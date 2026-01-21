@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 2 - Bootstrap Layout</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .box {
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        padding: 40px 0;
+        border-radius: 4px;
+      }
+
+      .orange {
+        background-color: #ff6b4a;
+      }
+      .blue {
+        background-color: #b7dfe9;
+        color: #000;
+      }
+
+      .h-100 {
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body class="p-4">
+    <div class="container">
+      <!-- orange -->
+      <div class="row g-3 mb-4">
+        <!-- Left orange -->
+        <div class="col-md-6">
+          <div class="box orange h-100">1</div>
+        </div>
+
+        <!-- Right orange -->
+        <div class="col-md-6">
+          <div class="row g-3">
+            <div class="col-sm-12">
+              <div class="box orange">2</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="box orange">3</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="box orange">4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blue -->
+      <div class="row g-3">
+        <!-- left blue -->
+        <div class="col-md-6">
+          <div class="box blue h-100">1</div>
+        </div>
+
+        <!-- Right blue -->
+        <div class="col-md-6">
+          <div class="row g-3">
+            <div class="col-sm-12">
+              <div class="box blue">2</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="box blue">3</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="box blue">4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
