@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3: Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="4" id="display">0</td>
+      </tr>
+
+      <tr>
+        <td class="operator" data-value="+"><button class="btn">+</button></td>
+        <td class="operator" data-value="-"><button class="btn">-</button></td>
+        <td class="operator" data-value="*"><button class="btn">*</button></td>
+        <td class="operator" data-value="/"><button class="btn">÷</button></td>
+      </tr>
+
+      <tr>
+        <td data-value="7"><button class="btn">7</button></td>
+        <td data-value="8"><button class="btn">8</button></td>
+        <td data-value="9"><button class="btn">9</button></td>
+        <td class="operator" data-value="%"><button class="btn-oprator">%</button></td>
+      </tr>
+
+      <tr>
+        <td data-value="4"><button class="btn">4</button></td>
+        <td data-value="5"><button class="btn">5</button></td>
+        <td data-value="6"><button class="btn">6</button></td>
+        <td class="equal" data-value="=" rowspan="3">
+          <button class="btn-equal">=</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td data-value="1"><button class="btn">1</button></td>
+        <td data-value="2"><button class="btn">2</button></td>
+        <td data-value="3"><button class="btn">3</button></td>
+      </tr>
+
+      <tr>
+        <td data-value="0"><button class="btn">0</button></td>
+        <td data-value="."><button class="btn">.</button></td>
+        <td data-value="AC"><button class="operator">AC</button></td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
