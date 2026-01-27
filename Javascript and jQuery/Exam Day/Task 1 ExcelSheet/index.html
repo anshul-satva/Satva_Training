@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1: Excel Sheet</title>
+    <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Excel Sheet</h1>
+
+    <!-- EXCEL SHEET -->
+    <div class="table-responsive">
+      <table id="excelTable" class="table table-bordered table-sm align-middle">
+        <thead>
+          <tr>
+            <th>Sr.No</th>
+            <th>Project Name</th>
+            <th>Timelog Date</th>
+            <th>Phase</th>
+            <th>Status</th>
+            <th>Logged Hours</th>
+            <th>Billable Hours</th>
+            <th>Notes</th>
+            <th>Out of Stock</th>
+            <th>BC Link</th>
+            <th>BC Description</th>
+          </tr>
+        </thead>
+        <tbody id="excelBody"></tbody>
+      </table>
+    </div>
+    <div class="controls gap-3  d-flex justify-content-center mt-3">
+      <button id="deleteRow" class="btn btn-danger btn-sm">
+        Delete Last Row
+      </button>
+      <input
+        type="text"
+        id="rowCount"
+        class="form-control form-control-sm w-auto"
+        placeholder="No of rows"
+      />
+
+      <button id="addRow" class="btn btn-primary btn-sm">Add Row</button>
+    </div>
+
+    <!-- DATA TABLE -->
+    <div id="tableWrapper"></div>
+
+    <!-- <button id="downloadBtn">Download Excel</button> -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
