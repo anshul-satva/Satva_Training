@@ -1,0 +1,110 @@
+/* NAVBAR */
+.satva-nav {
+  background: #4652a5;
+}
+
+.satva-nav .navbar-brand {
+  color: white !important;
+}
+
+.satva-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+/* DROPDOWN HOVER EFFECT */
+.dropdown-item {
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #4652a5 !important;
+  color: white !important;
+  padding-left: 20px !important;
+}
+
+/* MEGA MENU FIX - CENTERED */
+.navbar .dropdown-menu {
+  margin-top: 0;
+}
+
+.mega-menu {
+  width: 60% !important;
+  padding: 15px 0;
+  left: 50% !important; /* CENTER IT */
+  right: auto !important;
+  transform: translateX(-50%) !important; /* CENTER IT */
+}
+
+/* Ensure mega menu stays in viewport */
+.navbar .position-static {
+  position: static !important;
+}
+
+.navbar .position-static .dropdown-menu {
+  position: absolute;
+}
+
+.mega-menu h6 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #4652a5;
+  border-bottom: 2px solid #4652a5;
+  padding-bottom: 5px;
+}
+
+.mega-menu .dropdown-item {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.mega-menu .dropdown-item:hover {
+  background-color: #4652a5 !important;
+  color: white !important;
+  padding-left: 15px !important;
+  transition: all 0.3s ease;
+}
+
+/* FORM */
+.form-container {
+  max-width: 550px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Fix multiselect button validation states */
+.multiselect-container {
+  width: 100%;
+}
+
+.btn-group {
+  width: 100%;
+  display: block !important;
+}
+
+.btn-group.is-invalid .btn {
+  border-color: #dc3545 !important;
+}
+
+.btn-group.is-valid .btn {
+  border-color: #198754 !important;
+}
+
+/* CRITICAL FIX - Disease field error message alignment */
+#diseaseList-error {
+  display: block !important;
+  width: 100%;
+  margin-top: 0.25rem !important;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+label.error {
+  display: block !important;
+  margin-top: 0.25rem;
+}
