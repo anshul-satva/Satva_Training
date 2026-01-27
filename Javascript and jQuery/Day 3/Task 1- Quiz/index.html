@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 1: jQuery Quiz Game</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h2>jQuery Quiz Game</h2>
+
+      <div id="quizArea">
+        <div id="questionNumber"></div>
+        <div id="questionText"></div>
+
+        <div id="answerArea" class="options"></div>
+
+        <div id="errorMsg">Please answer before proceeding.</div>
+        <!-- <div id="feedback"></div> -->
+
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <div id="finalScore" style="display: none">
+        <h3 id="fresult">Your Final Score: <span id="finalResult"></span></h3>
+
+        <h3>Incorrect Answers</h3>
+        <hr />
+        <div id="incorrect-ans"></div>
+
+        <h3>Correct Answers</h3>
+        <hr />
+        <div id="correct-ans"></div>
+
+        <button id="restartBtn">Restart Quiz</button>
+      </div>
+
+      <div id="scoreDisplay">Score: 0</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
