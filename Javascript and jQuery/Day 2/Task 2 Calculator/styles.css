@@ -1,0 +1,94 @@
+body {
+    background-color: #e0e5ec; /* Soft gray for Neumorphic feel */
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+table {
+    background-color: #202124;
+    border-radius: 20px;
+    padding: 15px;
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.3); */
+    /* border-spacing: 8px;  */
+    /* Creates gaps between buttons */
+    width: 450px;
+}
+
+#display {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: right;
+    padding: 30px 10px;
+    font-size: 42px;
+    font-weight: 300;
+    border: none;
+    height: 60px;
+    word-break: break-all;
+}
+
+td {
+    width: 60px;
+    height: 60px;
+    /* border-radius: 12px; */
+    background-color: #3c4043;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+td:hover {
+    background-color: #4c5055;
+}
+
+td:active {
+    transform: scale(0.95);
+}
+
+/* Button Reset */
+button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    pointer-events: none; /* Let the td handle the click */
+}
+
+/* Operator Styling */
+.operator {
+    background-color: #5f6368;
+}
+
+.operator button {
+    color: #8ab4f8; /* Soft Blue */
+}
+
+/* Equal Button */
+.equal {
+    background-color: #f29900;
+}
+
+.equal:hover {
+    background-color: #ffad1f;
+}
+
+.equal button {
+    color: white;
+    font-size: 32px;
+}
+
+/* AC Button */
+.clear {
+    background-color: #3c4043;
+}
+
+.clear button {
+    color: #f28b82; /* Soft Red */
+}
