@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2: AJAX Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid px-3 px-md-4">
+        <a class="navbar-brand fw-bold" href="#">AJAX Site</a>
+
+        <!-- Mobile Toggle Button -->
+        <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Menu (collapses on screens < md) -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link menu active" data-page="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link menu" data-page="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link menu" data-page="team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link menu" data-page="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENT AREA -->
+    <div class="container-fluid px-3 px-sm-4 px-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-11 col-xl-10">
+          <!-- Loader -->
+          <div id="loader" class="loader-overlay" style="display:none;">
+            <div class="spinner">
+              <div></div><div></div><div></div>
+              <div></div><div></div><div></div>
+            </div>
+          </div>
+
+          <!-- Dynamic Content -->
+          <div id="content" class="mt-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
