@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 3: Full Calendar Booking</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+
+    <!-- FullCalendar CSS/JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+
+    <!-- jQuery + jQuery Validate -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  </head>
+
+  <body class="bg-light p-4">
+    <div class="container">
+      <div id="calendar" class="bg-white p-3 rounded"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Book Appointment</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form id="bookingForm" novalidate>
+              <div class="mb-3">
+                <label for="patientName" class="form-label">Patient Name</label>
+                <input
+                  type="text"
+                  id="patientName"
+                  name="patientName"
+                  class="form-control"
+                  placeholder="Enter patient name"
+                  oninput="allowLettersOnly(this)"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile Number</label>
+                <input
+                  type="text"
+                  id="mobile"
+                  name="mobile"
+                  class="form-control"
+                  placeholder="Enter mobile number"
+                  maxlength="10"
+                  oninput="allowNumbersOnly(this)"
+                />
+              </div>
+
+              <button type="submit" id="confBtn" class="btn btn-success w-100">
+                Confirm Booking
+              </button>
+              <button type="submit" id="editBtn" class="btn btn-primary w-100 d-none">
+                Edit Booking
+              </button>
+              <button type="button" id="deleteBtn" class="btn btn-danger d-none mt-2 w-100">
+                Delete
+              </button>              
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary w-100"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
