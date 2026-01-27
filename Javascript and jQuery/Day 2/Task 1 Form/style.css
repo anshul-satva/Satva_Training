@@ -1,0 +1,82 @@
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+.form-container {
+    background: white;
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.form-label {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+.form-control, .form-select {
+    font-size: 13px;
+    height: 38px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.form-control::placeholder, .form-select option:first-child {
+    color: #999;
+}
+.info-box {
+    background-color: #fffbea;
+    border: 1px solid #f0e8c5;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 13px;
+}
+.info-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+.info-box p {
+    margin: 3px 0;
+}
+.info-summary {
+    color: #856404;
+}
+.info-export {
+    color: #155724;
+}
+.info-clear {
+    color: #721c24;
+}
+.table-section {
+    margin-top: 30px;
+    display: none;
+}
+.table {
+    font-size: 13px;
+    background: white;
+}
+.table thead {
+    background-color: #f8f9fa;
+}
+.table thead th {
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #dee2e6;
+    padding: 12px 8px;
+}
+.table tbody td {
+    padding: 10px 8px;
+    color: #666;
+}
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 13px;
+}
+.dropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
