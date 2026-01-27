@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1: AJAX Dropdown</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  </head>
+  <body class="bg-light">
+    <div class="container-fluid py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-4">
+          <div class="custom-card">
+            <div class="card-body">
+              <h4 class="text-center mb-4 text-primary">AJAX Dropdown</h4>
+
+              <!-- Loader -->
+              <div class="text-center mb-3">
+                <div
+                  id="loader"
+                  class="spinner-border text-secondary d-none"
+                ></div>
+              </div>
+
+              <!-- Country -->
+              <div class="mb-3">
+                <select name="country" id="country" class="form-select">
+                  <option value="">Select Country</option>
+                </select>
+              </div>
+
+              <!-- State -->
+              <div class="mb-3">
+                <select id="state" class="form-select" disabled>
+                  <option value="">Select State</option>
+                </select>
+              </div>
+
+              <!-- City -->
+              <div class="mb-3">
+                <select id="city" class="form-select" disabled>
+                  <option value="">Select City</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
