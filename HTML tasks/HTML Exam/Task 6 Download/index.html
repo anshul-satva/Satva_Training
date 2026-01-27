@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6:File Upload/Download</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container1">
+      <h3>Click Button to Download the pdf</h3>
+      <a href="HTML Final Exam.pdf" download><button>Download</button> </a
+      ><br /><br />
+    </div>
+    <div class="container2">
+      <h3>Upload an Excel</h3>
+      <form action="" id="form">
+        <input
+          type="file"
+          accept=".xls, .xlsx, .csv"
+          id="file"
+          required
+        /><br /><br />
+        <button onclick="checkExcel()">Upload</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
