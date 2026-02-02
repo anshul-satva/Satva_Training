@@ -1,0 +1,3575 @@
+[
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "Cash & Equivalents",
+    "number": 1001,
+    "name": "Cash",
+    "keywords": "",
+    "description": "Petty cash is the amount of ready cash that the practice keeps available on premises for incidental needs. Examples of petty cash uses include reimbursement to employees for out-of-pocket purchases of office supplies and postage."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "Cash & Equivalents",
+    "number": 1002,
+    "name": "Cash in Daily Drawer",
+    "keywords": "",
+    "description": "The cash drawer represents the amount of cash on hand to provide change to clients, who are making cash purchases of services and retail items, or are settling the balances of their accounts. A separate petty cash fund should be maintained for incidental expenses."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "Cash & Equivalents",
+    "number": 1003,
+    "name": "Undeposited Funds",
+    "keywords": "",
+    "description": "This account records client payments and other receipts on premises or otherwise under practice control, and not yet deposited to the bank."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "Cash & Equivalents",
+    "number": 1010,
+    "name": "Primary Checking Account",
+    "keywords": "",
+    "description": "The chief operating bank account used for daily fee collection deposits and for paying bills."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "Cash & Equivalents",
+    "number": 1011,
+    "name": "Secondary Checking Account",
+    "keywords": "",
+    "description": "Many practices maintain more than one checking account, such as an account for payroll or an account that reflects the activity of a second practice location."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "Cash & Equivalents",
+    "number": 1012,
+    "name": "Savings Account",
+    "keywords": "",
+    "description": "In general, a practice savings account serves as an interest-bearing repository of reserve funds for working-capital requirements or for planned investments or commitments such as employee retirement funding."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "Cash & Equivalents",
+    "number": 1013,
+    "name": "Certificates of Deposit",
+    "keywords": "",
+    "description": "Record investments in certificate of deposits to this account. Interest earned on investments will be recorded in the 9050 account for interest revenues either at the time the interest is received (cash basis accounting) or when the right to it is earned (accrual basis accounting)."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "Cash & Equivalents",
+    "number": 1014,
+    "name": "Money Market Account",
+    "keywords": "",
+    "description": "Either a commercial bank\u2019s account or a brokerage-held account, a practice money market account provides another interest-bearing option for reserving funds to meet working capital needs or for future practice commitments."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1100,
+    "name": "Accounts Receivable",
+    "keywords": "",
+    "description": "The account used for recording client-owed amounts for veterinary services and ancillary purchases."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1101,
+    "name": "Allowance for Uncollectable Accounts (contra account)",
+    "keywords": "",
+    "description": "This is a contra asset account associated with accounts receivable. This account will maintain a credit balance and should be used when anticipating a portion of the accounts receivable will be uncollectible in the future."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1120,
+    "name": "Drug and Medical Supply Inventory",
+    "keywords": "",
+    "description": "Inventory value should be a reasonable approximation of drugs on hand (at acquisition cost) at quarterly reporting dates, including partial packages."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1130,
+    "name": "Employee Advances",
+    "keywords": "",
+    "description": "Advances to employees, most often as very short-term loans against future wages are recorded in this account."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1131,
+    "name": "Advances -- Related Party",
+    "keywords": "",
+    "description": "This account is used to record episodic and quickly repaid personal expenditures made on behalf of officers or owners of the practice."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1140,
+    "name": "Note Receivable, Current Portion -- Related Party",
+    "keywords": "",
+    "description": "Notes receivable usually reflect an interest-bearing loan of a large money amount or sale of valuable company property to an individual, with the requirement for repayment of the amount or value. If the terms of the loan provide for repayment to the practice over a period of longer than one year, then the portion to be repaid in greater than twelve months\u2019 time is recorded in account 2600, Long Term Portion of Notes Receivable. Account 1500 is explicitly reserved for amounts loaned to individuals who are related to the practice through ownership rights or through fiduciary responsibility, such as a director or officer."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1141,
+    "name": "Note Receivable, Current Portion -- Other",
+    "keywords": "",
+    "description": "This account carries amounts owed to the practice, usually by non-owner employees or related entities. Occasionally, it will also include client-signed promissory notes made to the practice when the client has renegotiated large, outstanding accounts-receivable amounts for documented re-payment over time."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1150,
+    "name": "Prepaid Expenses",
+    "keywords": "",
+    "description": "Record in this account any payments that reflect the acquisition of services that the practice will use in a future financial period. In the financial period of their use, adjust prepaid amounts as expenses and reduces the asset value of the prepaid expense account. Some examples of prepaid expenses are airline tickets and convention registration purchased for a continuing education event scheduled some months in the future; professional dues and membership payments for a future membership period; and service contracts that cover one or several years of future financial periods. Include in this account prepaid insurance premiums, prepaid rent, prepaid federal income tax, prepaid state income and/or franchise tax, and prepaid local income tax if applicable to your practice."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1151,
+    "name": "Prepaid Interest",
+    "keywords": "",
+    "description": "Record in this account any payments that reflect the prepayment of interest to be expensed in future periods"
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1160,
+    "name": "Deposits for New Equipment",
+    "keywords": "",
+    "description": "Record in this account any down payments made for equipment orders and similar assets that will be received and put in service at a future date."
+  },
+  {
+    "type": "Assets",
+    "group": "Current assets",
+    "subGroup": "General",
+    "number": 1170,
+    "name": "Construction In Progress",
+    "keywords": "",
+    "description": "When the practice is renovating or expanding facility or constructing other capital assets that have not yet been put into service, payments made for the ongoing construction project are coded here. Once the project is complete, and all costs have been accumulated, the total is re-classed to the appropriate fixed asset accounts with adequately detailed descriptions. When the building or constructed asset is put in service, depreciation can begin."
+  },
+  {
+    "type": "Assets",
+    "group": "Fixed assets",
+    "subGroup": "Fixed assets",
+    "number": 1200,
+    "name": "Professional Medical Equipment",
+    "keywords": "",
+    "description": "The acquisition costs of all medical, surgical, and diagnostic equipment used for service provision and revenue generation are included in this account. Examples include autoclaves and sterilization equipment; surgery and anesthetic equipment; X-ray machines and other imaging equipment such as ultrasound machines; microscopes and bench laboratory machines; and any other type of medical, patient-support, or monitoring equipment. Any item of equipment to which the practice has title or realistically will have title through acquisition contract terms should be listed in this account."
+  },
+  {
+    "type": "Assets",
+    "group": "Fixed assets",
+    "subGroup": "Fixed assets",
+    "number": 1210,
+    "name": "Computer Hardware",
+    "keywords": "",
+    "description": "Record all purchased computer equipment in this account, including electronic office equipment such as electronic cash registers, computer peripheral equipment, modems, surge protectors, computer cabling, servers, video monitors, printers, fax machines and network copiers. As the practice takes computer equipment out of service (often due to obsolescence as much as to breakage), it should also dispose of and remove the equipment from the accounting records."
+  },
+  {
+    "type": "Assets",
+    "group": "Fixed assets",
+    "subGroup": "Fixed assets",
+    "number": 1220,
+    "name": "Office Equipment, Furniture & Fixtures",
+    "keywords": "",
+    "description": "This fixed asset account includes all non-computer office equipment acquisitions, such as phone systems, calculators, photocopiers (not computer-networked), typewriters, paper-shredders, and similar equipment. It also includes appliances such as washers, dryers, freezers, and TVs not associated with medical equipment. The account also includes office furnishings such as desks, filing cabinets, chairs, waiting room furniture, decor, lockers, bookcases, movable lighting fixtures, signs, and other appurtenances not permanently affixed and integral features of the building."
+  },
+  {
+    "type": "Assets",
+    "group": "Fixed assets",
+    "subGroup": "Fixed assets",
+    "number": 1230,
+    "name": "Practice Vehicles",
+    "keywords": "",
+    "description": "Vehicles owned by and titled to the practice are coded in this account, and in general are used in the production of veterinary revenue (patient transport, house calls, business errands and travel). Debatable issues affecting appropriate accounting for leased vehicles dictate you seek the practice accountant\u2019s input and advice so that regulatory compliance occurs. Additionally, vehicles used in companion animal practice may have mixed use for personal use and commuting, as well as for the purposes of conducting veterinary business. Once business use (which does NOT include commuting) falls below 50%, special rules apply to depreciation."
+  },
+  {
+    "type": "Assets",
+    "group": "Fixed assets",
+    "subGroup": "Fixed assets",
+    "number": 1240,
+    "name": "Leasehold/Building Improvements",
+    "keywords": "",
+    "description": "Code building construction projects that upgrade and/or extend the useful life of practice-occupied buildings in this account. Integral, stationary, and permanently affixed parts of the facility, building improvements increase its value and usefulness. Improvements include renovations, additions, permanent upgrades, new roofs, and new floors. Capitalize major repairs, which add significant facility value or life expectancy, for inclusion in this account."
+  },
+  {
+    "type": "Assets",
+    "group": "Fixed assets",
+    "subGroup": "Fixed assets",
+    "number": 1245,
+    "name": "Buildings",
+    "keywords": "",
+    "description": "Record any costs of buildings to which the practice holds ownership title in this account."
+  },
+  {
+    "type": "Assets",
+    "group": "Fixed assets",
+    "subGroup": "Fixed assets",
+    "number": 1250,
+    "name": "Land Improvements",
+    "keywords": "",
+    "description": "Improvements made to land owned or leased by the practice, which includes such enhancements as driveways, sidewalks, landscaping, storm drainage, utilities, and septic systems."
+  },
+  {
+    "type": "Assets",
+    "group": "Fixed assets",
+    "subGroup": "Fixed assets",
+    "number": 1255,
+    "name": "Land",
+    "keywords": "",
+    "description": "Record in this account the cost of any land purchased by the practice, to which it takes title (an estate in real property). As a non-wasting asset, land is not depreciated. As such, no accumulated depreciation account exists for this fixed asset."
+  },
+  {
+    "type": "Assets",
+    "group": "Fixed assets",
+    "subGroup": "Fixed assets",
+    "number": 1290,
+    "name": "Accumulated Depreciation (contra account)",
+    "keywords": "",
+    "description": "This is a general \u201ccatch-all\u201d account for use in recording accumulated depreciation for all depreciable assets, in the event the practice owners (or accountant) prefers not to group accumulated depreciation with its related asset classes (professional equipment, office equipment, etc.) This provides an expedited method for tracking accumulated depreciation in a single balance sheet account."
+  },
+  {
+    "type": "Assets",
+    "group": "Other Long-Term Assets",
+    "subGroup": "Other Long-Term Assets",
+    "number": 1310,
+    "name": "Computer Software",
+    "keywords": "",
+    "description": "Computer software purchases are capitalized and recorded in this account. Often, computer software is bundled as part of a computer system purchase. The portion of the purchase price attributable to software is identified and recorded in this account. Since tax rules change about the correct way to depreciate or amortize software, speak with the practice\u2019s accountant to decide the best way to record system purchases which include both hardware and software components."
+  },
+  {
+    "type": "Assets",
+    "group": "Other Long-Term Assets",
+    "subGroup": "Other Long-Term Assets",
+    "number": 1320,
+    "name": "Goodwill",
+    "keywords": "",
+    "description": "Goodwill recorded in the practice books depends on the fact of a transaction involving goodwill acquisition at some time in the entity\u2019s history. Goodwill represents the amount paid for an existing practice entity (target) that is in excess of the target\u2019s other assets at the time of purchase. This account is only used for recording the purchase of preexisting goodwill from another entity."
+  },
+  {
+    "type": "Assets",
+    "group": "Other Long-Term Assets",
+    "subGroup": "Other Long-Term Assets",
+    "number": 1321,
+    "name": "Covenant Not to Compete",
+    "keywords": "",
+    "description": "The negotiated price assigned to the covenant not to compete in the course of allocating the total practice purchase is recorded in this account."
+  },
+  {
+    "type": "Assets",
+    "group": "Other Long-Term Assets",
+    "subGroup": "Other Long-Term Assets",
+    "number": 1330,
+    "name": "Organizational & Startup costs",
+    "keywords": "",
+    "description": "Costs related to veterinary practice start up and organization are capitalized and recorded to this account, including legal, accounting, site selection, appraisals, and any other fees incurred prior to the actual opening of the doors for business."
+  },
+  {
+    "type": "Assets",
+    "group": "Other Long-Term Assets",
+    "subGroup": "Other Long-Term Assets",
+    "number": 1340,
+    "name": "Loan Costs",
+    "keywords": "",
+    "description": "Loan costs should be amortized over the life of the loan. Fees such as legal, accounting, registration and bank fees incurred in conjunction with obtaining or refinancing a loan are considered loan fees. Record all such loan fees in this account and amortize them by debiting amortization expense account 8050 and crediting 2599 Accumulated Amortization monthly over the life of the loan."
+  },
+  {
+    "type": "Assets",
+    "group": "Other Long-Term Assets",
+    "subGroup": "Other Long-Term Assets",
+    "number": 1350,
+    "name": "Accumulated Amortization",
+    "keywords": "",
+    "description": "This is a general \u201ccatch-all\u201d account for use in recording accumulated amortization for all intangible and amortizable assets. This provides an expedited method for tracking accumulated amortization in a single balance sheet account."
+  },
+  {
+    "type": "Assets",
+    "group": "Other Long-Term Assets",
+    "subGroup": "Other Long-Term Assets",
+    "number": 1360,
+    "name": "Note Receivable, Long-Term Portion",
+    "keywords": "",
+    "description": "This account reflects the principle portion of promissory notes and secured notes for which receipt occurs at greater than twelve months from the balance sheet date. Adjust the note\u2019s current portion, that is, the principal amount receivable in 12 months or less, in accounts 1450 or 1500."
+  },
+  {
+    "type": "Assets",
+    "group": "Other Long-Term Assets",
+    "subGroup": "Other Long-Term Assets",
+    "number": 1370,
+    "name": "Refundable Deposits",
+    "keywords": "",
+    "description": "Use this account to record the amount of refundable deposits made at the initiation of a service, such as utilities. If the deposit is non-refundable, then it should be expensed when the expenditure occurred."
+  },
+  {
+    "type": "Assets",
+    "group": "Other Long-Term Assets",
+    "subGroup": "Other Long-Term Assets",
+    "number": 1380,
+    "name": "Other Assets",
+    "keywords": "",
+    "description": "Include in this account the cash value of any practice-owned life insurance policy or other assets not specified in listed asset accounts."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "General Payables",
+    "number": 2001,
+    "name": "Accounts Payable",
+    "keywords": "",
+    "description": "Code amounts owed to vendors for purchases made on credit. Such purchases are made to acquire the supplies, services, and materials needed for the practice of veterinary medicine. This account is a control account for a subsidiary ledger of each vendor, the amounts owed to that vendor, and aged amount of the payable (showing whether the payable amounts are current, or represent credit purchases that occurred 30, 60, 90, or more days in the past)."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "General Payables",
+    "number": 2002,
+    "name": "Credit Cards Payable",
+    "keywords": "",
+    "description": "This account represents all purchases made through the use of a credit card."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "General Payables",
+    "number": 2003,
+    "name": "Line of Credit",
+    "keywords": "",
+    "description": "The balance in this account represents total amount outstanding on the line of credit at any one time."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "General Payables",
+    "number": 2004,
+    "name": "Long-Term Loans & Capital Leases Payable, Current Portion",
+    "keywords": "",
+    "description": "Practice debt contracted for payment over a period greater than one year is posted to two accounts. Record the loan principal portion due in less than twelve months to this account. Account for the principal portions of loans due in greater than twelve months in the 3800 series. Adjustments to long- and short-term portions are typically made at the end of the accounting period."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "General Payables",
+    "number": 2005,
+    "name": "Loan Payable, Current Portion -- Related Party",
+    "keywords": "",
+    "description": "An officer or owner may loan money to the practice from time to time. This account represents the amount owed to the related party that will be repaid within one year. If the loan will extend beyond twelve months, then the loan should be accounted for as to the long-term and short-term portions."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "General Payables",
+    "number": 2006,
+    "name": "Unearned Revenue",
+    "keywords": "",
+    "description": "This account represents a liability account to record payments received in advance of providing goods or services. A typical example of unearned revenue in a practice would be related to wellness plans where payments are received by a hospital before goods or services are provided. As goods and services are provided, the bookkeeper should debit this account and credit the appropriate revenue category."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "General Payables",
+    "number": 2007,
+    "name": "Other Accrued Liabilities",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "General Payables",
+    "number": 2008,
+    "name": "Rent Payable",
+    "keywords": "",
+    "description": "This account contains any rent that has been incurred/expensed, but not yet paid, and is due within 30 days"
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Employee Payroll Liabilities",
+    "number": 2101,
+    "name": "Payroll Tax Payable",
+    "keywords": "",
+    "description": "Include in this account employer FICA tax which consists of Medicare and OASDI (Old Age, Survivors, and Disability Insurance). The employer\u2019s FICA obligation is recorded here, as the amount that must be remitted to the IRS coincident with the remittance of FICA payroll tax withholding from employee wages for a recently paid payroll. Include in this account federal unemployment tax payable which includes the balance of federal unemployment tax accrued on previously paid wages but not yet paid to the IRS. Include in this account state unemployment tax payable which reflects state unemployment tax accrued on previously paid wages but not yet paid to the state agency."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Employee Payroll Liabilities",
+    "number": 2102,
+    "name": "Wage Garnishment Payable",
+    "keywords": "",
+    "description": "This account carries the balance of any garnished wage expense that was not paid to the employee, but rather held for payment to a third party as required by a government entity and/or court of law."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Employee Payroll Liabilities",
+    "number": 2103,
+    "name": "Workers Compensation Payable",
+    "keywords": "",
+    "description": "This account reflects workers compensation premiums payable but not yet remitted to the insurer. Workers compensation premium cost is considered a tax (rather than insurance) by many accountants, as it is not a voluntary payment but a legally mandated one when an employer has employees."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Employee Payroll Liabilities",
+    "number": 2104,
+    "name": "Accrued Payroll & Bonuses",
+    "keywords": "",
+    "description": "The value of employee work time that has occurred but the practice will not pay until the next payroll date is said to be accrued. The practice incurs a liability to pay the employee for his or her time, but the pay period has not yet completely run, so is not due for payment. For accrual-based practices, this account generally carries a balance at the fiscal year end, when workers have wages due to them for hours worked, that the practice will not pay until the pay date falling in the first or second week of the following year. The value of any holiday, personal, or sick time earned by employees and not yet paid is carried in this account. Cash basis practices will generally not use this account."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Employee Payroll Liabilities",
+    "number": 2105,
+    "name": "Accrued Payroll Taxes",
+    "keywords": "",
+    "description": "This account carries the outstanding balance of employer payroll tax obligations associated with accrued wages and accrued paid time off (account 3150). It generally includes only the employer\u2019s portion of FICA tax, federal unemployment tax, and state unemployment tax associated with accrued wages and salary obligations. Like accrued payroll, generally only accrual based accounting method companies use this account."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Employee Payroll Liabilities",
+    "number": 2106,
+    "name": "Employer Retirement Plan Contribution Payable",
+    "keywords": "",
+    "description": "This account carries the balance of previously committed, but not yet paid, contributions to the employer-sponsored retirement plan in accord with the plan document\u2019s requirements. Many plans allow the employer to take a deduction for the committed amount in the year to which it pertains, whether paid or not, and regardless of whether the practice is cash or accrual based for tax purposes. The practice generally has until the extended due date of the federal tax return to pay the funding obligation."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Employee Benefit Liabilities",
+    "number": 2201,
+    "name": "Employee Payroll Tax Withholding Payable",
+    "keywords": "",
+    "description": "This account carries the balance of federal income tax withheld from employee wages that has not yet been paid to the IRS. The federal income taxes withheld and remitted by the employer on the employee\u2019s behalf do not belong to the employer. The employer functions as an agent of the government to assure the timely remittance of employee tax payments through forced withholding by the employer."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Employee Benefit Liabilities",
+    "number": 2202,
+    "name": "Employee Withholding Payable",
+    "keywords": "",
+    "description": "From time to time, some employees will experience court-ordered wage withholdings that are designated for use by some agency. In accord with the court order, the practice withholds the required amount and forwards it to the requisite agency on the employee\u2019s behalf. The balance carried in this account represents all withholdings not yet remitted to the agencies."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Employee Benefit Liabilities",
+    "number": 2203,
+    "name": "Employee Benefit Plan Deferrals (401(k), etc) Payable",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Other Tax Liabilities",
+    "number": 2301,
+    "name": "Sales & Use Tax Payable, Current Portion",
+    "keywords": "",
+    "description": "Many states require businesses to collect sales tax from consumers when they make purchases. When the practice collects sales tax from its clients at point of sale, the tax amount is credited to this account until the time the practice remits all collected tax amounts to the state. The requirements are comparable to payroll tax withholding rules: the state requires the practice to function as its agent, by collecting the appropriate amount of tax on subject sales and remitting it to the state revenue department."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Other Tax Liabilities",
+    "number": 2302,
+    "name": "Accrued Property Tax -- Current Portion",
+    "keywords": "",
+    "description": "If the practice owns real estate or is obligated through the lease agreement to pay taxes on the real estate, post the amount due and not yet paid to this account. Some states tax the value of personal property, either tangible property or intangible property or both. Accrual-based practices use this account to record the amount due and not yet paid."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Other Tax Liabilities",
+    "number": 2303,
+    "name": "Corporate Income Tax Payable -- Current Portion",
+    "keywords": "",
+    "description": "Both cash-basis and accrual-basis corporations use this account to record the amount of federal income tax owed for the most recently completed tax year. In general, the account only pertains to Subchapter C Corporations and Personal Service Corporations. All other legal entity types allow taxable practice income to pass through to individual owners for reporting on their personal tax returns. This account records any practice-owed income tax at the state, city, local or regional level that has not yet been paid."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Other Tax Liabilities",
+    "number": 2304,
+    "name": "Franchise Tax Payable, Current Portion",
+    "keywords": "",
+    "description": "Some states and many local jursidictions require businesses to pay a total revenues-based tax, typically calculated and remitted annually."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Current liability",
+    "subGroup": "Other Tax Liabilities",
+    "number": 2305,
+    "name": "Other Taxes Payable",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Liabilities",
+    "group": "Long-Term Liabilities",
+    "subGroup": "Long-Term Liabilities",
+    "number": 2501,
+    "name": "Loans & Capital Leases Payable, Long-Term Portion",
+    "keywords": "",
+    "description": "Record the principal portion of loans scheduled for repayment over a period greater than one year. Such loans will have terms that include a stated principal amount, monthly payment amount, and a stated interest rate. The current portion of the debt, the principal portion that will be repaid within a calendar or fiscal year, will be reported in account 3030. Most common long-term debt examples include mortgages and equipment loans with repayment schedules spanning multiple years. Also known as a purchase lease, a capital lease provides for transferred title of ownership to the lessee at the end of the lease term, usually for some bargain price such as one dollar. This account maintains the principal balance that is due in greater than twelve months from the balance sheet report date. The current portion of a capital lease is reported in account 3030."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Long-Term Liabilities",
+    "subGroup": "Long-Term Liabilities",
+    "number": 2502,
+    "name": "Loan Payable -- Related Party",
+    "keywords": "",
+    "description": "Record the principal portion of loans from related parties scheduled for repayment over a period greater than one year. Such loans will have terms that include a stated principal amount, monthly payment amount, and a stated interest rate. The current portion of the debt, the principal portion that will be repaid within a calendar or fiscal year, will be reported in account 3030. Most common long-term debt examples include mortgages and equipment loans with repayment schedules spanning multiple years. Also known as a purchase lease, a capital lease provides for transferred title of ownership to the lessee at the end of the lease term, usually for some bargain price such as one dollar. This account maintains the principal balance that is due in greater than twelve months from the balance sheet report date. The current portion of a capital lease is reported in account 3030."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Long-Term Liabilities",
+    "subGroup": "Long-Term Liabilities",
+    "number": 2503,
+    "name": "Sales & Use Tax Payable, Long-Term Portion",
+    "keywords": "",
+    "description": "Many states require businesses to collect sales tax from consumers when they make purchases. When the practice collects sales tax from its clients at point of sale, the tax amount is credited to this account until the time the practice remits all collected tax amounts to the state. The requirements are comparable to payroll tax withholding rules: the state requires the practice to function as its agent, by collecting the appropriate amount of tax on subject sales and remitting it to the state revenue department."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Long-Term Liabilities",
+    "subGroup": "Long-Term Liabilities",
+    "number": 2504,
+    "name": "Accrued Property Tax -- Long-Term Portion",
+    "keywords": "",
+    "description": "If the practice owns real estate or is obligated through the lease agreement to pay taxes on the real estate, post the amount due and not yet paid to this account. Some states tax the value of personal property, either tangible property or intangible property or both. Accrual-based practices use this account to record the amount due and not yet paid."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Long-Term Liabilities",
+    "subGroup": "Long-Term Liabilities",
+    "number": 2505,
+    "name": "Corporate Income Tax Payable -- Long-Term Portion",
+    "keywords": "",
+    "description": "Both cash-basis and accrual-basis corporations use this account to record the amount of federal income tax owed for the most recently completed tax year. In general, the account only pertains to Subchapter C Corporations and Personal Service Corporations. All other legal entity types allow taxable practice income to pass through to individual owners for reporting on their personal tax returns. This account records any practice-owed income tax at the state, city, local or regional level that has not yet been paid."
+  },
+  {
+    "type": "Liabilities",
+    "group": "Long-Term Liabilities",
+    "subGroup": "Long-Term Liabilities",
+    "number": 2506,
+    "name": "Franchise Tax Payable, Long-Term Portion",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3001,
+    "name": "Common Stock (C-Corp)",
+    "keywords": "",
+    "description": "This account title pertains to practices functioning in any of the corporate formats. The account balance reflects the value of issued and outstanding shares of corporate stock, usually at their original stated value. This is an account that infrequently changes, so it is likely any adjustments will come from the practice\u2019s accountant as a result of significant transaction events related to practice ownership. Often, the only transaction shown in the account occurs at the inception of the corporation when it issues shares to the first shareholders."
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3002,
+    "name": "Additional Paid in Capital  (C-Corp)",
+    "keywords": "",
+    "description": "Record any capital paid by shareholders to the corporation in excess of the stated share value. Generally, this account is used very infrequently, often only at the corporation\u2019s inception when it issues stock to the new shareholders in exchange for money and property. Any value in excess of the stated share value, which can be found in the original articles of incorporation, is recorded as additional paid in capital (commonly abbreviated APIC)."
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3003,
+    "name": "Retained Earnings / (Deficit)  (C-Corp)",
+    "keywords": "",
+    "description": "This account reflects a practice\u2019s accumulated profits and losses over time, which have not been distributed to owners. The account is presented separately from the Common Stock and Additional Paid in Capital accounts because it derives its balances from operational results, not from financing."
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3004,
+    "name": "Distributions/Dividends/Draws  (C-Corp)",
+    "keywords": "personal expenses, political contributions",
+    "description": "Any dividends (Subchapter C or a personal service corporation (PSC)) or distributions (Subchapter S Corporation) are recorded here during the fiscal year. At the beginning of the subsequent fiscal year, all dividends and distributions are closed by an account adjustment to Retained Earnings/(Deficit), account 4200. Withdrawals by members of an unincorporated entity will be booked to this account, also. Modify the account title to reflect the entity type: Owner Draws, Partner Draws, or Member Draws."
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3005,
+    "name": "Treasury Stock  (C-Corp)",
+    "keywords": "",
+    "description": "Treasury stock is the amount of previously issued stock subsequently redeemed and held by the corporation. This situation usually occurs when a shareholder retires from the practice and sells his shares back to the corporation rather than to another individual. When the corporation purchases its own shares from the departing shareholder, the shares are said to be in the treasury."
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3101,
+    "name": "Common Stock  (S-Corp)",
+    "keywords": "",
+    "description": "This account title pertains to practices functioning in any of the corporate formats. The account balance reflects the value of issued and outstanding shares of corporate stock, usually at their original stated value. This is an account that infrequently changes, so it is likely any adjustments will come from the practice\u2019s accountant as a result of significant transaction events related to practice ownership. Often, the only transaction shown in the account occurs at the inception of the corporation when it issues shares to the first shareholders."
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3102,
+    "name": "Additional Paid in Capital  (S-Corp)",
+    "keywords": "",
+    "description": "Record any capital paid by shareholders to the corporation in excess of the stated share value. Generally, this account is used very infrequently, often only at the corporation\u2019s inception when it issues stock to the new shareholders in exchange for money and property. Any value in excess of the stated share value, which can be found in the original articles of incorporation, is recorded as additional paid in capital (commonly abbreviated APIC)."
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3103,
+    "name": "Retained Earnings / (Deficit)  (S-Corp)",
+    "keywords": "",
+    "description": "This account reflects a practice\u2019s accumulated profits and losses over time, which have not been distributed to owners. The account is presented separately from the Common Stock and Additional Paid in Capital accounts because it derives its balances from operational results, not from financing."
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3104,
+    "name": "Distributions/Dividends/Draws  (S-Corp)",
+    "keywords": "personal expenses, political contributions",
+    "description": "Any dividends (Subchapter C or a personal service corporation (PSC)) or distributions (Subchapter S Corporation) are recorded here during the fiscal year. At the beginning of the subsequent fiscal year, all dividends and distributions are closed by an account adjustment to Retained Earnings/(Deficit), account 4200. Withdrawals by members of an unincorporated entity will be booked to this account, also. Modify the account title to reflect the entity type: Owner Draws, Partner Draws, or Member Draws."
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3105,
+    "name": "Treasury Stock  (S-Corp)",
+    "keywords": "",
+    "description": "Treasury stock is the amount of previously issued stock subsequently redeemed and held by the corporation. This situation usually occurs when a shareholder retires from the practice and sells his shares back to the corporation rather than to another individual. When the corporation purchases its own shares from the departing shareholder, the shares are said to be in the treasury."
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3201,
+    "name": "Owners Capital (Proprietorship)",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3202,
+    "name": "Additional Paid in Capital (Proprietorship)",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3203,
+    "name": "Owners Equity / (Deficit) (Proprietorship)",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3204,
+    "name": "Distributions/Dividends/Draws (Proprietorship)",
+    "keywords": "personal expenses, political contributions",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3301,
+    "name": "Partners Capital",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3302,
+    "name": "Partners Capital -- Additional Partner",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3303,
+    "name": "Partners Equity / (Deficit)",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3304,
+    "name": "Distributions/Dividends/Draws (Partnership)",
+    "keywords": "personal expenses, political contributions",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3401,
+    "name": "Members Capital (LLC)",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3402,
+    "name": "Members Equity / (Deficit) (LLC)",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Equity",
+    "group": "Equity",
+    "subGroup": "Equity",
+    "number": 3403,
+    "name": "Distributions/Dividends/Draws (LLC)",
+    "keywords": "personal expenses, political contributions",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal GP Revenue",
+    "number": 4000,
+    "name": "Companion Animal Generalist Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal GP Revenue",
+    "number": 4001,
+    "name": "Exam/Diagnostic Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal GP Revenue",
+    "number": 4002,
+    "name": "Hospitalization & Treatment Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal GP Revenue",
+    "number": 4003,
+    "name": "Vaccine Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal GP Revenue",
+    "number": 4010,
+    "name": "Large Animal Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Large Animal GP Revenue",
+    "number": 4011,
+    "name": "Equine Revenue",
+    "keywords": "",
+    "description": "This revenue center includes all revenues associated with diagnosing, hospitalizing and/or treating horses, including euthanasia (but, not mortuary services, which is account 4403)."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Large Animal GP Revenue",
+    "number": 4012,
+    "name": "Farm Animal Revenue",
+    "keywords": "",
+    "description": "This revenue center includes all revenues associated with diagnosing, hospitalizing and/or treating large/farm animals, excluding horses, including euthanasia (but, not mortuary services, which is account 4403)."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Large Animal GP Revenue",
+    "number": 4013,
+    "name": "Zoological Revenue",
+    "keywords": "",
+    "description": "This revenue center includes all revenues associated with diagnosing, hospitalizing and/or treating all zoological animals, including euthanasia (but, not mortuary services, which is account 4403)."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Large Animal GP Revenue",
+    "number": 4020,
+    "name": "Emergency/Critical Care Revenue",
+    "keywords": "ER",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal ER/CC Revenue",
+    "number": 4021,
+    "name": "Exam/Diagnostic Revenue",
+    "keywords": "ER",
+    "description": "This revenue center includes outpatient exams, consultations and diagnostic services in the ER and any outpatient treatments. Euthanasia services are included in this account (do not include mortuary services; see account 4403)."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal ER/CC Revenue",
+    "number": 4022,
+    "name": "Hospitalization & Treatment Revenue",
+    "keywords": "ER",
+    "description": "This revenue center includes hospitalization (day or night), and inpatient services. Includes professional care, critical care, nursing care, oxygen, heat support, stomach tubing and lavage, enemas, continuous blood pressure monitoring, heartworm treatment support, tattoo services, bandages, casts, urinary catheterization, therapeutic abdominocentesis or thoracentesis, inpatient non-surgical wound care. Includes theriogenology services such as semen collection and preparation, insemination, obstetrical assistance, and neonatal care. Also includes Stem Cell Therapy."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal ER/CC Revenue",
+    "number": 4023,
+    "name": "Emergency Surgery Revenue",
+    "keywords": "ER",
+    "description": "This revenue center includes Companion Animal Vaccine service income. Record in this account the fees charged and collected from administration of vaccines to immunize patients against disease. In the event that no physical exam fee or office charge fee is collected (or bundled with the vaccination service fee), then the entire fee is reported here. If vaccinations are given as part of an annual wellness program, the charge associated with vaccination should be recorded here if easily segregated by the VPIMS bundling option."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal ER/CC Revenue",
+    "number": 4100,
+    "name": "Specialty Revenue",
+    "keywords": "",
+    "description": "This revenue center includes only those specialty services provided by a board-certified veterinarian with specialty credentials from an ABVS-recognized veterinary specialty organization. It would not include patient care, fluids, imaging, laboratory, diagnostics or dispending unless directly performed by the ophthalmologist. Subaccounts for specific specialist revenue (i.e. ophthalmology, internal medicine, oncology, etc.) can be created using accounts 5081 to 5094."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4101,
+    "name": "Surgery",
+    "keywords": "",
+    "description": "This revenue center includes only those surgery services provided by a board-certified veterinarian with specialty credentials from an ABVS/AVMA-recognized veterinary surgery specialty organization. Services could be provided either by a traveling contract surgeon or a boarded staff surgeon if an employee of the practice. It should also include income from fees resulting from surgery room usage, surgical instrument or pack usage, surgical disposables and supplies (sutures, surgical drapes, gloves, etc.), surgeon fees, surgical implants, and plates and screws. Include orthopedic surgery, soft tissue surgery, and cryotherapy fee income, as well as laparoscopy and endoscopy income. If ovariohysterectomy (OHE/Spay), castration (neuter), and declaw procedures are bundled with anesthesia/analgesia as a single fee, the total fee charged should be included here.It would not include patient care, fluids, imaging, laboratory, diagnostics or dispending unless directly performed by the surgeon."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4102,
+    "name": "Internal Medicine",
+    "keywords": "",
+    "description": "This revenue center includes only those internal medicine services provided by a board-certified veterinarian with specialty credentials from an ABVS/AVMA-recognized veterinary internal medicine specialty organization. It should also include income from fees resulting from related supplies and diagnostics associated with these internal medicine services."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4103,
+    "name": "Cardiology",
+    "keywords": "",
+    "description": "This revenue center includes only those internal medicine services provided by a board-certified veterinarian with specialty credentials from an ABVS/AVMA-recognized veterinary internal medicine specialty organization with a focus on Cardiology. It should also include income from fees resulting from related supplies and diagnostics associated with these Cardiology services."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4104,
+    "name": "Oncology, Medical",
+    "keywords": "chemotherapy",
+    "description": "This revenue center includes only those internal medicine services provided by a board-certified veterinarian with specialty credentials from an ABVS/AVMA-recognized veterinary internal medicine specialty organization with a focus on Medical (Chemotherapy) Oncology. It should also include income from fees resulting from related supplies and diagnostics associated with these Medical Oncological services."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4105,
+    "name": "Oncology, Radiation",
+    "keywords": "ratiation therapy",
+    "description": "This revenue center includes only those internal medicine services provided by a board-certified veterinarian with specialty credentials from an ABVS/AVMA-recognized veterinary internal medicine specialty organization with a focus on Radiation Oncology. It should also include income from fees resulting from related supplies and diagnostics associated with these Radiation Oncological services."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4106,
+    "name": "Neurology",
+    "keywords": "",
+    "description": "This revenue center includes only those internal medicine services provided by a board-certified veterinarian with specialty credentials from an ABVS/AVMA-recognized veterinary internal medicine specialty organization with a focus on Neurology. It should also include income from fees resulting from related supplies and diagnostics associated with these Neurology services."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4107,
+    "name": "Ophthalmology",
+    "keywords": "",
+    "description": "This revenue center includes only those ophthalmology services provided by a board-certified veterinarian with specialty credentials from an ABVS/AVMA-recognized veterinary ophthalmology specialty organization. It should also include income from fees resulting from related supplies and diagnostics associated with these ophthalmological medicine services."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4108,
+    "name": "Dermatology",
+    "keywords": "",
+    "description": "This revenue center includes only those dermatology services provided by a board-certified veterinarian with specialty credentials from an ABVS/AVMA-recognized veterinary dermatology specialty organization. It should also include income from fees resulting from related supplies and diagnostics associated with these dermatological medicine services."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4109,
+    "name": "Dentistry",
+    "keywords": "",
+    "description": "This revenue center includes income from fees from dental prophylaxis. Also includes income from extractions, orthodontics, endodontics, and products applied to teeth or defects in the dental operatory. Includes oral surgery related to dental procedures such as gingival flaps etc."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4110,
+    "name": "Radiology, Diagnostic",
+    "keywords": "",
+    "description": "This revenue center includes all revenues associated with diagnostic radiology."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4111,
+    "name": "Anesthesia/Pain Management",
+    "keywords": "",
+    "description": "This revenue center includes income from fees from gas or IV anesthesia charged as a service. Includes all anesthetic \u201ccocktails\u201d & sedations (injectables such as Midazolam, Fentanyl, Marcaine, Bupivicaine, DexDormitor, Dormisedan, Telazole, Lidocaine, Propofol, Alfaxan, etc.), epidural nerve blocks, local & dental nerve blocks. Also includes income from anesthetic monitoring. Does not include tranquilizers"
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4112,
+    "name": "Alternative/Acupuncture",
+    "keywords": "",
+    "description": "This revenue center includes fees related to income from chiropractic, acupuncture and homeopathy services. Alternative medical products sold should be captured in 4532 -- OTC Nutriceuitical Revenue."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4113,
+    "name": "Behavior",
+    "keywords": "",
+    "description": "This revenue center includes fees related to behavior service income and includes both services related to the prevention of behavior issues that might lead to owner-pet bond breakage (behavior wellness), or consulting services addressing the modification of existing behavior issues (separation anxiety, excessive vocalization, aggression, and destructive behavior). Medications and OTC products to treat behavioral issues should be included under Pharmacy \u2013 5105 (FDA) or Ancillary \u2013 5801 (OTC)."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4114,
+    "name": "Rehabilitiation Therapy",
+    "keywords": "",
+    "description": "This revenue center includes fees from activities involving treadmill, swimming, core muscle conditioning, massage, and similar physiotherapeutic applications to increase muscle strength, range of joint motion, flexibility, and mobility."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4115,
+    "name": "Nutrition",
+    "keywords": "",
+    "description": "This revenue center includes all revenues associated with nutirition diagnositcs, consultation and treatment.."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4116,
+    "name": "Avian/Exotics",
+    "keywords": "",
+    "description": "This revenue center includes all revenues associated with treatment of birds, repitles and other exotic animals."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4117,
+    "name": "Diagnostic Lab / Clinical Pathology",
+    "keywords": "",
+    "description": "This revenue center includes all revenues associated with diagnostics in clinical pathology."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4118,
+    "name": "Theriogenology",
+    "keywords": "",
+    "description": "This revenue center includes all revenues associated with reproductive health and breeding of animals."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Companion Animal Specialty Revenue",
+    "number": 4200,
+    "name": "In-House Imaging Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "In-House Imaging Services Revenue",
+    "number": 4201,
+    "name": "X-Ray Revenue",
+    "keywords": "",
+    "description": "This revenue center includes fees for radiographs and interpretation of radiographic studies, including Penn Hip and OFA fees. Radiograph revenue associated with dental procedures should be included in account 5404."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "In-House Imaging Services Revenue",
+    "number": 4202,
+    "name": "Dental X-Ray Revenue",
+    "keywords": "",
+    "description": "This revenue center includes fees related to income from dental radiographs and interpretation fees."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "In-House Imaging Services Revenue",
+    "number": 4203,
+    "name": "CT Revenue",
+    "keywords": "CT scan",
+    "description": "This revenue center includes income from fees derived from image studies via computerized tomography technology, and including any interpretation fees, whether or not bundled with the procedure fee."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "In-House Imaging Services Revenue",
+    "number": 4204,
+    "name": "Ultrasound Revenue",
+    "keywords": "sonography",
+    "description": "This revenue center includes income from fees derived from ultrasound imaging procedures and their interpretation. Include income for needle aspirate along with ultrasound guided fine needle and Trucut biopsies procedure fees. Ultrasound guided urine cystocentesis fees should be included in lab services account 5301."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "In-House Imaging Services Revenue",
+    "number": 4205,
+    "name": "MRI Revenue",
+    "keywords": "",
+    "description": "This revenue center includes income from fees derived from MRI (Magnetic Resonance Imaging) scan procedures, and study interpretation."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "In-House Imaging Services Revenue",
+    "number": 4300,
+    "name": "In-House Laboratory Revenue",
+    "keywords": "",
+    "description": "This revenue center includes fees related to in-house laboratory includes any pre-surgical operatory tests, CBCs (complete blood counts), serum/blood chemistries, urinalyses, fecal analyses, cytology analyses, and semen evaluations completed by practice employees using practice laboratory equipment and supplies. Skin scraping, phlebotomy, blind or ultrasound guided cystocentesis, or fine needle aspirate fees resulting from specimen collection (chemistry, cytology, and/or biopsy interpretation) should be included in this account."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "In-House Laboratory Services Revenue",
+    "number": 4400,
+    "name": "Outside Professional Service Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Outside Professional Service Revenue",
+    "number": 4401,
+    "name": "Outside Laboratory Revenue",
+    "keywords": "",
+    "description": "This revenue center includes fees related to income from outside lab tests such as state diagnostic labs, private reference labs such as Antech, IDEXX, Marshfield, Phoenix, Abaxis etc. Includes phlebotomy and urine collection fees including cystocentesis for urine testing, histopathology and necropsy fees when performed by an outside lab."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Outside Laboratory Service Revenue",
+    "number": 4402,
+    "name": "Outside Radiology (Imaging) Revenue",
+    "keywords": "",
+    "description": "This revenue center includes all fees related to radiological 3rd party overreads and consultations (of Xrays, etc)."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Outside Imaging Service Revenue",
+    "number": 4403,
+    "name": "Mortuary/Disposal Services",
+    "keywords": "cremation, burial",
+    "description": "This revenue center includes fees related to cremation, burial income, and related body care services. Include fee income for sales of cemetery plots, caskets, urns, paw prints, and associated patient memorial services or products. (Euthanasia procedure fees are included in account 5010 \u2013 Exam Revenue)."
+  },
+  {
+    "type": "Revenue",
+    "group": "Professional Services Revenue",
+    "subGroup": "Outside Mortuary Service Revenue",
+    "number": 4500,
+    "name": "Product Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Rx Medication Product Revenue",
+    "number": 4510,
+    "name": "Medication (FDA controlled) Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Rx Medication Product Revenue",
+    "number": 4511,
+    "name": "FDA Prescription Medication Revenue",
+    "keywords": "",
+    "description": "This revenue center includes revenue from the sale of FDA prescription medications such as pills, capsules, liquids, and any other FDA approved product category not listed in the 5100 to 5199 accounts."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Rx Medication Product Revenue",
+    "number": 4512,
+    "name": "Injection Revenue",
+    "keywords": "",
+    "description": "This revenue center includes income from FDA inpatient and outpatient injections and any injection fee and any associated packaging/dispensing/injection fees. Insulin, tranquilizers and Immiticide are included in this account. Does not include income from injections for anesthetics, euthanasia solutions, sedating agents, Proheart and Program."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Rx Medication Product Revenue",
+    "number": 4513,
+    "name": "Flea-Tick Non-HW Parasite Control Medication Revenue",
+    "keywords": "",
+    "description": "This revenue center includes income from FDA prescription products that prevent fleas and/or ticks, but not heartworms. Example: Comfortis, Program, NexGard & Bravecto."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Rx Medication Product Revenue",
+    "number": 4514,
+    "name": "HW Parasite Control Medication Revenue",
+    "keywords": "",
+    "description": "This revenue center includes income from any FDA product that prevents heartworms or combo HW and other internal or external parasites. Example: Sentinel, Trifexis, Heartguard, Advantage Multi, Revolution, Proheart-6, etc."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Rx Medication Product Revenue",
+    "number": 4515,
+    "name": "Internet Pharmacy Revenue",
+    "keywords": "website, web",
+    "description": "This revenue center includes the gross revenues resulting from sales made through a practice web portal, regardless of type of product, and whether or not sales are facilitated through a subcontracted vendor (VetSource, MyVetDirect, etc.) Also include income from products billed by the practice, but shipped directly to the client. Ancillary products may be split out if desired and put in the ancillary category (5804)."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Rx Medication Product Revenue",
+    "number": 4520,
+    "name": "Dietary Product Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Dietary Product Revenue",
+    "number": 4521,
+    "name": "Therapeutic Dietary Product Revenue",
+    "keywords": "",
+    "description": "This revenue center includes fees related to any food that is sold as a medical recommendation to support a patient suffering from a diagnosed specific medical health problem. Hint: while often called prescription diets they do not by law require a veterinarian to prescribe them but manufacturers do frequently limit their sales through veterinarians and veterinary hospitals."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Dietary Product Revenue",
+    "number": 4522,
+    "name": "Retail Dietary Product Revenue",
+    "keywords": "",
+    "description": "This revenue center includes fees related to any food that is sold as a wellness/maintenance diet, pediatric diet or traditional food WITHOUT a specific therapeutic dietary formulation for a diagnosed medical health problem."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Dietary Product Revenue",
+    "number": 4530,
+    "name": "Other Product Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Other Product Revenue",
+    "number": 4531,
+    "name": "OTC Shampoo",
+    "keywords": "",
+    "description": "This revenue center includes income from feesfrom shampoos including non-FDA shampoos and flea shampoos"
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Other Product Revenue",
+    "number": 4532,
+    "name": "OTC Nutriceutical",
+    "keywords": "",
+    "description": "This revenue center includes income from fees from OTC/Nutraceuticals - all therapeutic over-the-counter (non- prescription) products, including Chinese herbs and homeopathic products, dental hygiene products including Greenies and chews and nutraceuticals, probiotics, vitamins. Also includes Elizabethan anti-self-mutilation type collars, behavior modifying non-FDA therapeutics and other products used in behavior therapy, including Soft Paws and Thundershirts."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Other Product Revenue",
+    "number": 4533,
+    "name": "Pet Supplies",
+    "keywords": "",
+    "description": "This revenue center includes income from fees income from non-therapeutic, retail sales of leashes, harnesses, collars, toys, point of purchase items, brushes, flea combs, grooming sprays, candles, milk replacers, pet treats, deodorants, nail trimmers, pet carriers, pet ID tags, pill cutters, cat litter, etc. Includes city and county license tags."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Other Product Revenue",
+    "number": 4534,
+    "name": "OTC Flea-Tick Control Product",
+    "keywords": "",
+    "description": "This revenue center includes income from fees from EPA non-FDA flea control products such as topical application products (Frontline, Activyl, Vectra, Certifect, Cheristin, etc.), non-FDA oral flea treatments such as Capstar, flea sprays, powders, dips, and premise treatments."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Other Product Revenue",
+    "number": 4535,
+    "name": "Internet Ancillary Product",
+    "keywords": "website, web",
+    "description": "Include in this revenue center income from fees related to internet ancillary product sales if you wish to separate them from pharmacy items. Otherwise put everything under Pharmacy (see above 4515 Internet Pharmacy Revenue)."
+  },
+  {
+    "type": "Revenue",
+    "group": "Product Revenue",
+    "subGroup": "Other Product Revenue",
+    "number": 4600,
+    "name": "Boarding/Daycare Revenue",
+    "keywords": "kennel, resort, daycare",
+    "description": "This revenue center includes income from fees from boarding and daycare services. If revenues from daycare services are substantial, a separate subaccount of boarding income can be used. If hospital housing is required due to medical condition treatment, doctor observation and nursing need, use hospitalization account 5020."
+  },
+  {
+    "type": "Revenue",
+    "group": "Non-Professional Service Revenue",
+    "subGroup": "Non-Professional Service Revenue",
+    "number": 4700,
+    "name": "Grooming Revenue",
+    "keywords": "",
+    "description": "This revenue center includes income from bathing & grooming services and associated anal sac expression and nail trim procedures, when bundled and provided by grooming personnel. Do not include fees related to treatment of medical conditions discovered during grooming services, such as ear care. If anesthesia or sedation is required to perform grooming services, these procedures are coded to anesthesia account 5600 unless bundled with grooming."
+  },
+  {
+    "type": "Revenue",
+    "group": "Non-Professional Service Revenue",
+    "subGroup": "Non-Professional Service Revenue",
+    "number": 4800,
+    "name": "Wellness Program Revenue",
+    "keywords": "",
+    "description": "This revenue center includes all wellness program revenues (typically recurring monthly revenues) for non-medical health and nutrition"
+  },
+  {
+    "type": "Revenue",
+    "group": "Discounts, Returns and Refunds",
+    "subGroup": "Discounts, Returns and Refunds",
+    "number": 4900,
+    "name": "Discounts Returns & Allowances (contra accounts)",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Revenue",
+    "group": "Discounts, Returns and Refunds",
+    "subGroup": "Discounts, Returns and Refunds",
+    "number": 4901,
+    "name": "Fee Discounts",
+    "keywords": "",
+    "description": "This revenue center includes client and employee discounts and fee accommodations are posted to this account. In the veterinary profession, the level of fee discounting can be relatively significant. For this reason, discounts are recorded as a debit directly offsetting operational revenues, so that management has an improved awareness of discounting impact on overall cost of operations. When offset against gross revenues charged, discounts reduce the total operating revenue figure that is used to calculate each expense as a percent of it. One challenge is that all fee discounts are not recorded in practice records. Many times, veterinarians provide free services (either intentionally or accidentally) that are never shown on the practice\u2019s records, thus understating the true level of client discounts. This oversight creates yet another problem: no recorded history of what was done for the patient exists."
+  },
+  {
+    "type": "Revenue",
+    "group": "Discounts, Returns and Refunds",
+    "subGroup": "Discounts, Returns and Refunds",
+    "number": 4902,
+    "name": "Returns & Allowances",
+    "keywords": "refund, chargeback",
+    "description": "Returns and allowances are fee amounts the practice returns to clients for disputed work, such as when a client is billed twice for the same procedure or when a client returns dispensed product they believe is not efficacious. The practice bookkeeper prepares a check or other payment to the client as settlement. This account carries a debit balance and as such, is an offsetting account to revenues (revenue accounts normally carry a credit balance). Transaction postings to this account decrease the practice gross revenue."
+  },
+  {
+    "type": "COGS",
+    "group": "Outside Clinical Services Costs",
+    "subGroup": "Outside Clinical Services Costs",
+    "number": 5100,
+    "name": "Outside (1099) Clinical Services Costs",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "COGS",
+    "group": "Outside Clinical Services Costs",
+    "subGroup": "Outside Clinical Services Costs",
+    "number": 5101,
+    "name": "Relief Emergency Professional Service Costs",
+    "keywords": "1099, locum",
+    "description": "Cost of 1099 or locum emergency doctors, whether full-time or part-time"
+  },
+  {
+    "type": "COGS",
+    "group": "Outside Clinical Services Costs",
+    "subGroup": "Outside Clinical Services Costs",
+    "number": 5102,
+    "name": "Radiology Professional Service Costs",
+    "keywords": "1099, locum",
+    "description": "Cost of 1099 radiologists performing work on premises"
+  },
+  {
+    "type": "COGS",
+    "group": "Outside Clinical Services Costs",
+    "subGroup": "Outside Clinical Services Costs",
+    "number": 5103,
+    "name": "SurgicalProfessional Service Costs",
+    "keywords": "1099, locum",
+    "description": "Cost of 1099 surgeons performing work on premises"
+  },
+  {
+    "type": "COGS",
+    "group": "Outside Clinical Services Costs",
+    "subGroup": "Outside Clinical Services Costs",
+    "number": 5104,
+    "name": "Other Specialty Professional Service Costs",
+    "keywords": "medical consultant, 1099, locum",
+    "description": "Cost of other types of specialists operating as 1099 contractors performing work on premises"
+  },
+  {
+    "type": "COGS",
+    "group": "In-House Imaging Costs",
+    "subGroup": "In-House Imaging Costs",
+    "number": 5200,
+    "name": "In-House Imaging Costs",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "COGS",
+    "group": "In-House Imaging Costs",
+    "subGroup": "In-House Imaging Costs",
+    "number": 5201,
+    "name": "X-Ray Cost",
+    "keywords": "",
+    "description": "Variable cost of x-Rays performed"
+  },
+  {
+    "type": "COGS",
+    "group": "In-House Imaging Costs",
+    "subGroup": "In-House Imaging Costs",
+    "number": 5202,
+    "name": "Dental X-Ray Cost",
+    "keywords": "",
+    "description": "Variable cost of dental x-Rays performed"
+  },
+  {
+    "type": "COGS",
+    "group": "In-House Imaging Costs",
+    "subGroup": "In-House Imaging Costs",
+    "number": 5203,
+    "name": "CT Cost",
+    "keywords": "",
+    "description": "Variable cost of CT scans performed"
+  },
+  {
+    "type": "COGS",
+    "group": "In-House Imaging Costs",
+    "subGroup": "In-House Imaging Costs",
+    "number": 5204,
+    "name": "Ultrasound Cost",
+    "keywords": "",
+    "description": "Variable cost of ultrasounds performed"
+  },
+  {
+    "type": "COGS",
+    "group": "In-House Imaging Costs",
+    "subGroup": "In-House Imaging Costs",
+    "number": 5205,
+    "name": "MRI Cost",
+    "keywords": "",
+    "description": "Variable cost of MRIs performed"
+  },
+  {
+    "type": "COGS",
+    "group": "In-House Laboratory Costs",
+    "subGroup": "In-House Laboratory Costs",
+    "number": 5300,
+    "name": "In-House Laboratory Costs",
+    "keywords": "",
+    "description": "Cost of any lab supplies, reagents or expendables along with minor non-depreciable equipment used in performing in-house lab testing. Does not include cost of significant equipment repairs, maintenance and service agreements which should be expensed separately under 7520 Maintenance, 7530 Service Contracts or 7570 Repairs. New capital equipment over $500 should be entered as an asset & depreciated."
+  },
+  {
+    "type": "COGS",
+    "group": "Outside Medical Services Costs",
+    "subGroup": "Outside Medical Services Costs",
+    "number": 5400,
+    "name": "Outside Medical Service Costs",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "COGS",
+    "group": "Outside Medical Services Costs",
+    "subGroup": "Outside Medical Services Costs",
+    "number": 5401,
+    "name": "Outside Laboratory Costs",
+    "keywords": "",
+    "description": "Cost of supplies or charges by reference lab for performing outside lab testing, histopathology and necropsy. Includes cost of mailing samples to lab. Includes consulting fees by lab pathologist."
+  },
+  {
+    "type": "COGS",
+    "group": "Outside Medical Services Costs",
+    "subGroup": "Outside Medical Services Costs",
+    "number": 5402,
+    "name": "Outside Radiology (Imaging) Costs",
+    "keywords": "",
+    "description": "Charges related to radiological 3rd party overreads and consultations (of Xrays, sonograms, MRI's, CT's etc)."
+  },
+  {
+    "type": "COGS",
+    "group": "Outside Medical Services Costs",
+    "subGroup": "Outside Medical Services Costs",
+    "number": 5403,
+    "name": "Mortuary/Cremation/Disposal Services",
+    "keywords": "",
+    "description": "Charges paid to 3rd parties related to the disposal of and/or mortuary services for deceased animals."
+  },
+  {
+    "type": "COGS",
+    "group": "Medical Supplies Cost",
+    "subGroup": "Medical Supplies",
+    "number": 5500,
+    "name": "Medical Supplies",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "COGS",
+    "group": "Medical Supplies Cost",
+    "subGroup": "Medical Supplies",
+    "number": 5501,
+    "name": "General Medical Supplies",
+    "keywords": "",
+    "description": "Cost of general medical supplies, such as gauze, tape, sutures, IV fulids, etc"
+  },
+  {
+    "type": "COGS",
+    "group": "Medical Supplies Cost",
+    "subGroup": "Medical Supplies",
+    "number": 5502,
+    "name": "Blood Products",
+    "keywords": "",
+    "description": "Cost of blood products"
+  },
+  {
+    "type": "COGS",
+    "group": "Medical Supplies Cost",
+    "subGroup": "Medical Supplies",
+    "number": 5503,
+    "name": "Surgical Supplies",
+    "keywords": "",
+    "description": "Cost of surgical supplies, such as screws, plates, etc."
+  },
+  {
+    "type": "COGS",
+    "group": "Medical Supplies Cost",
+    "subGroup": "Medical Supplies",
+    "number": 5504,
+    "name": "Laboratory Supplies",
+    "keywords": "",
+    "description": "Cost of  all in-house lab supplies, including reagents, etc."
+  },
+  {
+    "type": "COGS",
+    "group": "Medical Supplies Cost",
+    "subGroup": "Medical Supplies",
+    "number": 5505,
+    "name": "Oxygen Supplies",
+    "keywords": "",
+    "description": "Cost of oxygen cannisters and/or oxygen generators (amortized)."
+  },
+  {
+    "type": "COGS",
+    "group": "Medical Supplies Cost",
+    "subGroup": "Medical Supplies",
+    "number": 5506,
+    "name": "Dermatological Supplies",
+    "keywords": "",
+    "description": "Cost of dermatological supplies used for in-hospital treatments, including creams, etc. (those solf to customers are included in either prescription or OTC product costs)"
+  },
+  {
+    "type": "COGS",
+    "group": "Medical Supplies Cost",
+    "subGroup": "Medical Supplies",
+    "number": 5507,
+    "name": "Oncology Supplies",
+    "keywords": "",
+    "description": "Cost of medical oncological supplies used for in-hospital treatments, including chemotherapy supplies."
+  },
+  {
+    "type": "COGS",
+    "group": "Medical Supplies Cost",
+    "subGroup": "Medical Supplies",
+    "number": 5508,
+    "name": "Other Specialty Supplies",
+    "keywords": "",
+    "description": "Cost of specialty supplies not captured in the other accounts, perhaps including ophthalmological supplies."
+  },
+  {
+    "type": "COGS",
+    "group": "Medical Supplies Cost",
+    "subGroup": "Medical Supplies",
+    "number": 5509,
+    "name": "Digital COGS Supplies or Services",
+    "keywords": "",
+    "description": "Payments to 3rd parties for digital supplies and/or services associated with costs of goods sold, such as \"health certificates\" for customers, or management of regulatory (SDS filings, etc) requirements, or any royalties/fees paid to distribution channels as a % of revenue they generate"
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Drug Product Costs",
+    "number": 5700,
+    "name": "Product Costs",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Rx Medication Costs",
+    "number": 5710,
+    "name": "Medication (FDA controlled) Costs",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Rx Medication Costs",
+    "number": 5711,
+    "name": "FDA Prescription Medication Costs",
+    "keywords": "",
+    "description": "FDA prescription medications such as pills, capsules, liquids, and any other FDA approved product category not listed in the 6100 to 6199 accounts. Also include pharmacy dispensing supplies such as prescription containers and labels."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Rx Medication Costs",
+    "number": 5712,
+    "name": "Injection Costs",
+    "keywords": "",
+    "description": "Includes all FDA injectable medications billed as pharmacy injection income. It does include insulin and Immiticide injections."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Rx Medication Costs",
+    "number": 5713,
+    "name": "Flea-Tick Non-HW Parasite Control Medication Cost",
+    "keywords": "",
+    "description": "Includes FDA prescription products that prevent fleas and/or ticks, but not heartworm. Examples: Comfortis, Program, Nexgard, Bravecto etc."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Rx Medication Costs",
+    "number": 5714,
+    "name": "HW Parasite Control Medication Cost",
+    "keywords": "",
+    "description": "Includes purchases of any FDA product that prevents heartworms or combination products that prevent heartworms and other internal or external parasites. Examples: Sentinel, Trifexis, Heartguard, Advantage Multi, Revolution, Proheart-6, etc."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Rx Medication Costs",
+    "number": 5715,
+    "name": "Internet Pharmacy Cost",
+    "keywords": "website, web",
+    "description": "Includes cost of products resulting in sales made through a web portal either belonging to the practice or a subcontracted vendor such as VetSource, Vet Centric, MyVetDirect or Henry Schein portal. The practice may split out ancillary products if they desire and expense separately to 6804 Ancillary Internet Costs. Subcontracted vendors usually pay the practice the net amount of sales made to clients, so a journal entry may be required to record sales at gross (in account 5130) and the related cost here."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "OTC Dietary Product Costs",
+    "number": 5720,
+    "name": "OTC Dietary Products",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "OTC Dietary Product Costs",
+    "number": 5721,
+    "name": "Therapeutic Dietary Product Cost",
+    "keywords": "",
+    "description": "Cost of pet foods that are sold as a therapeutic medical recommendation to address a patient\u2019s diagnosed medical health."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "OTC Dietary Product Costs",
+    "number": 5722,
+    "name": "Retail Dietary Product Cost",
+    "keywords": "",
+    "description": "Cost of pet foods that are sold as a wellness/maintenance diet, pediatric diet or traditional food WITHOUT a specific therapeutic dietary formulation for a diagnosed medical health problem."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Other OTC Product Costs",
+    "number": 5730,
+    "name": "Other OTC Product Costs",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Other OTC Product Costs",
+    "number": 5731,
+    "name": "OTC Shampoo",
+    "keywords": "",
+    "description": "Includes all therapeutic OTC products, probiotics, dental hygiene OTC products including Greenies, nutraceuticals, vitamins, alternative medicine and acupuncture products such as needles and Chinese herbs, Elizabethan self- mutilation type collars, non-FDA shampoos, behavior modifying products used in behavior therapy including Soft Paws and Thunder Shirts."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Other OTC Product Costs",
+    "number": 5732,
+    "name": "OTC Nutriceutical",
+    "keywords": "",
+    "description": "Includes all therapeutic OTC products, probiotics, dental hygiene OTC products including Greenies, nutraceuticals, vitamins, alternative medicine and acupuncture products such as needles and Chinese herbs, Elizabethan self- mutilation type collars, non-FDA shampoos, behavior modifying products used in behavior therapy including Soft Paws and Thunder Shirts."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Other OTC Product Costs",
+    "number": 5733,
+    "name": "Pet Supplies",
+    "keywords": "products",
+    "description": "Include all retail costs of product sold in hospital. May include all non-medical products such as leashes, harnesses, collars, toys, point of purchase items, brushes, flea combs, grooming sprays, candles, milk replacers, pet treats, Pill Pockets, deodorants, nail trimmers, pet carriers, pet ID tags, pill cutters, air fresheners, etc. Include city/county license tags in this account."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Other OTC Product Costs",
+    "number": 5734,
+    "name": "OTC Flea-Tick Control Product",
+    "keywords": "",
+    "description": "Include all EPA non-FDA flea control products such as topically applied products (Frontline, Activyl, Vectra, Certifect, Cheristin, etc.), Capstar, sprays, powders, dips, and premise treatments. Flea shampoos are all in 6801 OTC Products, Shampoos & Nutraceutical Costs."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Products Sold",
+    "subGroup": "Other OTC Product Costs",
+    "number": 5735,
+    "name": "Internet Ancillary Product",
+    "keywords": "website, web",
+    "description": "Record costs in this account resulting from ancillary product sales made through a practice web portal. If not separated from Internet pharmacy costs, include all in account number 6130 Internet Pharmacy Costs."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Non-Professional Services",
+    "subGroup": "Cost of Non-Professional Services",
+    "number": 5800,
+    "name": "Boarding Cost",
+    "keywords": "",
+    "description": "Food, bedding, food/water bowls and kitty litter pans and litter used exclusively for the maintenance of boarded or hospitalized animals. Include any other expense you know to be only for boarded pets and not comingled with other areas of the hospital."
+  },
+  {
+    "type": "COGS",
+    "group": "Cost of Non-Professional Services",
+    "subGroup": "Cost of Non-Professional Services",
+    "number": 5900,
+    "name": "Grooming Cost",
+    "keywords": "",
+    "description": "Include all supplies for the grooming and bathing of pets in the hospital. May include gallon sized grooming shampoos and supplies used by groomers."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Salary Expense",
+    "number": 6000,
+    "name": "Salary Expense",
+    "keywords": "payroll, wage",
+    "description": "All salaries exclude the amounts earned, but reserved for sick time, vacation time, but include the portions of salaries withheld for garnishments, which should appears onteh balance sheet to the extent they are payable."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6100,
+    "name": "Doctor Salary Expense",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6101,
+    "name": "Companion Animal Generalist Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6102,
+    "name": "Equine Generalist Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6103,
+    "name": "Farm Animal Generalist Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6104,
+    "name": "Zoological Generalist Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6110,
+    "name": "Emergency/Critical Care Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6120,
+    "name": "Specialist Doctor Salary Expense",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6121,
+    "name": "Surgery Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6122,
+    "name": "Internal Medicine Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6123,
+    "name": "Cardiology Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6124,
+    "name": "Oncology, Medical Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6125,
+    "name": "Oncology, Radiation Doctor Salary ",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6126,
+    "name": "Neurology Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6127,
+    "name": "Ophthalmology Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6128,
+    "name": "Dermatology Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6129,
+    "name": "Dentistry Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6130,
+    "name": "Radiology, Diagnostic Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6131,
+    "name": "Anesthesia/Pain Management Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6132,
+    "name": "Alternative/Acupuncture Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6133,
+    "name": "Behavior Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6134,
+    "name": "Rehabilitiation Therapy Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6135,
+    "name": "Nutrition Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6136,
+    "name": "Avian/Extics Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6137,
+    "name": "Diagnostic Lab / Clinical Pathology Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Doctor Salary Expense",
+    "number": 6138,
+    "name": "Theriogenology Doctor Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6200,
+    "name": "Technician Salary Expense",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6201,
+    "name": "Companion Animal Generalist Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6202,
+    "name": "Equine Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6203,
+    "name": "Farm Animal Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6204,
+    "name": "Zoological Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6210,
+    "name": "Emergency/Critical Care Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6220,
+    "name": "Specialty Technican Salary Expense",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6221,
+    "name": "Surgery Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6222,
+    "name": "Internal Medicine Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6223,
+    "name": "Cardiology Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6224,
+    "name": "Oncology, Medical Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6225,
+    "name": "Oncology, Radiation Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6226,
+    "name": "Neurology Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6227,
+    "name": "Ophthalmology Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6228,
+    "name": "Dermatology Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6229,
+    "name": "Dentistry Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6230,
+    "name": "Radiology, Diagnostic Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6231,
+    "name": "Anesthesia/Pain Management Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6232,
+    "name": "Alternative/Acupuncture Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6233,
+    "name": "Behavior Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6234,
+    "name": "Rehabilitiation Therapy Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6235,
+    "name": "Nutrition Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6236,
+    "name": "Avian/Extics Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6237,
+    "name": "Diagnostic Lab / Clinical Pathology Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Technician Salary Expense",
+    "number": 6238,
+    "name": "Theriogenology Technician Salary",
+    "keywords": "payroll, wage",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Salary Expense",
+    "number": 6300,
+    "name": "Other Salary Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Salary Expense",
+    "number": 6310,
+    "name": "Client Service Representative (\"CSR\") Salary Expense",
+    "keywords": "reception, receptionist, payroll, wage",
+    "description": "Gross wages, commissions, and/or bonuses for receptionists and client service representatives (CSRs)."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Salary Expense",
+    "number": 6320,
+    "name": "Management Salary Expense",
+    "keywords": "payroll, wage",
+    "description": "Gross wages, commissions, and/or bonuses for employees managing the practice"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Salary Expense",
+    "number": 6330,
+    "name": "Adminstrative Salary Expense",
+    "keywords": "payroll, wage",
+    "description": "Gross wages, commissions, and/or bonuses for employees providing predominantly administrative, managerial, or back office services."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Salary Expense",
+    "number": 6340,
+    "name": "Maintenance Salary Expense",
+    "keywords": "Janitor, Custodian, payroll, wage",
+    "description": "Gross wages, commissions, and/or bonuses for employees performing janatorial and building maintenance work."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Salary Expense",
+    "number": 6350,
+    "name": "Groomer Compensation Expense",
+    "keywords": "payroll, wage",
+    "description": "Gross wages, commissions, and/or bonuses for pet groomers."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Salary Expense",
+    "number": 6360,
+    "name": "Boarding Staff Compensation Expense",
+    "keywords": "kennel, payroll, wage",
+    "description": "Gross wages, commissions, and/or bonuses for boarding/kennel staff."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Salary Expense",
+    "number": 6370,
+    "name": "Owner Compensation Expense",
+    "keywords": "payroll, wage",
+    "description": "The gross amount (before tax withholdings) of salaries, wages, bonuses, commissions, and guaranteed payments paid to owner-employees post to this account. LLC member distributions, partner draws, and sole proprietor draws are recorded in accounts 3204, 3304 and 3403. Each veterinarian employee-owner can be listed individually with a sub-account (7001, 7002, etc.) if desired for additional detail within financial reports. This account should include the wages paid to owner veterinarians for clinical time (excludes compensation for management time which should be expensed in 7005 Owner Management Compensation)."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee-Related Taxes & Benefits Expenses",
+    "number": 6400,
+    "name": "Employee-Related Taxes & Benefits Expenses",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Payroll Tax Expense",
+    "number": 6410,
+    "name": "Employer Payroll Taxes",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Payroll Tax Expense",
+    "number": 6411,
+    "name": "FICA Tax Expense -- Employers Portion",
+    "keywords": "",
+    "description": "This account expenses the employer\u2019s portion of social security (OASDI) and Medicare tax matching funds (to those withheld from employee wages)."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Payroll Tax Expense",
+    "number": 6412,
+    "name": "Federal Unemployment Tax Expense",
+    "keywords": "",
+    "description": "Employers must pay federal taxes to fund unemployment claims. The unemployment tax amounts required by state law are coded to the next account."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Payroll Tax Expense",
+    "number": 6413,
+    "name": "State Unemployment Tax Expense",
+    "keywords": "",
+    "description": "Employers must pay state taxes to fund unemployment claims. The unemployment tax amounts required by federal law are coded to the prior account."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Payroll Tax Expense",
+    "number": 6414,
+    "name": "Other Employer Payroll Tax Expense",
+    "keywords": "",
+    "description": "Some states require other tax payments by employers, and these more unique employment tax payments should be coded to this account."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6420,
+    "name": "Employer Fringe Benefits Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6421,
+    "name": "Group Health Insurance Premium",
+    "keywords": "",
+    "description": "Payments made to cover the employer portion of the cost of Group Health Insurance Plans for employees"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6422,
+    "name": "S-Corporation Shareholder Health Insurance Premium",
+    "keywords": "",
+    "description": "Payments made to cover the shareholder portion of the cost of Group Health Insurance Plans for shareholders"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6423,
+    "name": "Group Dental/Vision Insurance Premium Expense",
+    "keywords": "",
+    "description": "Payments made to cover the employer portion of the cost of Group Dental/Vision Insurance plans for employees"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6424,
+    "name": "Group Disability Insurance Premium Expense",
+    "keywords": "",
+    "description": "Payments made to cover the employer portion of the cost of Group Disability Insurance Plans for employees"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6425,
+    "name": "Group Term Life Insurance Premium Expense",
+    "keywords": "",
+    "description": "Payments made to cover the employer portion of the cost of Group Life Insurance Plans for key employees"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6426,
+    "name": "Employer Retirement Plan (e.g. 401(k)) Contribution Expense",
+    "keywords": "",
+    "description": "Payments made by the employer as contributions to theretirement plan for all employees (matching payments, etc)"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6427,
+    "name": "Profit-Sharing Expense",
+    "keywords": "",
+    "description": "Standard profit-sharing bonuses across a wide section of employees, rather than employee-specific bonuses (which would be listed in salary expense)"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6430,
+    "name": "Paid Time Off (PTO) Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6431,
+    "name": "Sick Pay",
+    "keywords": "",
+    "description": "Payments made to employees for time they were sick and unable to work"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee Benefits Expense",
+    "number": 6432,
+    "name": "Vacation Pay",
+    "keywords": "",
+    "description": "Payments made to employees for \"paid vacation\" time"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee-Related Insurance Expense",
+    "number": 6440,
+    "name": "Employee-Related Insurance Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee-Related Insurance Expense",
+    "number": 6441,
+    "name": "Professional Liability Insurance Expense",
+    "keywords": "",
+    "description": "Premiums paid for insurance to cover PLIT (Professional Liability Insurance) for doctors"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee-Related Insurance Expense",
+    "number": 6442,
+    "name": "Workers Compensation Insurance Expense",
+    "keywords": "",
+    "description": "Tax or premiums paid for practice insurance that manages the risk of claims related to employee injury on the job, and provides wage replacement and medical benefits in exchange for mandatory relinquishment of the employee\u2019s right to sue the employer for negligence. Direct payment for small dollar value medical payments related to on the job injuries in order to mitigate workers\u2019 comp."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Employee-Related Insurance Expense",
+    "number": 6443,
+    "name": "Employment Practices Liability Insurance Expense",
+    "keywords": "",
+    "description": "Premiums paid for insurance to cover Employment Practices Liability Insurance"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Continuing Education Expense",
+    "number": 6450,
+    "name": "Continuing Education Expense",
+    "keywords": "",
+    "description": "Payments made to enroll employees in webinars, seminars, conferences and conventions for the purposes of expanding skills and knowledge, as well as complying with regulatory guidelines to maintain professional licensure in that particular state."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Continuing Education Expense",
+    "number": 6451,
+    "name": "Registration Fees",
+    "keywords": "",
+    "description": "Registration fees for conferences or other symposia, whether physical or virtual"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Continuing Education Expense",
+    "number": 6452,
+    "name": "Educational Materials Expense",
+    "keywords": "",
+    "description": "Payments made to purchase materials (books, trade magazines, conference materials, etc) related to continuing education"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Continuing Education Expense",
+    "number": 6453,
+    "name": "Staff Training Fees & Costs",
+    "keywords": "",
+    "description": "Payments made to facilitate internal staff training"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Travel & Lodging Expense",
+    "number": 6460,
+    "name": "Travel & Lodging Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Travel & Lodging Expense",
+    "number": 6461,
+    "name": "Common Carrier Travel",
+    "keywords": "Airline, airfare, train ticket, bus ticket",
+    "description": "Payments made to purchase plane tickets, train tickets, bus tickets, baggage fees, etc for buisness-related travel"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Travel & Lodging Expense",
+    "number": 6462,
+    "name": "Lodging",
+    "keywords": "",
+    "description": "Payments made for accomodiations for buisness-related travel"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Travel & Lodging Expense",
+    "number": 6463,
+    "name": "Ground Transportation",
+    "keywords": "",
+    "description": "Payments made rental cars or taxis/Ubers for buisness-related travel"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Travel & Lodging Expense",
+    "number": 6464,
+    "name": "Mileage Reimbursement (eg for CE travel)",
+    "keywords": "",
+    "description": "Payments made to reimburse employees for their use of their own vehicles for buisness-related travel, including for parking"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Employee-Related Expenses",
+    "number": 6470,
+    "name": "Other Employee-Related Expenses",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Employee-Related Expenses",
+    "number": 6471,
+    "name": "Study Group Fees (e.g., VMG)",
+    "keywords": "VMG",
+    "description": "This account includes annual dues/expenses, quarterly fees, travel expenses, hotel/lodging expenses, materials & production expenses associated with study groups."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Employee-Related Expenses",
+    "number": 6472,
+    "name": "Employee Business Meals & Entertainment",
+    "keywords": "",
+    "description": "Expense amounts paid for feeding employees who are working on behalf of the practice to recruit new employees or clients, gain training, improving skills, networking, meeting, etc."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Employee-Related Expenses",
+    "number": 6473,
+    "name": "Staff Events & Recreation",
+    "keywords": "",
+    "description": "Expenditures coded to this account typically include staff picnics and holiday parties, but can include other practice financial support of events wherein 100% of all current employees are invited and included in the event."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Employee-Related Expenses",
+    "number": 6474,
+    "name": "Employee Recruitment",
+    "keywords": "",
+    "description": "Expenses coded to this account may include the cost of background checks, pre-employment drug screening, reimbursed airfare for purpose of interview visits, reimbursed moving expenses, etc."
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Employee-Related Expenses",
+    "number": 6475,
+    "name": "Laundry & Uniform",
+    "keywords": "",
+    "description": "Expenses related to the purhase or cleaning of uniforms for staff"
+  },
+  {
+    "type": "Expense",
+    "group": "Labor Expense",
+    "subGroup": "Other Employee-Related Expenses",
+    "number": 6476,
+    "name": "Employee Gifts",
+    "keywords": "",
+    "description": "Expenses related to the purhase of gifts or gift cards for staff"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Facility Expense",
+    "number": 6500,
+    "name": "Facility Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Facility Expense",
+    "number": 6501,
+    "name": "Real Estate Rental Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Facility Expense",
+    "number": 6502,
+    "name": "Common Area Maintenance (CAM) Charges",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Facility Expense",
+    "number": 6503,
+    "name": "Remote Storage Expense",
+    "keywords": "",
+    "description": "Payments made to rent off-premises storage space are coded to this account."
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Facility Expense",
+    "number": 6504,
+    "name": "Building Maintenance",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to maintain the building on an a la carte basis (rather than as a fixed price service contract)"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Facility Expense",
+    "number": 6505,
+    "name": "Building Service Contract",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to maintain the building as part of a service contract"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Facility Expense",
+    "number": 6506,
+    "name": "Facility Repairs",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to repair Facilities"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Facility Expense",
+    "number": 6507,
+    "name": "Janatorial/Cleaning Expense",
+    "keywords": "",
+    "description": "This account includes payments to a contracted cleaning, maid, or janitorial service as well as supplies associated with facility cleaning."
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Facility Expense",
+    "number": 6508,
+    "name": "Environmental Control",
+    "keywords": "pest, mold",
+    "description": "This account includes payments to a pest or mold control companies servicing the facilities"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6510,
+    "name": "Equipment Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6511,
+    "name": "Equipment Rental Expense",
+    "keywords": "",
+    "description": "This account includes one-time equipment rental fees, such as a pressure washer to clean the practice facility. Operating lease payments (non-purchase leases) should also be included here. Many leases are purchases in disguise and should be capitalized to the 2000 account series with an associated liability included in the 3030 account series. Talk with the practice\u2019s CPA to ensure proper accounting of the practice\u2019s leases."
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6512,
+    "name": "Minor Equipment Purchase Expense",
+    "keywords": "",
+    "description": "Payments made to purchase minor equipment (typically less than $300)."
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6520,
+    "name": "Equipment Maintenance Expense, In-House",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6521,
+    "name": "Medical Equipment Maintenance",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to maintain Medical Equipment on an a la carte basis (rather than as a fixed price service contract)"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6522,
+    "name": "Lab Equipment Maintenance",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to maintain Lab Equipment on an a la carte basis (rather than as a fixed price service contract)"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6523,
+    "name": "Office Equipment Maintenance",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to maintain Office Equipment on an a la carte basis (rather than as a fixed price service contract)"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6524,
+    "name": "Computer/IT Equipment Maintenance",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to maintain Computer/IT Equipment on an a la carte basis (rather than as a fixed price service contract)"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6530,
+    "name": "Equipment Maintenance, Service Contracts",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6531,
+    "name": "Medical Equipment Service Contract",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to maintain Medical Equipment as part of a service contract"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6532,
+    "name": "Lab Equipment Service Contract",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to maintain Lab Equipment as part of a service contract"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6533,
+    "name": "Office Equipment Service Contract",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to maintain Office Equipment as part of a service contract"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6534,
+    "name": "Computer/IT Equipment Service Contract",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to maintain Computer/IT Equipment as part of a service contract"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6540,
+    "name": "Equipment Repair Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6541,
+    "name": "Medical Equipment Repairs",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to repair Medical Equipment"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6542,
+    "name": "Lab Equipment Repairs",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to repair Lab Equipment"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6543,
+    "name": "Office Equipment Repairs",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to repair Office Equipment"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Equipment Expense",
+    "number": 6544,
+    "name": "Computer/IT Equipment Repairs",
+    "keywords": "",
+    "description": "Payments made to 3rd parties to repair Computer/IT Equipment"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Property Tax Expense",
+    "number": 6550,
+    "name": "Property Tax Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Property Tax Expense",
+    "number": 6551,
+    "name": "Real Estate/Property Tax Expense",
+    "keywords": "",
+    "description": "The lease agreement and who owns practice real estate makes determination of whether the practice or the landlord pays real estate taxes."
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Property Tax Expense",
+    "number": 6552,
+    "name": "Personal Property Tax Expense",
+    "keywords": "",
+    "description": "Record tangible and intangible personal property tax payments in this account, when applicable in your practice\u2019s state. See account 3420 Accrued Property Tax for additional explanation."
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Practice Vehicle Expense",
+    "number": 6560,
+    "name": "Practice Vehicle Expense",
+    "keywords": "car, truck, vehicle",
+    "description": "Costs associated with running and maintaining a practice vehicle for business purposes should be coded here, including gasoline/diesel, vehicle repairs and maintenance, vehicle insurance, and vehicle license renewals. If the vehicle is leased, lease payments are classed here."
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Utility Expense",
+    "number": 6570,
+    "name": "Utility Services",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Utility Expense",
+    "number": 6571,
+    "name": "Electricity",
+    "keywords": "",
+    "description": "Payments made to 3rd parties for electricity"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Utility Expense",
+    "number": 6572,
+    "name": "Natural Gas/Oil/Propane",
+    "keywords": "",
+    "description": "Payments made to 3rd parties for fossil fuels"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Utility Expense",
+    "number": 6573,
+    "name": "Water",
+    "keywords": "",
+    "description": "Payments made to 3rd parties for water or water/sewer (they are sometimes combined on a single bill by the utility)"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Utility Expense",
+    "number": 6574,
+    "name": "Sewer",
+    "keywords": "",
+    "description": "Payments made to 3rd parties for sewer, if separately paid"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Utility Expense",
+    "number": 6575,
+    "name": "Garbage Removal",
+    "keywords": "",
+    "description": "Payments made to 3rd parties for ordinary refuse removal (not to include mortuary)"
+  },
+  {
+    "type": "Expense",
+    "group": "Facility & Equipment Expense",
+    "subGroup": "Utility Expense",
+    "number": 6576,
+    "name": "Security System Expense",
+    "keywords": "fire, burglar, security",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Communication Expense",
+    "subGroup": "Communication Services Expense",
+    "number": 6580,
+    "name": "Communication Services",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Communication Expense",
+    "subGroup": "Communication Services Expense",
+    "number": 6581,
+    "name": "Landline Voice",
+    "keywords": "phone",
+    "description": "Payments made to 3rd parties for landline voice services"
+  },
+  {
+    "type": "Expense",
+    "group": "Communication Expense",
+    "subGroup": "Communication Services Expense",
+    "number": 6582,
+    "name": "Mobile Voice",
+    "keywords": "cell, data plan",
+    "description": "Payments made to 3rd parties for mobile voice/internet services"
+  },
+  {
+    "type": "Expense",
+    "group": "Communication Expense",
+    "subGroup": "Communication Services Expense",
+    "number": 6583,
+    "name": "Answering Service",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Communication Expense",
+    "subGroup": "Communication Services Expense",
+    "number": 6584,
+    "name": "Landline Internet & TV",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6600,
+    "name": "Administrative Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6601,
+    "name": "Licenses & Permits",
+    "keywords": "",
+    "description": "Include expenditures for professional and business licenses and permits, such as veterinary and technician license fees, DEA licenses, building occupancy permits, and kennel permits."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6602,
+    "name": "Use Tax",
+    "keywords": "",
+    "description": "Use tax paid on applicable purchases can be allocated to the appropriate expense category rather than using this account, if you prefer."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6603,
+    "name": "Franchise Tax",
+    "keywords": "",
+    "description": "Record state franchise, commercial activity, or other similar state tax payments to this account."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6604,
+    "name": "Other Tax",
+    "keywords": "",
+    "description": "Use this account to record other taxes levied on the practice that do not appropriately fit elsewhere. Note well: payroll taxes, workers compensation premiums/tax, corporate income taxes, real estate taxes, personal property taxes, etc. should all be coded elsewhere."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6605,
+    "name": "Veterinary & Professional Dues/Licenses",
+    "keywords": "",
+    "description": "Expense to this account expenditure made for AVMA, AAHA, VHMA, state and local associations, and business associations such as chamber of commerce membership dues."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6606,
+    "name": "Subscriptions",
+    "keywords": "",
+    "description": "Expense to this account recurring expenditures (even if prepaid, as with software licenses) made for subscriptions for periodicals and/or software (& cloud-based services) used by the business that cannot be directly linked to revenue generation"
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6607,
+    "name": "Client Education Material",
+    "keywords": "",
+    "description": "Use this account to expense newsletters, brochures, other client education materials, and postage related to newsletter mailings."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6608,
+    "name": "Business Gifts",
+    "keywords": "",
+    "description": "Gifts, flowers, cards, food baskets, sympathy cards and expression of sympathy gifts."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6609,
+    "name": "Charitable Contributions",
+    "keywords": "",
+    "description": "Record payments made to qualified charitable organizations to this account only if no current or future practice promotional benefit is received. If such donations have promotional and marketing benefit that advances client acquisition and growth, then consider classing such payments as advertising and marketing expense, even if made to qualified charitable organizations. If you received a direct benefit, such as a meal, then the fair market value of the direct benefit should be coded to the appropriate account (7440, in this example), with the difference coded to charitable contributions. For example, if the practice pays $100 to a qualified charitable organization and in return receives a meal with a value of $20, then of the $100 expense, $80 should be coded to account 7740 and $20 should be coded to account 7440, assuming there is a business purpose for attendance and business discussion relative to the practice."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6610,
+    "name": "Computer Supplies",
+    "keywords": "",
+    "description": "Post transactions for peripheral supplies such as cables and small dollar-value software to this account. Minor equipment and software acquisitions may be expensed to this account in accord with the practice capitalization policy. Major acquisitions of computer systems, software, or environmental changes should be capitalized and posted to account 2050 Computer. Labor costs associated with the installation of hardware or software should also be capitalized as part of the respective computer hardware or software account."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6611,
+    "name": "Office Supplies",
+    "keywords": "",
+    "description": "Expenditures in this account include typical general office supplies such as pens, paper, paper and binder clips, binders, paper files, inexpensive calculators and small equipment."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6612,
+    "name": "Postage & Delivery",
+    "keywords": "",
+    "description": "Expense to this account stamps, FedEx and UPS, parcel post, courier service, and postal machine rental. Postage for newsletters and other promotional items should be recorded in the appropriate category. Semen shipping freight costs should be included with artificial insemination (A.I.) costs in account 6020."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6613,
+    "name": "Printing & Reproduction",
+    "keywords": "",
+    "description": "Post costs for printing in-office documents and using outside printing services (e.g. Staples or FedEx Office)."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6614,
+    "name": "Business Services",
+    "keywords": "",
+    "description": "Payments to business services companies, incuding credit socring vendors, for non-recurring busienss services"
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6615,
+    "name": "Accounting Fees",
+    "keywords": "",
+    "description": "Record fees paid to accounting firms for accounting and tax services. Payroll service and/or outside bookkeeping service payments are coded to the following two accounts."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6616,
+    "name": "Bookkeeping Services",
+    "keywords": "",
+    "description": "Payments for an independent bookkeeper who is not an employee of the practice are included here. If the bookkeeper is an employee of the practice, wages would be recorded in account 7166."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6617,
+    "name": "Payroll Service Fees",
+    "keywords": "",
+    "description": "Post payments to this account for an independent payroll company service involving preparation of employee paychecks, payroll-related tax returns and filings, and tax fund remittance handling, such as ADP, Paychex, Heartland, or Intuit, among many others."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6618,
+    "name": "Employe Benefits / Pension Administration",
+    "keywords": "",
+    "description": "This account includes fees paid to a third-party administrator for maintenance of retirement plans (e.g. 401K, SIMPLE IRA, etc.) or other employee benefit plan maintenance, such as Section 125 Cafeteria Plans. Surety bond premium expense is also coded to this account."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6619,
+    "name": "Legal Services Fees",
+    "keywords": "",
+    "description": "This account is used for expenses related to ordinary and necessary business expenses related to attorney and legal assistance. Expenses related to business startup, business organization, and business acquisition generally are NOT coded to this account. Special attention must be given to the exact legal services incurred to determine how they should be handled for accounting and tax purposes. These issues are beyond the scope of this handbook, and the practice accountant should be assisting in determination of correct handling."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Administrative Expense",
+    "number": 6620,
+    "name": "Professional / Business Consulting Fees",
+    "keywords": "",
+    "description": "Code payments to third party companies and independent contractors for business management advice and consultation services."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Business Insurance Expense",
+    "number": 6630,
+    "name": "Business Insurance",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Business Insurance Expense",
+    "number": 6631,
+    "name": "General Liability Insurance Expense",
+    "keywords": "",
+    "description": "Code premium expenses for liability insurance on the facility, inventory, contents, and business overhead insurance (BOI; sometimes called disability overhead insurance)."
+  },
+  {
+    "type": "Expense",
+    "group": "Administrative Expense",
+    "subGroup": "Business Insurance Expense",
+    "number": 6632,
+    "name": "Flood Insurance Expense",
+    "keywords": "",
+    "description": "Code premium expenses for flood insurance on the facility, inventory and contents"
+  },
+  {
+    "type": "Expense",
+    "group": "Advertising & Promotion Expense",
+    "subGroup": "Advertising & Promotion Expense",
+    "number": 6700,
+    "name": "Advertising & Promotion",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Advertising & Promotion Expense",
+    "subGroup": "Advertising & Promotion Expense",
+    "number": 6701,
+    "name": "Yellow Page Advertising",
+    "keywords": "",
+    "description": "Payments made to advertise in phone directories, including the \"yellow pages.\""
+  },
+  {
+    "type": "Expense",
+    "group": "Advertising & Promotion Expense",
+    "subGroup": "Advertising & Promotion Expense",
+    "number": 6702,
+    "name": "Website Maintenance",
+    "keywords": "",
+    "description": "Payments made to vendors to maintain the practice website on its servers or the cloud, including payments made to hosting services, such as AWS."
+  },
+  {
+    "type": "Expense",
+    "group": "Advertising & Promotion Expense",
+    "subGroup": "Advertising & Promotion Expense",
+    "number": 6703,
+    "name": "Internet Advertising",
+    "keywords": "",
+    "description": "Payments made to vendors to display advertising via the Internet/Web."
+  },
+  {
+    "type": "Expense",
+    "group": "Advertising & Promotion Expense",
+    "subGroup": "Advertising & Promotion Expense",
+    "number": 6704,
+    "name": "Direct Mailing",
+    "keywords": "",
+    "description": "Payments made to vendors to utilize physical direct mail or email campaigns to market to customers, including such services as SurveyMonkey, MailChimp, etc."
+  },
+  {
+    "type": "Expense",
+    "group": "Advertising & Promotion Expense",
+    "subGroup": "Advertising & Promotion Expense",
+    "number": 6705,
+    "name": "Client Reminders",
+    "keywords": "",
+    "description": "Payments made to vendors to generate automated client reminders"
+  },
+  {
+    "type": "Expense",
+    "group": "Advertising & Promotion Expense",
+    "subGroup": "Advertising & Promotion Expense",
+    "number": 6706,
+    "name": "Memorial Contributions",
+    "keywords": "",
+    "description": "Payments made in memory of any party, the payment of which establishes some community goodwill and/or awareness."
+  },
+  {
+    "type": "Expense",
+    "group": "Advertising & Promotion Expense",
+    "subGroup": "Advertising & Promotion Expense",
+    "number": 6707,
+    "name": "Sponsored Events",
+    "keywords": "",
+    "description": "Payments made to sponsor any party, the payment of which establishes some community goodwill and/or awareness."
+  },
+  {
+    "type": "Expense",
+    "group": "Advertising & Promotion Expense",
+    "subGroup": "Advertising & Promotion Expense",
+    "number": 6708,
+    "name": "Marketing Consulting Fees",
+    "keywords": "",
+    "description": "Payments made to any outside marketing consultant that assists in the development of marketing campaign plans and execution."
+  },
+  {
+    "type": "Expense",
+    "group": "Advertising & Promotion Expense",
+    "subGroup": "Advertising & Promotion Expense",
+    "number": 6709,
+    "name": "Advertising & Promotion -- Other",
+    "keywords": "",
+    "description": "Payments made to vendors to advertise in offline advertising and/or promotional events."
+  },
+  {
+    "type": "Expense",
+    "group": "Customer Financing Expense",
+    "subGroup": "Customer Financing Expense",
+    "number": 6800,
+    "name": "Cash-Related Services Fees",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Customer Financing Expense",
+    "subGroup": "Customer Financing Expense",
+    "number": 6801,
+    "name": "Bank Charges & Service Fees",
+    "keywords": "",
+    "description": "Code payments made for bank and financial management service fees for processing deposits and bounced checks, TeleCheck, maintaining an account or safe deposit box, and providing other services. Also include fees for late credit card payments."
+  },
+  {
+    "type": "Expense",
+    "group": "Customer Financing Expense",
+    "subGroup": "Customer Financing Expense",
+    "number": 6802,
+    "name": "Merchant Services Fees / Credit Card Discounts",
+    "keywords": "",
+    "description": "The account records the fees paid to credit card companies, by way of discounts, on payments received from such companies on behalf of customers making payment for services/products."
+  },
+  {
+    "type": "Expense",
+    "group": "Customer Financing Expense",
+    "subGroup": "Customer Financing Expense",
+    "number": 6803,
+    "name": "Care Credit/TeleCheck Service Fees",
+    "keywords": "",
+    "description": "This account records the fees paid to CareCredit related to client use of the instant credit system to pay practice invoices. Other instant consumer credit vehicles the practice contracts would result in fees that can be expensed to this account, as well."
+  },
+  {
+    "type": "Expense",
+    "group": "Customer Financing Expense",
+    "subGroup": "Customer Financing Expense",
+    "number": 6804,
+    "name": "Collection Fees",
+    "keywords": "",
+    "description": "This account includes fees paid to a collection agency for pursuit of client accounts receivable."
+  },
+  {
+    "type": "Expense",
+    "group": "Customer Financing Expense",
+    "subGroup": "Customer Financing Expense",
+    "number": 6805,
+    "name": "Bad Debt Expense",
+    "keywords": "",
+    "description": "Bad debt expense is recorded at the time of direct write-off of specific client accounts receivable that have been pursued and collection efforts exhausted. This account will be used by accrual basis taxpayers."
+  },
+  {
+    "type": "Expense",
+    "group": "Customer Financing Expense",
+    "subGroup": "Customer Financing Expense",
+    "number": 6806,
+    "name": "Returned Check Fees",
+    "keywords": "",
+    "description": "Record check payments received from clients that did not clear the bank due to insufficient fund balances or were otherwise returned as uncollected by the practice\u2019s bank. If another means of payment is received from the client to settle the returned check, the payment should be offset here. If a re-deposited check successfully clears, then the second deposit is recorded against this account, effectively clearing it to zero. The balance of this account will only include returned checks for which no compensating payment has been received. This account will be used by cash basis taxpayers"
+  },
+  {
+    "type": "Expense",
+    "group": "Depreciation/Amortization Expense",
+    "subGroup": "Depreciation/Amortization Expense",
+    "number": 7000,
+    "name": "Depreciation & Amortization",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Expense",
+    "group": "Depreciation/Amortization Expense",
+    "subGroup": "Depreciation/Amortization Expense",
+    "number": 7010,
+    "name": "Depreciation Expense",
+    "keywords": "",
+    "description": "If your practice does not have depreciation adjustments via its tax accountant, estimates for interim, non-tax reporting purposes can be made as follows, at ownership prerogative: Spread the cost of fixed asset costs (account 2000-2499) over a 10-year estimated useful life."
+  },
+  {
+    "type": "Expense",
+    "group": "Depreciation/Amortization Expense",
+    "subGroup": "Depreciation/Amortization Expense",
+    "number": 7020,
+    "name": "Amortization Expense",
+    "keywords": "",
+    "description": "The periodic expense attributed to the decline in usefulness of an intangible asset. Similar to depreciation, it is the process of gradually reducing the value of an asset over its useful life, to reflect an estimate of its use in producing revenues over many financial periods."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Revenue",
+    "subGroup": "Other Revenue",
+    "number": 8000,
+    "name": "Other Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Revenue",
+    "subGroup": "Other Revenue",
+    "number": 8001,
+    "name": "Interest Revenue",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Revenue",
+    "subGroup": "Other Revenue",
+    "number": 8002,
+    "name": "Rent Revenue",
+    "keywords": "",
+    "description": "Post interest income from all sources, including notes receivable and interest-bearing investment accounts to this account. If a variety of interest-bearing investments exists, each interest source can be separately presented by establishing individual interest-revenue account codes to match with the Forms 1099 \u2013 INT the practice will receive in the first quarter of the subsequent calendar year."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Revenue",
+    "subGroup": "Other Revenue",
+    "number": 8003,
+    "name": "Miscellaneous Revenue",
+    "keywords": "",
+    "description": "Use this account to report episodic revenue for which there is no other classification. For example, an insurance payment received for damaged property in excess of its repair costs would be recorded here."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Revenue",
+    "subGroup": "Other Revenue",
+    "number": 8004,
+    "name": "Gain on Sales of Assets",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Other Expense",
+    "number": 8100,
+    "name": "Other Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Other Expense",
+    "number": 8101,
+    "name": "Miscellaneous Expense",
+    "keywords": "",
+    "description": "In this section, record non-recurring expenses unrelated to daily veterinary practice operations. Do not post operating expenses to this account."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Other Expense",
+    "number": 8102,
+    "name": "Fines & Penalties",
+    "keywords": "",
+    "description": "Fines and penalties such as those related to late submission of tax filings or traffic tickets are coded to this category, and are non-tax-deductible by law."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Other Expense",
+    "number": 8103,
+    "name": "Officer/Key Person Life Insurance",
+    "keywords": "",
+    "description": "Premiums for practice-owned life insurance on the life of a key person(s) for which the practice is also the beneficiary are coded to this account."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Other Expense",
+    "number": 8104,
+    "name": "Officer Disability Insurance",
+    "keywords": "",
+    "description": "Premiums for any long- or short- term disability insurance provided for a key person(s) nby the practice are coded to this account."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Other Expense",
+    "number": 8105,
+    "name": "Loss on Sale of Assets",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Interest Expense",
+    "number": 8200,
+    "name": "Interest Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Interest Expense",
+    "number": 8201,
+    "name": "Debt Interest Expense -- 3rd Party",
+    "keywords": "",
+    "description": "This account records the interest expense portion of debt service payments to financial institutions. The portion of payment related to principal reduction is coded to the corresponding loan account in the practice liability 3000 series."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Interest Expense",
+    "number": 8202,
+    "name": "Debt Interest Expense -- Shareholder/Owner",
+    "keywords": "",
+    "description": "This account is used to record interest paid on practice debt owed to shareholders or other related parties. See liability account 3050."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Interest Expense",
+    "number": 8203,
+    "name": "Other Interest Expense",
+    "keywords": "finance charge",
+    "description": "This account records the interest expense payments related to vendor and other debt, interest assessed on outstanding credit card liability."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Interest Expense",
+    "number": 8204,
+    "name": "SBA Funding Fees",
+    "keywords": "",
+    "description": "Fees paid to the SBA to support an SBA loan where interest expense is paid to a third party financial institution"
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Income Tax Expense",
+    "number": 8300,
+    "name": "Income Tax Expense",
+    "keywords": "",
+    "description": ""
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Income Tax Expense",
+    "number": 8301,
+    "name": "Federal Income Tax Expense",
+    "keywords": "",
+    "description": "Record here the federal income tax liability associated with the practice entity\u2019s taxable income, which must be paid by the entity. Taxes owed by practice owners are not recorded on the practice\u2019s books. This tax is not a payroll tax."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Income Tax Expense",
+    "number": 8302,
+    "name": "State Income Tax Expense",
+    "keywords": "",
+    "description": "Record here the state income tax liability associated with the practice entity\u2019s taxable income, which must be paid by the entity. Taxes owed by practice owners are not recorded on the practice\u2019s books. This tax is not a payroll tax."
+  },
+  {
+    "type": "Other Rev & Exp",
+    "group": "Other Expense",
+    "subGroup": "Income Tax Expense",
+    "number": 8303,
+    "name": "Local Income Tax Expense",
+    "keywords": "",
+    "description": "Record here the city, regional, or other local income tax liability associated with the practice entity\u2019s taxable income, that must be paid by the entity. Taxes owed by practice owners are not recorded on the practice\u2019s books. This tax is not a payroll tax."
+  }
+]

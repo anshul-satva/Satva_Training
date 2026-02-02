@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standardizer - Chart of Accounts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Update Notice -->
+    <div class="update-notice" id="updateNotice">
+        <i class="fas fa-info-circle"></i> Human Updated
+    </div>
+
+    <!-- Top Navbar -->
+    <nav class="top-navbar">
+        <div class="navbar-brand-section">
+            <span class="brand-logo">⚡</span>
+            <span class="brand-text">Standardizer</span>
+        </div>
+        
+        <div class="navbar-center">
+            <a href="#" class="nav-link-custom active" id="coaLink">CoA</a>
+            <a href="#" class="nav-link-custom" id="journalLink">Journal</a>
+            <a href="#" class="nav-link-custom" id="adminLink">Admin</a>
+        </div>
+        
+        <div class="navbar-right">
+            <span class="navbar-text">Standardizer Test</span>
+            <button class="btn-icon"><i class="fas fa-bell"></i></button>
+            <div class="admin-avatar">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=3b82f6&color=fff" alt="Admin">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Type Navbar -->
+    <div class="type-navbar" id="typeNavbar">
+        <div class="loading-text">Loading types...</div>
+        <button class="type-btn submit-btn" id="submitBtn">Submit</button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Source Account Structure -->
+        <div class="section-card">
+            <div class="section-header">Source Account Structure</div>
+            <div class="section-subheader cyan">Balance Sheet Accounts</div>
+            <div class="account-list" id="sourceAccountList">
+                <div class="empty-state">Please select a type from above</div>
+            </div>
+        </div>
+
+        <!-- Likely Destination Accounts -->
+        <div class="section-card">
+            <div class="section-header">Likely Destination Account</div>
+            <div class="mapping-container" id="mappingContainer">
+                <div class="empty-state">Mapping grid will appear after loading accounts</div>
+            </div>
+        </div>
+
+        <!-- Destination Account Structure -->
+        <div class="section-card">
+            <div class="section-header">Destination Account Structure</div>
+            
+            <!-- Type Scroller -->
+            <div class="type-scroller">
+                <button class="scroller-btn" id="scrollLeft">&lt;</button>
+                <div class="type-scroller-container">
+                    <div class="type-scroller-items" id="destinationTypeScroller">
+                        <div class="loading-text-small">Loading...</div>
+                    </div>
+                </div>
+                <button class="scroller-btn" id="scrollRight">&gt;</button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="destinationSearch" placeholder="Search Account Here....">
+            </div>
+
+            <!-- Subheader -->
+            <div class="section-subheader green">Balance Sheet Accounts</div>
+
+            <!-- Destination Account List -->
+            <div class="account-list" id="destinationAccountList">
+                <div class="empty-state">Loading accounts...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="data-loader.js"></script>
+    <script src="ui-renderer.js"></script>
+    <script src="drag-drop.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

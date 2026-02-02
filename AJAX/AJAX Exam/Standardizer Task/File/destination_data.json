@@ -1,0 +1,1910 @@
+[
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1001,
+    "accountName": "Petty Cash",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1002,
+    "accountName": "Cash in Daily Drawer",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1003,
+    "accountName": "Undeposited Funds",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1010,
+    "accountName": "Primary Checking Account",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1011,
+    "accountName": "Secondary Checking Account",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1012,
+    "accountName": "Savings Account",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1013,
+    "accountName": "Certificates of Deposit",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1014,
+    "accountName": "Money Market Account",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1100,
+    "accountName": "Accounts Receivable",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1101,
+    "accountName": "Allowance for Uncollectable Accounts (contra account)",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1120,
+    "accountName": "Drug and Medical Supply Inventory",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1130,
+    "accountName": "Employee Advances",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1131,
+    "accountName": "Advances -- Related Party",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1140,
+    "accountName": "Note Receivable, Current Portion -- Related Party",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1141,
+    "accountName": "Note Receivable, Current Portion -- Other",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1150,
+    "accountName": "Prepaid Expenses",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1160,
+    "accountName": "Deposits for New Equipment",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1170,
+    "accountName": "Construction In Progress",
+    "subAccountName": "Current Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1200,
+    "accountName": "Professional Medical Equipment",
+    "subAccountName": "Fixed Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1210,
+    "accountName": "Computer Hardware",
+    "subAccountName": "Fixed Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1220,
+    "accountName": "Office Equipment, Furniture & Fixtures",
+    "subAccountName": "Fixed Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1230,
+    "accountName": "Practice Vehicles",
+    "subAccountName": "Fixed Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1240,
+    "accountName": "Leasehold/Building Improvements",
+    "subAccountName": "Fixed Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1245,
+    "accountName": "Buildings",
+    "subAccountName": "Fixed Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1250,
+    "accountName": "Land Improvements",
+    "subAccountName": "Fixed Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1255,
+    "accountName": "Land",
+    "subAccountName": "Fixed Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1290,
+    "accountName": "Accumulated Depreciation",
+    "subAccountName": "Fixed Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1310,
+    "accountName": "Computer Software",
+    "subAccountName": "Other Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1320,
+    "accountName": "Goodwill",
+    "subAccountName": "Other Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1321,
+    "accountName": "Covenant Not to Compete",
+    "subAccountName": "Other Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1330,
+    "accountName": "Organizational & Startup Costs",
+    "subAccountName": "Other Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1340,
+    "accountName": "Loan Costs",
+    "subAccountName": "Other Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1350,
+    "accountName": "Accumulated Amortization",
+    "subAccountName": "Other Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1360,
+    "accountName": "Note Receivable, Long-Term Portion",
+    "subAccountName": "Other Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1370,
+    "accountName": "Refundable Deposits",
+    "subAccountName": "Other Assets"
+  },
+  {
+    "accountTypeName": "ASSETS",
+    "accountCode": 1380,
+    "accountName": "Other Assets",
+    "subAccountName": "Other Assets"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2001,
+    "accountName": "Accounts Payable",
+    "subAccountName": "Current Liabilities General"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2002,
+    "accountName": "Credit Cards Payable",
+    "subAccountName": "Current Liabilities General"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2003,
+    "accountName": "Line of Credit",
+    "subAccountName": "Current Liabilities General"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2004,
+    "accountName": "Long-Term Loans & Capital Leases Payable, Current Portion",
+    "subAccountName": "Current Liabilities General"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2005,
+    "accountName": "Loan Payable, Current Portion -- Related Party",
+    "subAccountName": "Current Liabilities General"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2006,
+    "accountName": "Unearned Revenue",
+    "subAccountName": "Current Liabilities General"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2101,
+    "accountName": "Payroll Tax Payable",
+    "subAccountName": "Employer Payroll & Benefit Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2102,
+    "accountName": "Wage Garnishment Payable",
+    "subAccountName": "Employer Payroll & Benefit Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2103,
+    "accountName": "Workers Compensation Payable",
+    "subAccountName": "Employer Payroll & Benefit Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2104,
+    "accountName": "Accrued Payroll & Bonuses",
+    "subAccountName": "Employer Payroll & Benefit Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2105,
+    "accountName": "Accrued Payroll Taxes",
+    "subAccountName": "Employer Payroll & Benefit Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2106,
+    "accountName": "Employer Retirement Plan Contribution Payable",
+    "subAccountName": "Employer Payroll & Benefit Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2201,
+    "accountName": "Employee Payroll Tax Withholding Payable",
+    "subAccountName": "Employee Payroll & Benefit Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2202,
+    "accountName": "Employee Withholding Payable",
+    "subAccountName": "Employee Payroll & Benefit Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2301,
+    "accountName": "Sales & Use Tax Payable",
+    "subAccountName": "Other Tax Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2302,
+    "accountName": "Accrued Property Tax",
+    "subAccountName": "Other Tax Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2303,
+    "accountName": "Corporate Income Tax Payable",
+    "subAccountName": "Other Tax Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2304,
+    "accountName": "Franchise Tax Payable",
+    "subAccountName": "Other Tax Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2305,
+    "accountName": "Other Taxes Payable",
+    "subAccountName": "Other Tax Liabilities"
+  },
+  {
+    "accountTypeName": "LIABILITIES",
+    "accountCode": 2501,
+    "accountName": "Loans & Capital Leases Payable, Long-Term Portion",
+    "subAccountName": "Long-Term Liabilities"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3001,
+    "accountName": "Common Stock",
+    "subAccountName": "C-Corporation"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3002,
+    "accountName": "Additional Paid in Capital",
+    "subAccountName": "C-Corporation"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3003,
+    "accountName": "Retained Earnings / (Deficit)",
+    "subAccountName": "C-Corporation"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3004,
+    "accountName": "Distributions/Dividends/Draws",
+    "subAccountName": "C-Corporation"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3005,
+    "accountName": "Treasury Stock",
+    "subAccountName": "C-Corporation"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3101,
+    "accountName": "Common Stock",
+    "subAccountName": "S-Corporation"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3102,
+    "accountName": "Additional Paid in Capital",
+    "subAccountName": "S-Corporation"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3103,
+    "accountName": "Retained Earnings / (Deficit)",
+    "subAccountName": "S-Corporation"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3104,
+    "accountName": "Distributions/Dividends/Draws",
+    "subAccountName": "S-Corporation"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3105,
+    "accountName": "Treasury Stock",
+    "subAccountName": "S-Corporation"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3201,
+    "accountName": "Owner's Capital",
+    "subAccountName": "Proprietorship"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3202,
+    "accountName": "Additional Paid in Capital",
+    "subAccountName": "Proprietorship"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3203,
+    "accountName": "Owner's Equity / (Deficit)",
+    "subAccountName": "Proprietorship"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3204,
+    "accountName": "Distributions/Dividends/Draws",
+    "subAccountName": "Proprietorship"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3301,
+    "accountName": "Partners's Capital -- Partner #1",
+    "subAccountName": "Partnership"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3302,
+    "accountName": "Partners's Capital -- Partner #2",
+    "subAccountName": "Partnership"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3303,
+    "accountName": "Partner's Equity / (Deficit)",
+    "subAccountName": "Partnership"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3304,
+    "accountName": "Distributions/Dividends/Draws",
+    "subAccountName": "Partnership"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3401,
+    "accountName": "Members' Capital",
+    "subAccountName": "Limited Liability Company (\"LLC\")"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3402,
+    "accountName": "Members' Equity / (Deficit)",
+    "subAccountName": "Limited Liability Company (\"LLC\")"
+  },
+  {
+    "accountTypeName": "EQUITY/CAPITAL",
+    "accountCode": 3403,
+    "accountName": "Distributions/Dividends/Draws",
+    "subAccountName": "Limited Liability Company (\"LLC\")"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4001,
+    "accountName": "GP Exam/Diagnostic Revenue",
+    "subAccountName": "Generalist Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4002,
+    "accountName": "GP Hospitalization & Treatment Revenue",
+    "subAccountName": "Generalist Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4003,
+    "accountName": "GP Vaccine Revenue",
+    "subAccountName": "Generalist Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4011,
+    "accountName": "ER Exam/Diagnostic Revenue",
+    "subAccountName": "Emergency/Critical Care Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4012,
+    "accountName": "ER Hospitalization & Treatment Revenue",
+    "subAccountName": "Emergency/Critical Care Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4013,
+    "accountName": "ER Surgery Revenue",
+    "subAccountName": "Emergency/Critical Care Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4021,
+    "accountName": "Equine Revenue",
+    "subAccountName": "Large Animal Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4022,
+    "accountName": "Farm Animal Revenue",
+    "subAccountName": "Large Animal Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4023,
+    "accountName": "Zoological Revenue",
+    "subAccountName": "Large Animal Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4101,
+    "accountName": "Surgery",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4102,
+    "accountName": "Internal Medicine",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4103,
+    "accountName": "Cardiology",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4104,
+    "accountName": "Oncology, Medical",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4105,
+    "accountName": "Oncology, Radiation",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4106,
+    "accountName": "Neurology",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4107,
+    "accountName": "Ophthalmology",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4108,
+    "accountName": "Dermatology",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4109,
+    "accountName": "Dentistry",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4110,
+    "accountName": "Radiology, Diagnostic",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4111,
+    "accountName": "Anesthesia/Pain Management",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4112,
+    "accountName": "Alternative/Acupuncture",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4113,
+    "accountName": "Behavior",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4114,
+    "accountName": "Rehabilitiation Therapy",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4115,
+    "accountName": "Nutrition",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4116,
+    "accountName": "Avian/Exotics",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4117,
+    "accountName": "Diagnostic Lab / Clinical Pathology",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4118,
+    "accountName": "Theriogenology",
+    "subAccountName": "Specialty Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4201,
+    "accountName": "X-Ray Revenue",
+    "subAccountName": "In-House Imaging Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4202,
+    "accountName": "Dental X-Ray Revenue",
+    "subAccountName": "In-House Imaging Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4203,
+    "accountName": "CT Revenue",
+    "subAccountName": "In-House Imaging Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4204,
+    "accountName": "Ultrasound Revenue",
+    "subAccountName": "In-House Imaging Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4205,
+    "accountName": "MRI Revenue",
+    "subAccountName": "In-House Imaging Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4401,
+    "accountName": "Outside Laboratory Revenue",
+    "subAccountName": "Outside Professional Service Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4402,
+    "accountName": "Outside Radiology (Imaging) Revenue",
+    "subAccountName": "Outside Professional Service Revenue"
+  },
+  {
+    "accountTypeName": "Professional Services Revenue",
+    "accountCode": 4403,
+    "accountName": "Mortuary/Disposal Services",
+    "subAccountName": "Outside Professional Service Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4511,
+    "accountName": "FDA Prescription Medication Revenue",
+    "subAccountName": "Medication (FDA controlled) Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4512,
+    "accountName": "Injection Revenue",
+    "subAccountName": "Medication (FDA controlled) Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4513,
+    "accountName": "Flea-Tick Non-HW Parasite Control Medication Revenue",
+    "subAccountName": "Medication (FDA controlled) Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4514,
+    "accountName": "HW Parasite Control Medication Revenue",
+    "subAccountName": "Medication (FDA controlled) Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4515,
+    "accountName": "Internet Pharmacy Revenue",
+    "subAccountName": "Medication (FDA controlled) Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4521,
+    "accountName": "Therapeutic Dietary Product Revenue",
+    "subAccountName": "Dietary Product Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4522,
+    "accountName": "Retail Dietary Product Revenue",
+    "subAccountName": "Dietary Product Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4531,
+    "accountName": "OTC Shampoo",
+    "subAccountName": "Other Product Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4532,
+    "accountName": "OTC Nutriceutical",
+    "subAccountName": "Other Product Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4533,
+    "accountName": "Pet Supplies",
+    "subAccountName": "Other Product Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4534,
+    "accountName": "OTC Flea-Tick Control Product",
+    "subAccountName": "Other Product Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4535,
+    "accountName": "Internet Ancillary Product",
+    "subAccountName": "Other Product Revenue"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4901,
+    "accountName": "Fee Discounts",
+    "subAccountName": "Fee Discounts & Client Returns (contra accounts)"
+  },
+  {
+    "accountTypeName": "Product Revenue",
+    "accountCode": 4902,
+    "accountName": "Returns & Allowances",
+    "subAccountName": "Fee Discounts & Client Returns (contra accounts)"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5104,
+    "accountName": "Other Specialty",
+    "subAccountName": "Other Specialty"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5201,
+    "accountName": "X-Ray Cost",
+    "subAccountName": "In-House Imaging Costs"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5202,
+    "accountName": "Dental X-Ray Cost",
+    "subAccountName": "In-House Imaging Costs"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5203,
+    "accountName": "CT Cost",
+    "subAccountName": "In-House Imaging Costs"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5204,
+    "accountName": "Ultrasound Cost",
+    "subAccountName": "In-House Imaging Costs"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5205,
+    "accountName": "MRI Cost",
+    "subAccountName": "In-House Imaging Costs"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5401,
+    "accountName": "Outside Laboratory Revenue",
+    "subAccountName": "Outside Professional Service Costs"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5402,
+    "accountName": "Outside Radiology (Imaging) Revenue",
+    "subAccountName": "Outside Professional Service Costs"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5403,
+    "accountName": "Mortuary/Disposal Services",
+    "subAccountName": "Outside Professional Service Costs"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5501,
+    "accountName": "General Medical Supplies",
+    "subAccountName": "Medical Supplies"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5502,
+    "accountName": "Blood Products",
+    "subAccountName": "Medical Supplies"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5503,
+    "accountName": "Surgical Supplies",
+    "subAccountName": "Medical Supplies"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5504,
+    "accountName": "Laboratory Supplies",
+    "subAccountName": "Medical Supplies"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5505,
+    "accountName": "Medical/Diagnostic Software",
+    "subAccountName": "Medical Supplies"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5506,
+    "accountName": "Oxygen Supplies",
+    "subAccountName": "Medical Supplies"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5507,
+    "accountName": "Dermatological Supplies",
+    "subAccountName": "Medical Supplies"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5508,
+    "accountName": "Oncology Supplies",
+    "subAccountName": "Medical Supplies"
+  },
+  {
+    "accountTypeName": "Outside (or \"1099\") Professional Services Costs",
+    "accountCode": 5509,
+    "accountName": "Other Specialty Supplies",
+    "subAccountName": "Medical Supplies"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5711,
+    "accountName": "FDA Prescription Medication Costs",
+    "subAccountName": "Medication (FDA controlled) Costs"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5712,
+    "accountName": "Injection Costs",
+    "subAccountName": "Medication (FDA controlled) Costs"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5713,
+    "accountName": "Flea-Tick Non-HW Parasite Control Medication Cost",
+    "subAccountName": "Medication (FDA controlled) Costs"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5714,
+    "accountName": "HW Parasite Control Medication Cost",
+    "subAccountName": "Medication (FDA controlled) Costs"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5715,
+    "accountName": "Internet Pharmacy Cost",
+    "subAccountName": "Medication (FDA controlled) Costs"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5721,
+    "accountName": "Therapeutic Dietary Product Cost",
+    "subAccountName": "Dietary Products"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5722,
+    "accountName": "Retail Dietary Product Cost",
+    "subAccountName": "Dietary Products"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5731,
+    "accountName": "OTC Shampoo",
+    "subAccountName": "Other Product Costs"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5732,
+    "accountName": "OTC Nutriceutical",
+    "subAccountName": "Other Product Costs"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5733,
+    "accountName": "Pet Supplies",
+    "subAccountName": "Other Product Costs"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5734,
+    "accountName": "OTC Flea-Tick Control Product",
+    "subAccountName": "Other Product Costs"
+  },
+  {
+    "accountTypeName": "Product Costs",
+    "accountCode": 5735,
+    "accountName": "Internet Ancillary Product",
+    "subAccountName": "Other Product Costs"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6000,
+    "accountName": "Generalist Technician Salary",
+    "subAccountName": "Doctor Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6010,
+    "accountName": "Emergency/Critical Care Salary",
+    "subAccountName": "Doctor Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6021,
+    "accountName": "Equine Revenue",
+    "subAccountName": "Large Animal Doctor Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6022,
+    "accountName": "Farm Animal Revenue",
+    "subAccountName": "Large Animal Doctor Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6023,
+    "accountName": "Zoological Revenue",
+    "subAccountName": "Large Animal Doctor Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6051,
+    "accountName": "Surgery",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6052,
+    "accountName": "Internal Medicine",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6053,
+    "accountName": "Cardiology",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6054,
+    "accountName": "Oncology, Medical",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6055,
+    "accountName": "Oncology, Radiation",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6056,
+    "accountName": "Neurology",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6057,
+    "accountName": "Ophthalmology",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6058,
+    "accountName": "Dermatology",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6059,
+    "accountName": "Dentistry",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6060,
+    "accountName": "Radiology, Diagnostic",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6061,
+    "accountName": "Anesthesia/Pain Management",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6062,
+    "accountName": "Alternative/Acupuncture",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6063,
+    "accountName": "Behavior",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6064,
+    "accountName": "Rehabilitiation Therapy",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6065,
+    "accountName": "Nutrition",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6066,
+    "accountName": "Avian/Extics",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6067,
+    "accountName": "Diagnostic Lab / Clinical Pathology",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6068,
+    "accountName": "Theriogenology",
+    "subAccountName": "Specialist Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6110,
+    "accountName": "Generalist Technician Salary",
+    "subAccountName": "Technician Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6120,
+    "accountName": "Emergency/Critical Care Salary",
+    "subAccountName": "Technician Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6131,
+    "accountName": "Equine Revenue",
+    "subAccountName": "Large Animal Technician Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6132,
+    "accountName": "Farm Animal Revenue",
+    "subAccountName": "Large Animal Technician Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6133,
+    "accountName": "Zoological Revenue",
+    "subAccountName": "Large Animal Technician Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6151,
+    "accountName": "Surgery",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6152,
+    "accountName": "Internal Medicine",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6153,
+    "accountName": "Cardiology",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6154,
+    "accountName": "Oncology, Medical",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6155,
+    "accountName": "Oncology, Radiation",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6156,
+    "accountName": "Neurology",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6157,
+    "accountName": "Ophthalmology",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6158,
+    "accountName": "Dermatology",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6159,
+    "accountName": "Dentistry",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6160,
+    "accountName": "Radiology, Diagnostic",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6161,
+    "accountName": "Anesthesia/Pain Management",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6162,
+    "accountName": "Alternative/Acupuncture",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6163,
+    "accountName": "Behavior",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6164,
+    "accountName": "Rehabilitiation Therapy",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6165,
+    "accountName": "Nutrition",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6166,
+    "accountName": "Avian/Extics",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6167,
+    "accountName": "Diagnostic Lab / Clinical Pathology",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6168,
+    "accountName": "Theriogenology",
+    "subAccountName": "Specialty Technican Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6200,
+    "accountName": "Client Service Representative (\"CSR\") Salary Expense",
+    "subAccountName": "Other Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6210,
+    "accountName": "Management Salary Expense",
+    "subAccountName": "Other Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6220,
+    "accountName": "Adminstrative Salary Expense",
+    "subAccountName": "Other Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6230,
+    "accountName": "Maintenance Salary Expense",
+    "subAccountName": "Other Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6240,
+    "accountName": "Groomer Compensation Expense",
+    "subAccountName": "Other Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6250,
+    "accountName": "Boarding Staff Compensation Expense",
+    "subAccountName": "Other Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6260,
+    "accountName": "Owner Compensation Expense",
+    "subAccountName": "Other Salary Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6311,
+    "accountName": "FICA Tax Expense -- Employer's Portion",
+    "subAccountName": "Employer Payroll Taxes"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6312,
+    "accountName": "Federal Unemployment Tax Expense",
+    "subAccountName": "Employer Payroll Taxes"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6313,
+    "accountName": "State Unemployment Tax Expense",
+    "subAccountName": "Employer Payroll Taxes"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6314,
+    "accountName": "Other Employer Payroll Tax Expense",
+    "subAccountName": "Employer Payroll Taxes"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6321,
+    "accountName": "Group Health Insurance Premium",
+    "subAccountName": "Employer Fringe Benefits Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6322,
+    "accountName": "S-Corporation Shareholder Health Insurance Premium",
+    "subAccountName": "Employer Fringe Benefits Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6323,
+    "accountName": "Group Dental/Vision Insurance Premium Expense",
+    "subAccountName": "Employer Fringe Benefits Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6324,
+    "accountName": "Group Disability Insurance Premium Expense",
+    "subAccountName": "Employer Fringe Benefits Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6325,
+    "accountName": "Group Term Life Insurance Premium Expense",
+    "subAccountName": "Employer Fringe Benefits Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6331,
+    "accountName": "Sick Pay",
+    "subAccountName": "\"Paid Time Off\" (\"PTO\") Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6332,
+    "accountName": "Vacation Pay",
+    "subAccountName": "\"Paid Time Off\" (\"PTO\") Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6341,
+    "accountName": "Professional Liability Insurance Expense",
+    "subAccountName": "Employee-Related Insurance Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6342,
+    "accountName": "Workers Compensation Insurance Expense",
+    "subAccountName": "Employee-Related Insurance Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6343,
+    "accountName": "Employment Practices Liability Insurance Expense",
+    "subAccountName": "Employee-Related Insurance Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6350,
+    "accountName": "Employer Retirement Plan (e.g., 401(k)) Contribution Expense",
+    "subAccountName": "Employee-Related Insurance Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6361,
+    "accountName": "Registration Fees",
+    "subAccountName": "Continuing Education Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6362,
+    "accountName": "Educational Materials Expense",
+    "subAccountName": "Continuing Education Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6363,
+    "accountName": "Staff Training Fees & Costs",
+    "subAccountName": "Continuing Education Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6371,
+    "accountName": "Airfare",
+    "subAccountName": "Travel & Lodging Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6372,
+    "accountName": "Lodging",
+    "subAccountName": "Travel & Lodging Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6373,
+    "accountName": "Ground Transportation",
+    "subAccountName": "Travel & Lodging Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6374,
+    "accountName": "Mileage Reimbursement (eg, for CE travel)",
+    "subAccountName": "Travel & Lodging Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6381,
+    "accountName": "Study Group Fees (eg, VMG)",
+    "subAccountName": "Other Employee-Related Expenses"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6382,
+    "accountName": "Business Meals & Entertainment",
+    "subAccountName": "Other Employee-Related Expenses"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6383,
+    "accountName": "Staff Events & Recreation",
+    "subAccountName": "Other Employee-Related Expenses"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6384,
+    "accountName": "Employee Recruitment",
+    "subAccountName": "Other Employee-Related Expenses"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6385,
+    "accountName": "Laundry & Uniform",
+    "subAccountName": "Other Employee-Related Expenses"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6400,
+    "accountName": "Real Estate Rental Expense",
+    "subAccountName": "Facility Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6404,
+    "accountName": "Equipment Rental Expense",
+    "subAccountName": "Facility Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6408,
+    "accountName": "Remote Storage Expense",
+    "subAccountName": "Facility Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6409,
+    "accountName": "Minor Equipment Expense",
+    "subAccountName": "Facility Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6411,
+    "accountName": "Medical Equipment Maintenance",
+    "subAccountName": "Equipment Maintenance Expense, In-House"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6412,
+    "accountName": "Lab Equipment Maintenance",
+    "subAccountName": "Equipment Maintenance Expense, In-House"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6413,
+    "accountName": "Office Equipment Maintenance",
+    "subAccountName": "Equipment Maintenance Expense, In-House"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6414,
+    "accountName": "Computer/IT Equipment Maintenance",
+    "subAccountName": "Equipment Maintenance Expense, In-House"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6415,
+    "accountName": "Building Maintenance",
+    "subAccountName": "Equipment Maintenance Expense, In-House"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6421,
+    "accountName": "Medical Equipment Service Contract",
+    "subAccountName": "Equipment Maintenance, Service Contracts"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6422,
+    "accountName": "Lab Equipment Service Contract",
+    "subAccountName": "Equipment Maintenance, Service Contracts"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6423,
+    "accountName": "Office Equipment Service Contract",
+    "subAccountName": "Equipment Maintenance, Service Contracts"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6424,
+    "accountName": "Computer/IT Equipment Service Contract",
+    "subAccountName": "Equipment Maintenance, Service Contracts"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6425,
+    "accountName": "Buiilding Service Contract",
+    "subAccountName": "Equipment Maintenance, Service Contracts"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6431,
+    "accountName": "Medical Equipment Repairs",
+    "subAccountName": "Equipment Repair Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6432,
+    "accountName": "Lab Equipment Repairs",
+    "subAccountName": "Equipment Repair Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6433,
+    "accountName": "Office Equipment Repairs",
+    "subAccountName": "Equipment Repair Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6434,
+    "accountName": "Computer/IT Equipment Repairs",
+    "subAccountName": "Equipment Repair Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6435,
+    "accountName": "Facility Repairs",
+    "subAccountName": "Equipment Repair Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6461,
+    "accountName": "Real Estate Tax Expense",
+    "subAccountName": "Property Tax Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6465,
+    "accountName": "Personal Property Tax Expense",
+    "subAccountName": "Property Tax Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6470,
+    "accountName": "Practice Vehicle Expense",
+    "subAccountName": "Property Tax Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6481,
+    "accountName": "Electricity",
+    "subAccountName": "Utility Services"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6482,
+    "accountName": "Natural Gas/Oil/Propane",
+    "subAccountName": "Utility Services"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6483,
+    "accountName": "Water",
+    "subAccountName": "Utility Services"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6484,
+    "accountName": "Sewer",
+    "subAccountName": "Utility Services"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6485,
+    "accountName": "Garbage Removal",
+    "subAccountName": "Utility Services"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6491,
+    "accountName": "Landline Voice",
+    "subAccountName": "Communication Services"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6492,
+    "accountName": "Mobile Voice",
+    "subAccountName": "Communication Services"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6493,
+    "accountName": "Answering Service",
+    "subAccountName": "Communication Services"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6494,
+    "accountName": "Landline Internet & TV",
+    "subAccountName": "Communication Services"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6501,
+    "accountName": "Licenses & Permits",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6502,
+    "accountName": "Use Tax",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6503,
+    "accountName": "Franchise Tax",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6504,
+    "accountName": "Other Tax",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6505,
+    "accountName": "Veterinary & Professional Dues",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6506,
+    "accountName": "Client Education Material",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6507,
+    "accountName": "Business Gifts",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6508,
+    "accountName": "Charitable Contributions",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6509,
+    "accountName": "Computer Supplies",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6510,
+    "accountName": "Office/Medical Software",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6511,
+    "accountName": "Office Supplies",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6512,
+    "accountName": "Postage & Delivery",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6513,
+    "accountName": "Printing & Reproduction",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6514,
+    "accountName": "Accounting Fees",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6515,
+    "accountName": "Bookkeeping Services",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6516,
+    "accountName": "Payroll Service Fees",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6517,
+    "accountName": "Employee Benefits Administration",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6518,
+    "accountName": "Legal Services Fees",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6519,
+    "accountName": "Business Consultation Fees",
+    "subAccountName": "Administrative Expense General"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6601,
+    "accountName": "Yellow Page Advertising",
+    "subAccountName": "Advertising & Promotion"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6602,
+    "accountName": "Website Maintenance",
+    "subAccountName": "Advertising & Promotion"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6603,
+    "accountName": "Internet Advertising",
+    "subAccountName": "Advertising & Promotion"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6604,
+    "accountName": "Direct Mailing",
+    "subAccountName": "Advertising & Promotion"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6605,
+    "accountName": "Client Reminders",
+    "subAccountName": "Advertising & Promotion"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6606,
+    "accountName": "Memorial Contributions",
+    "subAccountName": "Advertising & Promotion"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6607,
+    "accountName": "Sponsored Events",
+    "subAccountName": "Advertising & Promotion"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6608,
+    "accountName": "Marketing Consulting Fees",
+    "subAccountName": "Advertising & Promotion"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6609,
+    "accountName": "Advertising & Promotion -- Other",
+    "subAccountName": "Advertising & Promotion"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6701,
+    "accountName": "Bank Charges & Service Fees",
+    "subAccountName": "Cash-Related Services Fees"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6702,
+    "accountName": "Merchant Services Fees",
+    "subAccountName": "Cash-Related Services Fees"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6703,
+    "accountName": "Care Credit Service Fees",
+    "subAccountName": "Cash-Related Services Fees"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6704,
+    "accountName": "Collection Fees",
+    "subAccountName": "Cash-Related Services Fees"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6705,
+    "accountName": "Bad Debt Expense",
+    "subAccountName": "Cash-Related Services Fees"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 6706,
+    "accountName": "Returned Check Fees",
+    "subAccountName": "Cash-Related Services Fees"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 7000,
+    "accountName": "Depreciation Expense",
+    "subAccountName": "Depreciation & Amortization"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 7050,
+    "accountName": "Amortization Expense",
+    "subAccountName": "Depreciation & Amortization"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8001,
+    "accountName": "Interest Revenue",
+    "subAccountName": "Other Revenue"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8002,
+    "accountName": "Rent Revenue",
+    "subAccountName": "Other Revenue"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8003,
+    "accountName": "Miscellaneous Revenue",
+    "subAccountName": "Other Revenue"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8101,
+    "accountName": "Miscellaneous Expense",
+    "subAccountName": "Other Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8102,
+    "accountName": "Fines & Penalties",
+    "subAccountName": "Other Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8103,
+    "accountName": "Officer/Key Person Life Insurance",
+    "subAccountName": "Other Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8104,
+    "accountName": "Officer Disability Insurance",
+    "subAccountName": "Other Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8201,
+    "accountName": "Interest Expense -- 3rd Party",
+    "subAccountName": "Interest Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8202,
+    "accountName": "Interest Expense -- Shareholder/Owner",
+    "subAccountName": "Interest Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8203,
+    "accountName": "Interest Expense -- Other",
+    "subAccountName": "Interest Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8204,
+    "accountName": "SBA Funding Fees",
+    "subAccountName": "Interest Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8301,
+    "accountName": "Federal Income Tax Expense",
+    "subAccountName": "Income Tax Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8302,
+    "accountName": "State Income Tax Expense",
+    "subAccountName": "Income Tax Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 8303,
+    "accountName": "Local Income Tax Expense",
+    "subAccountName": "Income Tax Expense"
+  },
+  {
+    "accountTypeName": "Labor Expense",
+    "accountCode": 9000,
+    "accountName": "Ask My Accountant",
+    "subAccountName": "Ask My Accountant"
+  }
+]
