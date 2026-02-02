@@ -1,0 +1,271 @@
+.brand-icon {
+    color: #ef4444;
+    font-size: 1.4rem;
+}
+
+/* Type Buttons */
+.type-btn {
+    font-size: 0.85rem;
+    white-space: nowrap;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.type-btn.active {
+    background-color: #3b82f6 !important;
+    color: white !important;
+}
+
+.clear-btn {
+    font-size: 0.85rem;
+}
+
+#logoutBtn {
+    font-size: 0.85rem;
+}
+
+.clear-btn:hover {
+    background-color: #dc2626 !important;
+}
+
+.submit-btn {
+    font-size: 0.85rem;
+}
+
+.submit-btn:hover {
+    background-color: #16a34a !important;
+}
+
+/* Mapping Layout */
+.mapping-headers {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.map-headers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.header-ml, .header-l, .header-p {
+    text-align: center;
+    padding: 0.4rem;
+    border-radius: 4px;
+    color: white;
+}
+
+.header-ml { background: #00b4d8; }
+.header-l { background: #48cae4; }
+.header-p { background: #90e0ef; }
+
+/* Source Rows */
+.source-mapping-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.source-account-col {
+    padding: 0.75rem;
+    background: #fff;
+    border-left: 3px solid #3b82f6;
+}
+
+.source-account-col .account-code {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #1f2937;
+    display: block;
+}
+
+.source-account-col .account-name {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-top: 0.2rem;
+    display: block;
+}
+
+/* Mapping Columns */
+.mapping-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.mapping-column {
+    min-height: 65px;
+    /* border: 2px  #d1d5db; */
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 0.5rem;
+    background: #fff;
+    transition: all 0.2s;
+}
+
+.mapping-column.drag-over {
+    background: #eff6ff;
+    border-color: #3b82f6;
+}
+
+/* Mapped Accounts */
+.mapped-account {
+    padding: 0.5rem;
+    background: #eff6ff;
+    border: 1px solid #3b82f6;
+    border-radius: 4px;
+    cursor: move;
+}
+
+.mapped-account .account-code {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #3b82f6;
+    display: block;
+}
+
+.mapped-account .account-name {
+    font-size: 0.7rem;
+    color: #6c757d;
+    margin-top: 0.2rem;
+    display: block;
+}
+
+/* Destination Type Scroller */
+.type-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #94a3b8 #e2e8f0;
+    padding-bottom: 4px;
+    min-height: 42px;
+}
+
+.type-scroll::-webkit-scrollbar {
+    height: 6px;
+    display: block;
+}
+
+.type-scroll::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 3px;
+    margin: 0 4px;
+}
+
+.type-scroll::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 3px;
+}
+
+.type-scroll::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+.type-scroll::-webkit-scrollbar-thumb:active {
+    background: #475569;
+}
+
+.destination-type-btn {
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.destination-type-btn.btn-secondary {
+    background-color: #6c757d !important;
+    color: white !important;
+    border-color: #6c757d !important;
+}
+
+/* Destination Accounts */
+.account-item {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    cursor: move;
+    transition: all 0.15s;
+}
+
+.account-item:hover {
+    background: #f9fafb;
+    border-color: #3b82f6;
+}
+
+.account-item .account-code {
+    font-weight: 600;
+    color: #3b82f6;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.account-item .account-name {
+    color: #4b5563;
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
+    display: block;
+}
+
+/* Drag States */
+.dragging {
+    opacity: 0.5;
+}
+
+.sortable-ghost {
+    opacity: 0.3;
+    background: #eff6ff;
+}
+
+/* Scrollbars */
+#sourceMappingList::-webkit-scrollbar,
+#destinationAccountList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#sourceMappingList::-webkit-scrollbar-track,
+#destinationAccountList::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+#sourceMappingList::-webkit-scrollbar-thumb,
+#destinationAccountList::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+}
+
+/* Scroll Buttons */
+#scrollLeft, #scrollRight {
+    padding: 0.35rem 0.6rem;
+    font-weight: bold;
+    min-width: 32px;
+}
+
+#scrollLeft:hover, #scrollRight:hover {
+    background-color: #e9ecef;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .mapping-headers,
+    .source-mapping-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-headers {
+        margin-top: 0.5rem;
+    }
+}
+
