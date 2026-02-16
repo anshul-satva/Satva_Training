@@ -483,3 +483,63 @@ ORDER BY "Avg Revenue" DESC
 
 
 
+CREATE TYPE booking_status2 AS ENUM (
+'Pending', 'Confirmed', 'cancelled'
+)
+
+CREATE TABLE bookings2 (
+	booking_id SERIAL PRIMARY KEY,
+	customner_name TEXT,
+	status booking_status2,
+	booking_date DATE
+)
+
+select * from bookings2
+ALTER TABLE bookings2 RENAME customner_name TO customer_name
+
+INSERT INTO bookings2 (customer_name, status, booking_date)
+VALUES
+('Rahul', 'Confirmed', '2026-02-10'),
+('Anita', 'Pending', '2026-02-11'),
+('Vijay', 'cancelled', '2026-02-12');
+
+SELECT booking_id, customer_name, status
+FROM bookings2
+WHERE status = 'Confirmed';
+
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    customer_name TEXT,
+    order_details JSONB
+);
+
+INSERT INTO orders(customer_name, order_details)
+VALUES (
+	'Rohit',
+ 	'{
+	 	"product": "Laptop",
+		 "price": 65000,
+		 "payment":{
+				"method": "credit card",
+				"status": "paid"
+		 },
+		"items":1
+	 }'
+)
+
+INSERT INTO orders (customer_name, order_details)
+VALUES (
+    'Amit',
+    '{
+        "product": "Laptop",
+        "price": 65000,
+        "payment": {
+            "method": "Credit Card",
+            "status": "Paid"
+        },
+        "items": 1
+    }'
+);
+
+
+
