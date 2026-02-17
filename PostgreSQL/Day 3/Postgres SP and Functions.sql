@@ -329,54 +329,50 @@ SELECT salary FROM employee where first_name = 'Lakshmi'
 SELECT * FROM employee
 
 
+-- Exception Handling
+DO $$
+BEGIN
+    BEGIN
+        -- risky operation
+        PERFORM 10 / 0;
+    EXCEPTION
+        WHEN division_by_zero THEN
+            RAISE NOTICE 'Cannot divide by zero';
+    END;
+END;
+$$;
 
+-- SELECT INTO exception handling
+DO $$
+DECLARE v_id INT;
+BEGIN
+    BEGIN
+        SELECT id INTO v_id FROM company WHERE name = 'XYZ';
+    EXCEPTION
+        WHEN no_data_found THEN
+            RAISE NOTICE 'Company not found';
+    END;
+END;
+$$;
 
+/* 
+Exception	
 
+division_by_zero 	   10 / 0
+no_data_found	       SELECT INTO returns no rows
+too_many_rows	       SELECT INTO returns multiple rows
+unique_violation	   Duplicate key
+foreign_key_violation  FK constraint fails
+others	               Catch-all 
+*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* BEGIN
+    -- anything risky
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE NOTICE 'Unexpected error occurred';
+END;
+*/
 
 
 /* Task 4: Department Budget Enforcement Function
@@ -435,6 +431,8 @@ BEGIN
 END;
 $$;
 
+
+
 -- highest salary emp
 CREATE OR REPLACE FUNCTION highest_salary(
 	com_name VARCHAR(100)
@@ -469,23 +467,6 @@ END;
 $$;
 
 SELECT * FROM highest_salary('Satva Solutions');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
