@@ -1,0 +1,34 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+export const inventortySlice = createSlice({
+  name: "inventory",
+  initialState: {
+    products: [
+      { id: 1, name: "Laptop", price: 1000, quantity: 10 },
+      { id: 2, name: "Phone", price: 500, quantity: 20 },
+      { id: 3, name: "Tablet", price: 700, quantity: 15 },
+      { id: 4, name: "Monitor", price: 300, quantity: 8 },
+      { id: 5, name: "Keyboard", price: 100, quantity: 25 },
+      { id: 6, name: "Mouse", price: 50, quantity: 30 },
+      { id: 7, name: "Headphones", price: 150, quantity: 12 },
+      { id: 8, name: "Speaker", price: 200, quantity: 5 },
+      { id: 9, name: "Webcam", price: 80, quantity: 18 },
+      { id: 10, name: "Printer", price: 250, quantity: 7 },
+      { id: 11, name: "Router", price: 120, quantity: 10 },
+      { id: 12, name: "External Hard Drive", price: 180, quantity: 9 },
+      { id: 13, name: "USB Flash Drive", price: 20, quantity: 50 },
+      { id: 14, name: "Graphics Card", price: 400, quantity: 4 },
+      { id: 15, name: "Power Supply", price: 90, quantity: 6 },
+    ],
+  },
+  reducers: {
+    deleteProduct: (state, action) => {
+      state.products = state.products.filter(
+        (product) => product.id !== action.payload,
+      );
+    },
+  },
+});
+
+export const { deleteProduct } = inventortySlice.actions;
+export default inventortySlice.reducer;
