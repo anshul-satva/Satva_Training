@@ -1,0 +1,4 @@
+{
+  "/roles/permissions": "/permissions",
+  "/roles/permissions/:id": "/permissions/:id"
+}
