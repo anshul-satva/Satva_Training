@@ -11,12 +11,12 @@ const middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
-server.use(
-  jsonServer.rewriter({
-    "/roles/permissions": "/permissions",
-    "/roles/permissions/:id": "/permissions/:id",
-  }),
-);
+// server.use(
+//   jsonServer.rewriter({
+//     "/roles/permissions": "/permissions",
+//     "/roles/permissions/:id": "/permissions/:id",
+//   }),
+// );
 
 server.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -47,7 +47,7 @@ server.post("/login", async (req, res) => {
     {
       id: user.id,
       name: user.name,
-      email: user.email,
+      // email: user.email,
       roleId: user.roleId,
       roleName: role.name,
     },
@@ -60,7 +60,7 @@ server.post("/login", async (req, res) => {
     user: {
       id: user.id,
       name: user.name,
-      email: user.email,
+      // email: user.email,
       roleId: user.roleId,
       roleName: role.name,
     },

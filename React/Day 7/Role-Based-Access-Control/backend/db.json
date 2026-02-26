@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Super Admin",
-      "email": "admin@app.com",
-      "password": "$2b$10$VmBzkQsm6/aAoO/LZ7B4mOVFC//w34U6kHkji7fHJA48AnWQJZ1Bq",
-      "roleId": 1
-    },
-    {
       "id": 2,
       "name": "HR Manager",
       "email": "hr@app.com",
@@ -27,6 +20,41 @@
       "email": "manager@app.com",
       "password": "$2b$10$jx5Sy5HGleVMbEmUpTpI3OsukkoTtOBEWAnWTGDHJ3oNsfNPqI/Gi",
       "roleId": 4
+    },
+    {
+      "name": "Anshul",
+      "email": "anshulpanchal2508@gmail.com",
+      "password": "$2b$10$DgmwcW1EeyIaDZgWMq8x/uQVJR6n8O0WxfZpR/rQXknbrtmB5nw8G",
+      "roleId": 1,
+      "id": 5
+    },
+    {
+      "name": "Harshal",
+      "email": "harshal@gmail.com",
+      "password": "$2b$10$FXHV/PNFwJ02s/Gx25A6EO27.UxShDRiaK.9SAgrZAWa7GmrcL4FS",
+      "roleId": 3,
+      "id": 6
+    },
+    {
+      "name": "gf",
+      "email": "anshulpanchal2508@gmail.comfdg",
+      "password": "$2b$10$81PQHlkWiUOhTZczqdRwV.6nJTakJEB59c60ZdsOdAZmqfDHW7GuK",
+      "roleId": 2,
+      "id": 7
+    },
+    {
+      "name": "123654",
+      "email": "anshulkumar@satvasolutions.com",
+      "password": "$2b$10$9Pl2k79ax3uQ.3ANNA1ygeceZS8iJukkZ50Wu646F9I3DogR6n20W",
+      "roleId": 1,
+      "id": 8
+    },
+    {
+      "name": "Anshul",
+      "email": "anshul@gmail.com",
+      "password": "$2b$10$UnoUunDSSigci1F0Or6klOKg6oC5F4HgTtaI408S9Kq9079CgePQW",
+      "roleId": 1,
+      "id": 9
     }
   ],
   "roles": [
@@ -96,19 +124,43 @@
         {
           "moduleId": 1,
           "moduleName": "users",
-          "allowedActionIds": [1, 2, 3, 4]
+          "allowedActionIds": [
+            4,
+            3,
+            2,
+            1
+          ]
         },
         {
           "moduleId": 2,
           "moduleName": "employees",
-          "allowedActionIds": [1, 2, 3, 4]
+          "allowedActionIds": [
+            1,
+            2,
+            3,
+            4
+          ]
         },
         {
           "moduleId": 3,
           "moduleName": "projects",
-          "allowedActionIds": [1, 2, 3, 4]
+          "allowedActionIds": [
+            1,
+            2,
+            3,
+            4
+          ]
         },
-        { "moduleId": 4, "moduleName": "roles", "allowedActionIds": [1, 3] }
+        {
+          "moduleId": 4,
+          "moduleName": "roles",
+          "allowedActionIds": [
+            1,
+            3,
+            2,
+            4
+          ]
+        }
       ]
     },
     {
@@ -116,14 +168,35 @@
       "roleId": 2,
       "roleName": "HR",
       "modulePermissions": [
-        { "moduleId": 1, "moduleName": "users", "allowedActionIds": [] },
+        {
+          "moduleId": 1,
+          "moduleName": "users",
+          "allowedActionIds": [
+            2
+          ]
+        },
         {
           "moduleId": 2,
           "moduleName": "employees",
-          "allowedActionIds": [1, 2, 3, 4]
+          "allowedActionIds": [
+            1,
+            2,
+            3,
+            4
+          ]
         },
-        { "moduleId": 3, "moduleName": "projects", "allowedActionIds": [] },
-        { "moduleId": 4, "moduleName": "roles", "allowedActionIds": [1] }
+        {
+          "moduleId": 3,
+          "moduleName": "projects",
+          "allowedActionIds": []
+        },
+        {
+          "moduleId": 4,
+          "moduleName": "roles",
+          "allowedActionIds": [
+            1
+          ]
+        }
       ]
     },
     {
@@ -131,14 +204,35 @@
       "roleId": 3,
       "roleName": "Supervisor",
       "modulePermissions": [
-        { "moduleId": 1, "moduleName": "users", "allowedActionIds": [] },
+        {
+          "moduleId": 1,
+          "moduleName": "users",
+          "allowedActionIds": [
+            1
+          ]
+        },
         {
           "moduleId": 2,
           "moduleName": "employees",
-          "allowedActionIds": [1, 3]
+          "allowedActionIds": [
+            1,
+            3
+          ]
         },
-        { "moduleId": 3, "moduleName": "projects", "allowedActionIds": [1] },
-        { "moduleId": 4, "moduleName": "roles", "allowedActionIds": [1] }
+        {
+          "moduleId": 3,
+          "moduleName": "projects",
+          "allowedActionIds": [
+            1
+          ]
+        },
+        {
+          "moduleId": 4,
+          "moduleName": "roles",
+          "allowedActionIds": [
+            1
+          ]
+        }
       ]
     },
     {
@@ -146,15 +240,94 @@
       "roleId": 4,
       "roleName": "Manager",
       "modulePermissions": [
-        { "moduleId": 1, "moduleName": "users", "allowedActionIds": [] },
-        { "moduleId": 2, "moduleName": "employees", "allowedActionIds": [] },
+        {
+          "moduleId": 1,
+          "moduleName": "users",
+          "allowedActionIds": []
+        },
+        {
+          "moduleId": 2,
+          "moduleName": "employees",
+          "allowedActionIds": []
+        },
         {
           "moduleId": 3,
           "moduleName": "projects",
-          "allowedActionIds": [1, 2, 3, 4]
+          "allowedActionIds": [
+            2,
+            3,
+            4,
+            1
+          ]
         },
-        { "moduleId": 4, "moduleName": "roles", "allowedActionIds": [1] }
+        {
+          "moduleId": 4,
+          "moduleName": "roles",
+          "allowedActionIds": [
+            1
+          ]
+        }
       ]
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "alice@company.com",
+      "department": "Engineering",
+      "position": "Developer",
+      "phone": "555-0101"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob@company.com",
+      "department": "Marketing",
+      "position": "Designer",
+      "phone": "555-0102"
+    },
+    {
+      "id": 3,
+      "name": "John due",
+      "email": "john@company.com",
+      "department": "Sales",
+      "position": "Designer",
+      "phone": "555-0102"
+    },
+    {
+      "id": 4,
+      "name": "Adam Smith",
+      "email": "adam@company.com",
+      "department": "Production Executive",
+      "position": "Manager",
+      "phone": "555-0102"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Website Redesign",
+      "description": "Redesign company website",
+      "status": "In Progress",
+      "startDate": "2024-01-01",
+      "endDate": "2024-06-30"
+    },
+    {
+      "id": 2,
+      "name": "Mobile App",
+      "description": "Build iOS and Android app",
+      "status": "Planning",
+      "startDate": "2024-03-01",
+      "endDate": "2024-12-31"
+    },
+    {
+      "name": "PayBev",
+      "description": "Payment Beverages",
+      "status": "In Progress",
+      "startDate": "2026-02-26",
+      "endDate": "2026-03-19",
+      "id": 3
     }
   ]
 }
