@@ -147,6 +147,11 @@ const ProjectList = () => {
         columns={columns}
         rowKey="id"
         loading={loading}
+        pagination={{
+          defaultPageSize : 5,
+          showSizeChanger: true,
+          pageSizeOptions: ["7", "10", "12"],
+        }}
       />
 
       <Modal
