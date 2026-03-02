@@ -1,0 +1,46 @@
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.exe
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.deps.json
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.runtimeconfig.json
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.dll
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.pdb
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.AssemblyInfo.cs
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.dll
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\refint\ConsoleApp1.dll
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.pdb
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.genruntimeconfig.cache
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ref\ConsoleApp1.dll
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\Dependent_Project.deps.json
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\Dependent_Project.runtimeconfig.json
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\Dependent_Project.exe
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\Dependent_Project.dll
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\Dependent_Project.pdb
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleA.CB28C8CC.Up2Date
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Admin\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\Dependent_Project.deps.json
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\Dependent_Project.runtimeconfig.json
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\Dependent_Project.exe
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.exe
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.deps.json
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.runtimeconfig.json
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.dll
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.pdb
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\Dependent_Project.dll
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\bin\Debug\net10.0\Dependent_Project.pdb
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.AssemblyInfo.cs
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\ConsoleA.CB28C8CC.Up2Date
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.dll
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\refint\ConsoleApp1.dll
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.pdb
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.genruntimeconfig.cache
+C:\Users\Admin\source\repos\DI Practicle\ConsoleApp1\obj\Debug\net10.0\ref\ConsoleApp1.dll

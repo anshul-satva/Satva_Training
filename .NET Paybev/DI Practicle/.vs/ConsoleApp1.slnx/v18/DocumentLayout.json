@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\admin\\source\\repos\\di practicle\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\admin\\source\\repos\\di practicle\\consoleapp1\\greetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\greetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FC4C10D-07C8-4366-AC09-A81822CC9824}|Dependent_Project\\Dependent_Project.csproj|c:\\users\\admin\\source\\repos\\di practicle\\dependent_project\\di\\igreeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FC4C10D-07C8-4366-AC09-A81822CC9824}|Dependent_Project\\Dependent_Project.csproj|solutionrelative:dependent_project\\di\\igreeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FC4C10D-07C8-4366-AC09-A81822CC9824}|Dependent_Project\\Dependent_Project.csproj|c:\\users\\admin\\source\\repos\\di practicle\\dependent_project\\di\\greeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FC4C10D-07C8-4366-AC09-A81822CC9824}|Dependent_Project\\Dependent_Project.csproj|solutionrelative:dependent_project\\di\\greeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FC4C10D-07C8-4366-AC09-A81822CC9824}|Dependent_Project\\Dependent_Project.csproj|c:\\users\\admin\\source\\repos\\di practicle\\dependent_project\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FC4C10D-07C8-4366-AC09-A81822CC9824}|Dependent_Project\\Dependent_Project.csproj|solutionrelative:dependent_project\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FC4C10D-07C8-4366-AC09-A81822CC9824}|Dependent_Project\\Dependent_Project.csproj|c:\\users\\admin\\source\\repos\\di practicle\\dependent_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FC4C10D-07C8-4366-AC09-A81822CC9824}|Dependent_Project\\Dependent_Project.csproj|solutionrelative:dependent_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FC4C10D-07C8-4366-AC09-A81822CC9824}|Dependent_Project\\Dependent_Project.csproj|c:\\users\\admin\\source\\repos\\di practicle\\dependent_project\\dependent_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6FC4C10D-07C8-4366-AC09-A81822CC9824}|Dependent_Project\\Dependent_Project.csproj|solutionrelative:dependent_project\\dependent_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\admin\\source\\repos\\di practicle\\consoleapp1\\calculatorapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\calculatorapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\admin\\source\\repos\\di practicle\\consoleapp1\\consoleapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\consoleapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\Dependent_Project\\Program.cs",
+              "RelativeDocumentMoniker": "Dependent_Project\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\Dependent_Project\\Program.cs",
+              "RelativeToolTip": "Dependent_Project\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T04:29:16.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Calculator.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\Dependent_Project\\Calculator.cs",
+              "RelativeDocumentMoniker": "Dependent_Project\\Calculator.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\Dependent_Project\\Calculator.cs",
+              "RelativeToolTip": "Dependent_Project\\Calculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T04:32:54.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Greeter.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\Dependent_Project\\DI\\Greeter.cs",
+              "RelativeDocumentMoniker": "Dependent_Project\\DI\\Greeter.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\Dependent_Project\\DI\\Greeter.cs",
+              "RelativeToolTip": "Dependent_Project\\DI\\Greeter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T11:16:27.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IGreeter.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\Dependent_Project\\DI\\IGreeter.cs",
+              "RelativeDocumentMoniker": "Dependent_Project\\DI\\IGreeter.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\Dependent_Project\\DI\\IGreeter.cs",
+              "RelativeToolTip": "Dependent_Project\\DI\\IGreeter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T11:16:33.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T11:11:50.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GreetingController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\ConsoleApp1\\GreetingController.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\GreetingController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\ConsoleApp1\\GreetingController.cs",
+              "RelativeToolTip": "ConsoleApp1\\GreetingController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T13:09:47.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dependent_Project.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\Dependent_Project\\Dependent_Project.csproj",
+              "RelativeDocumentMoniker": "Dependent_Project\\Dependent_Project.csproj",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\Dependent_Project\\Dependent_Project.csproj",
+              "RelativeToolTip": "Dependent_Project\\Dependent_Project.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-27T11:10:45.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CalculatorApp.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\ConsoleApp1\\CalculatorApp.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\CalculatorApp.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\ConsoleApp1\\CalculatorApp.cs",
+              "RelativeToolTip": "ConsoleApp1\\CalculatorApp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T11:17:58.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConsoleApp1.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\ConsoleApp1\\ConsoleApp1.csproj",
+              "RelativeDocumentMoniker": "ConsoleApp1\\ConsoleApp1.csproj",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DI Practicle\\ConsoleApp1\\ConsoleApp1.csproj",
+              "RelativeToolTip": "ConsoleApp1\\ConsoleApp1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-27T04:11:37.824Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
