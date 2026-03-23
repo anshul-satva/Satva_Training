@@ -1,0 +1,17 @@
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\bin\Debug\net10.0\Employee_CRUD.exe
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\bin\Debug\net10.0\App.config
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\bin\Debug\net10.0\Employee_CRUD.dll.config
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\bin\Debug\net10.0\Employee_CRUD.deps.json
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\bin\Debug\net10.0\Employee_CRUD.runtimeconfig.json
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\bin\Debug\net10.0\Employee_CRUD.dll
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\bin\Debug\net10.0\Employee_CRUD.pdb
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\obj\Debug\net10.0\Employee_CRUD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\obj\Debug\net10.0\Employee_CRUD.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\obj\Debug\net10.0\Employee_CRUD.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\obj\Debug\net10.0\Employee_CRUD.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\obj\Debug\net10.0\Employee_CRUD.sourcelink.json
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\obj\Debug\net10.0\Employee_CRUD.dll
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\obj\Debug\net10.0\refint\Employee_CRUD.dll
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\obj\Debug\net10.0\Employee_CRUD.pdb
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\obj\Debug\net10.0\Employee_CRUD.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Training\C#\Day 2\Employee_CRUD\Employee_CRUD\obj\Debug\net10.0\ref\Employee_CRUD.dll

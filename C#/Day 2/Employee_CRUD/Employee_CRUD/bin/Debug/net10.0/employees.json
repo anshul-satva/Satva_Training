@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 2,
+    "FirstName": "Harshal",
+    "LastName": "Panchal",
+    "Gender": "Male",
+    "Email": "harsh@gmail.com",
+    "Phone": "1111111111",
+    "Designation": "ba",
+    "Salary": 40000,
+    "CreatedAt": "2026-03-10T18:07:25.0546697+05:30",
+    "FullName": "Harshal Panchal"
+  }
+]
