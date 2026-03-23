@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "dVxzs+PXifc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Training\\C#\\Day 5\\EmployeeApp\\EmployeeApp\\EmployeeApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.0\\system.configuration.configurationmanager.9.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.0\\system.diagnostics.eventlog.9.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.0\\system.security.cryptography.protecteddata.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
