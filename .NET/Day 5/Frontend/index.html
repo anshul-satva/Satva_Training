@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+  <head>
+    <title>QuickBooks OAuth Test</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+      .subtitle {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+      .card {
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 16px;
+      }
+      .card h2 {
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+      .card p {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 14px;
+      }
+      button {
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .btn-blue {
+        background: #2563eb;
+        color: white;
+      }
+      .btn-green {
+        background: #16a34a;
+        color: white;
+      }
+      .btn-red {
+        background: #dc2626;
+        color: white;
+      }
+      .btn-gray {
+        background: #f3f4f6;
+        color: #333;
+        border: 1px solid #ddd;
+      }
+      .result {
+        margin-top: 14px;
+        background: #f9fafb;
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 12px;
+        font-family: monospace;
+        min-height: 40px;
+        color: #333;
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+      .status-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .connected {
+        background: #dcfce7;
+        color: #166534;
+      }
+      .disconnected {
+        background: #fee2e2;
+        color: #991b1b;
+      }
+      .loading {
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>QuickBooks OAuth Demo</h1>
+
+    <!-- STATUS -->
+    <div class="card">
+      <h2>Connection Status</h2>
+      <p>Check if QuickBooks is connected for this user</p>
+      <button class="btn-gray" onclick="checkStatus()">Check Status</button>
+      <div class="result" id="status-result">Click button to check...</div>
+    </div>
+
+    <!-- CONNECT -->
+    <div class="card">
+      <h2>Connect QuickBooks</h2>
+      <p>Step 1: Get the login URL. Step 2: Open it in this tab to login.</p>
+      <button class="btn-blue" onclick="connectQB()">
+        Connect to QuickBooks
+      </button>
+      <div class="result" id="connect-result">Click to get QB login URL...</div>
+    </div>
+
+    <!-- REFRESH -->
+    <div class="card">
+      <h2>Refresh Token</h2>
+      <p>
+        Get a new access token silently (no user login needed). Use when token
+        expires after 1 hour.
+      </p>
+      <button class="btn-green" onclick="refreshToken()">Refresh Token</button>
+      <div class="result" id="refresh-result">Click to refresh...</div>
+    </div>
+
+    <!-- REVOKE -->
+    <div class="card">
+      <h2>Revoke / Disconnect</h2>
+      <p>
+        Disconnect QuickBooks. Deletes tokens from DB and tells QB to invalidate
+        them.
+      </p>
+      <button class="btn-red" onclick="revokeToken()">
+        Disconnect QuickBooks
+      </button>
+      <div class="result" id="revoke-result">Click to disconnect...</div>
+    </div>
+
+    <script>
+      const API = "https://localhost:7215/api/auth/quickbooks";
+
+      async function checkStatus() {
+        const el = document.getElementById("status-result");
+        el.textContent = "Loading...";
+        try {
+          const res = await fetch(`${API}/status`);
+          const data = await res.json();
+          el.textContent = JSON.stringify(data, null, 2);
+        } catch (e) {
+          el.textContent =
+            "Error: Is your .NET app running at https://localhost:7215?";
+        }
+      }
+
+      async function connectQB() {
+        const el = document.getElementById("connect-result");
+        el.textContent = "Getting login URL...";
+        try {
+          const res = await fetch(`${API}/connect`);
+          const data = await res.json();
+          el.textContent = "Opening QuickBooks login in this tab...";
+          // Open QB login in same tab so session cookie works
+          window.location.href = data.authUrl;
+        } catch (e) {
+          el.textContent =
+            "Error: Is your .NET app running at https://localhost:7215?";
+        }
+      }
+
+      async function refreshToken() {
+        const el = document.getElementById("refresh-result");
+        el.textContent = "Refreshing...";
+        try {
+          const res = await fetch(`${API}/refresh`, {
+            method: "POST",
+          });
+          const data = await res.json();
+          el.textContent = JSON.stringify(data, null, 2);
+        } catch (e) {
+          el.textContent = "Error: " + e.message;
+        }
+      }
+
+      async function revokeToken() {
+        const el = document.getElementById("revoke-result");
+        el.textContent = "Revoking...";
+        try {
+          const res = await fetch(`${API}/revoke`, {
+            method: "POST"
+          });
+          const data = await res.json();
+          el.textContent = JSON.stringify(data, null, 2);
+        } catch (e) {
+          el.textContent = "Error: " + e.message;
+        }
+      }
+
+      // Auto check status on page load
+      checkStatus();
+    </script>
+  </body>
+</html>
