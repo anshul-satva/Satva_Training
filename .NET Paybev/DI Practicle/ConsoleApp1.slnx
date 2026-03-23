@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="ConsoleApp1/ConsoleApp1.csproj" />
-  <Project Path="Dependent_Project/Dependent_Project.csproj" Id="6fc4c10d-07c8-4366-ac09-a81822cc9824" />
-</Solution>
