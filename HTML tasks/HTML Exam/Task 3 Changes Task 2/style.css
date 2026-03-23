@@ -1,0 +1,42 @@
+.table-1 {
+  border-collapse: collapse;
+  border: 1px solid blue;
+  width: 600px;
+  height: 250px;
+  margin-left: 380px;
+}
+th,
+td {
+  border: 1px solid blue;
+  padding: 2px;
+}
+
+.table-1 th {
+  text-align: left;
+  color: red;
+}
+.waster-width {
+  height: 50px;
+}
+.gray {
+  background-color: rgb(222, 219, 219);
+}
+
+.table-2 {
+  border: 1px solid blue;
+  width: 600px;
+  height: 250px;
+  margin-left: 380px;
+  margin-top: 15px;
+  margin-bottom: 70px;
+}
+
+.table-2 th {
+  text-align: left;
+  border: 1px solid blue;
+  font-weight: normal;
+}
+.table-2 td {
+  text-align: center;
+  border: 1px solid blue;
+}

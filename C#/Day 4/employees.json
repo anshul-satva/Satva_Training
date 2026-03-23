@@ -1,0 +1,38 @@
+[
+  {
+    "id": "fdb700fb-815f-4878-afb7-c820bbef9efb",
+    "firstName": "Anshul",
+    "lastName": "Panchal",
+    "email": "anshul@gmail.com",
+    "phoneNumber": "1020202020",
+    "salary": 21000,
+    "encryptedPassword": "1Er0iqNTkic243T0qgPZbIW/JKAz0l\u002BLU\u002B3f374aGCM="
+  },
+  {
+    "id": "3eeada42-7fa9-4155-8faf-9f5e0eead214",
+    "firstName": "Virat",
+    "lastName": "Kohli",
+    "email": "virat@kohli.com",
+    "phoneNumber": "1325469781",
+    "salary": 21000,
+    "encryptedPassword": "LGP9fTv6hprgzit7LoFsmrK1Xqi6RF8dg2kCQzP3Y1o="
+  },
+  {
+    "id": "3a1a9096-ac06-4fef-bc25-15c08674a973",
+    "firstName": "Rohit",
+    "lastName": "Sharma",
+    "email": "rohit@sharma.com",
+    "phoneNumber": "1325469781",
+    "salary": 21546,
+    "encryptedPassword": "hL/f6xR2m7JefOusGFun7bKIld0alshUW9cCEIYzi5I="
+  },
+  {
+    "id": "8f42ac15-ec92-45f9-a3e8-44c5b61c4324",
+    "firstName": "Harsh",
+    "lastName": "Singh",
+    "email": ".hars@gmail.com",
+    "phoneNumber": "1020304050",
+    "salary": 100000,
+    "encryptedPassword": "Pblgq4BytHtWzbxhZXI6pCo3SkeZ7UMAT69rypdng18="
+  }
+]

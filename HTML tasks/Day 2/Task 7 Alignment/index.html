@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Task 7</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-header">
+        <span style="font-size: 18px; font-weight: 500">Modal title</span>
+        <i class="fas fa-times" style="cursor: pointer"></i>
+      </div>
+
+      <div class="toolbar">
+        <button onclick="format('justifyLeft')" title="Align Left">
+          <i class="fas fa-align-left"></i>
+        </button>
+        <button onclick="format('justifyCenter')" title="Align Center">
+          <i class="fas fa-align-center"></i>
+        </button>
+        <button onclick="format('justifyRight')" title="Align Right">
+          <i class="fas fa-align-right"></i>
+        </button>
+        <button onclick="format('justifyFull')" title="Justify">
+          <i class="fas fa-align-justify"></i>
+        </button>
+      </div>
+
+      <div id="editor" contenteditable="true">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-close">Close</button>
+        <button class="btn btn-save">Save changes</button>
+      </div>
+    </div>
+
+    <script>
+      function format(command) {
+        // Execute the formatting command
+        document.execCommand(command, false, null);
+
+        document.getElementById("editor").focus();
+      }
+    </script>
+  </body>
+</html>

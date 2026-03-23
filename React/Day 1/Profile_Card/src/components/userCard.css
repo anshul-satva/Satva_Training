@@ -1,0 +1,91 @@
+body {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", "Helvetica Neue", "Arial", sans-serif;
+  background-color: darkgray;
+}
+
+.cards-container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  margin: 20px;
+  width: 250px;
+  padding: 16px;
+  border-radius: 10px;
+  background: linear-gradient(160deg, #ffffff 0%, #eef0fb 100%);
+  box-shadow:
+    0 2px 0px rgba(255, 255, 255, 0.9) inset,
+    0 6px 20px rgba(99, 102, 241, 0.1),
+    0 1px 4px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  border: 1px solid rgba(99, 102, 241, 0.12);
+}
+
+.user-header {
+  margin-bottom: 10px;
+}
+
+.user-name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e1e2e;
+  letter-spacing: -0.3px;
+}
+
+.user-role {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7c7f9a;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.user-status {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #9294aa;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 30px;
+  padding: 6px 14px;
+  display: inline-block;
+}
+
+.status-online,
+.status-offline {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-online::before,
+.status-offline::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-online {
+  color: #16a34a;
+}
+
+.status-online::before {
+  background-color: #22c55e;
+}
+
+.status-offline {
+  color: #dc2626;
+}
+
+.status-offline::before {
+  background-color: #ef4444;
+}

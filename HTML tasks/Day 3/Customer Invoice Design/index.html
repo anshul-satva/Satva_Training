@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="logo">Logo</div>
+      <div class="admin">
+        <div class="admin-circle"></div>
+        Super Admin
+      </div>
+    </div>
+
+    <div class="main">
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="active" onclick="showSection('customer',this)">
+          <b><i>Customer</i></b>
+        </div>
+        <div onclick="showSection('invoice',this)">
+          <b><i>Invoice</i></b>
+        </div>
+        <div onclick="showSection('report',this)">
+          <b><i>Report</i></b>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content">
+        <!-- CUSTOMER -->
+        <div id="customer" class="section active">
+          <div class="inline">
+            <b><i>Customer</i></b>
+          </div>
+          <br />
+          <div class="filters">
+            <input placeholder="Search" />
+            <select>
+              <option>Status</option>
+              <option>Active</option>
+              <option>Inactive</option>
+            </select>
+            <button class="add-btn" onclick="openCustomer()">
+              + Add Customer
+            </button>
+          </div>
+
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Company name</th>
+              <th>Email</th>
+              <th>Mobile number</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            <!-- 8 rows -->
+            <tr>
+              <td>Anshul</td>
+              <td>Satva Solution</td>
+              <td>a@mail.com</td>
+              <td>9999999999</td>
+              <td class="active-status">Active</td>
+              <td>
+                <a href="#" title="Edit">
+                  <i class="bi bi-pencil-square"></i>
+                </a>
+                <a href="#" title="Delete" onclick="openDelete()">
+                  <i class="bi bi-trash"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Mark</td>
+              <td>XYZ</td>
+              <td>b@mail.com</td>
+              <td>8888888888</td>
+              <td class="inactive-status">Inactive</td>
+              <td>
+                <a href="#" class="btn btn-primary" title="Edit">
+                  <i class="bi bi-pencil-square"></i>
+                </a>
+                <span class="icon" onclick="openDelete()"
+                  ><a href="#" class="btn btn-danger" title="Delete">
+                    <i class="bi bi-trash"></i> </a
+                ></span>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+
+          <div class="pagination">
+            <span>1</span><span>2</span><span>3</span><span>4</span
+            ><span>5</span><span>6</span>
+          </div>
+        </div>
+
+        <!-- INVOICE -->
+        <div id="invoice" class="section">
+          <div class="inline">
+            <b> <i> Invoice </i> </b>
+          </div>
+          <br />
+          <div class="filters">
+            <input placeholder="Search" />
+            <select>
+              <option>Payment status</option>
+              <option>Paid</option>
+              <option>Unpaid</option>
+              <option>Partially paid</option>
+            </select>
+            <button class="add-btn" onclick="openInvoice()">
+              + Add Invoice
+            </button>
+          </div>
+
+          <table class="invoice-table">
+            <tr>
+              <th>Number</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Due date</th>
+              <th>Payment status</th>
+              <th></th>
+            </tr>
+
+            <!-- ROW 1 -->
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="paid">Paid</td>
+              <td class="action">
+                <a href="#" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                <a href="#" title="Delete" onclick="openDelete()"
+                  ><i class="bi bi-trash"></i
+                ></a>
+              </td>
+            </tr>
+
+            <!-- ROW 2 -->
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="partial">Partially paid</td>
+              <td class="action">
+                <a href="#"><i class="bi bi-pencil-square"></i></a>
+                <a href="#" onclick="openDelete()"
+                  ><i class="bi bi-trash"></i
+                ></a>
+              </td>
+            </tr>
+
+            <!-- ROW 3 -->
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="unpaid">Unpaid</td>
+              <td class="action">
+                <a href="#"><i class="bi bi-pencil-square"></i></a>
+                <a href="#" onclick="openDelete()"
+                  ><i class="bi bi-trash"></i
+                ></a>
+              </td>
+            </tr>
+
+            <!-- EMPTY ROWS (total 8 rows like PDF) -->
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="action">
+                <a href="#"><i class="bi bi-pencil-square"></i></a>
+                <a href="#" onclick="openDelete()"
+                  ><i class="bi bi-trash"></i
+                ></a>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="action">
+                <a href="#"><i class="bi bi-pencil-square"></i></a>
+                <a href="#" onclick="openDelete()"
+                  ><i class="bi bi-trash"></i
+                ></a>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="action">
+                <a href="#"><i class="bi bi-pencil-square"></i></a>
+                <a href="#" onclick="openDelete()"
+                  ><i class="bi bi-trash"></i
+                ></a>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="action">
+                <a href="#"><i class="bi bi-pencil-square"></i></a>
+                <a href="#" onclick="openDelete()"
+                  ><i class="bi bi-trash"></i
+                ></a>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="action">
+                <a href="#"><i class="bi bi-pencil-square"></i></a>
+                <a href="#" onclick="openDelete()"
+                  ><i class="bi bi-trash"></i
+                ></a>
+              </td>
+            </tr>
+          </table>
+
+          <div class="pagination">
+            <span>1</span><span>2</span><span>3</span><span>4</span
+            ><span>5</span><span>6</span>
+          </div>
+        </div>
+
+        <!-- REPORT -->
+        <div id="report" class="section">
+          <h3><i>Report</i></h3>
+          <div class="report-header">
+            <div class="report-info">
+              <p><b>Financial Year:</b> 2023-2024 | <b>Currency:</b> AUD</p>
+            </div>
+
+            <button class="aud-btn">AUD($) in Thousand</button>
+          </div>
+
+          <table>
+            <tr>
+              <th rowspan="2" class="left">Accounts</th>
+              <th colspan="2">S1 (Feb 2023 - Jul 2023)</th>
+              <th colspan="2">S2 (Aug 2023 - Jan 2024)</th>
+              <th rowspan="2">FYT</th>
+            </tr>
+            <tr>
+              <th>Aggregated</th>
+              <th>Consolidated</th>
+              <th>Aggregated</th>
+              <th>Consolidated</th>
+            </tr>
+
+            <tr class="last-border">
+              <td class="left"><b>Revenue</b></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>200 - SAAS Recurring</td>
+              <td>$100.00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>201 - Subscriptions</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>202 - Transaction/ Usage</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="dark-color">
+              <td>
+                <div><b>Total 200 - SAAS Recurring</b></div>
+              </td>
+              <td><b>$100.00</b></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>209 - Service Revenue</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>220 - Hardware</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>250 - Other</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="dark-color">
+              <td class="left">
+                <div><b>Total Revenue</b></div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="left"><b>Cost Of Goods Sold</b></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>300 - S A A S Cost of Sales</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>301 - Tech Support</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>302 - Dev Ops</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="dark-color">
+              <td class="left">
+                <div><b>Total S A A S Cost of Sales</b></div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="dark-color">
+              <td class="left">
+                <div><b>Gross Profit</b></div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="last-border">
+              <td class="left"><b>Expense</b></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>402 - Sales Expenses</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>403 - Marketing Expenses</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="left"><b>Total expense</b></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD CUSTOMER POPUP -->
+    <div class="popup" id="addCustomer">
+      <div class="popup-box">
+        <div class="popup-header">Add customer</div>
+        <div class="popup-body">
+          <div class="form-grid">
+            <div>
+              <div class="cont">Name</div>
+              <input id="custName" />
+            </div>
+            <div>
+              <div class="cont">Company name</div>
+              <input id="custCompany" />
+            </div>
+            <div>
+              <div class="cont">Email</div>
+              <input id="custEmail" />
+            </div>
+            <div>
+              <div class="cont">Mobile number</div>
+              <input id="custMobile" />
+            </div>
+          </div>
+        </div>
+        <div class="address">
+          <div class="cont">Address</div>
+          <textarea id="custAddress"></textarea>
+        </div>
+        <div class="popup-footer">
+          <button onclick="closeAll()">Cancel</button>
+          <button class="save-btn" onclick="validateCustomerForm()">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD INVOICE POPUP -->
+    <div class="popup" id="addInvoice">
+      <div class="popup-box">
+        <div class="popup-header">Add invoice</div>
+
+        <div class="popup-body">
+          <div class="form-grid">
+            <div>
+              <div class="cont">Number</div>
+              <input id="invNumber" />
+            </div>
+
+            <div>
+              <div class="cont">Customer</div>
+              <select id="invCustomer">
+                <option value="" class="cont">Customer</option>
+                <option value="cust1">Anshul</option>
+                <option value="cust2">Mark</option>
+              </select>
+              <!-- <input id="invCustomer" /> -->
+            </div>
+
+            <div>
+              <div class="cont">Date</div>
+              <input type="date" id="invDate" />
+            </div>
+
+            <div>
+              <div class="cont">Due date</div>
+              <input type="date" id="invDue" />
+            </div>
+
+            <div>
+              <div class="cont">QTY</div>
+              <input id="invQty" />
+            </div>
+
+            <div>
+              <div class="cont">Rate</div>
+              <input id="invRate" />
+            </div>
+          </div>
+
+          <div class="description">
+            <div class="description">Description</div>
+            <div class="desarea">
+              <textarea id="invDesc"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-footer">
+          <button onclick="closeAll()">Cancel</button>
+          <button class="save-btn" onclick="validateInvoiceForm()">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELETE POPUP -->
+    <div class="popup" id="deletePopup">
+      <div class="popup-box">
+        <div class="delete-icon">
+          <i class="bi bi-x-lg"></i>
+        </div>        
+        <div class="popup-body" style="text-align: center">
+          <h3>Are you sure?</h3>
+          Are you sure you want to delete this record?
+        </div>
+        <div class="popup-footer">
+          <button onclick="closeAll()">Cancel</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

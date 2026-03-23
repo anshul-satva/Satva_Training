@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Anshul",
+    "Age": 20,
+    "City": {
+      "Name": "Ahmedabad",
+      "Population": 8000000
+    }
+  },
+  {
+    "Name": "Virat",
+    "Age": 25,
+    "City": {
+      "Name": "Delhi",
+      "Population": 9000000
+    }
+  }
+]

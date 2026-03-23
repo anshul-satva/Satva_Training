@@ -1,3 +1,0 @@
-C# is developed by Microsoft.
-It runs on the .NET platform.
-It is strongly typed and object-oriented.

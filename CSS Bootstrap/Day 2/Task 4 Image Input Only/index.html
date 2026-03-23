@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4 - Image Input Only</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">Task 4:</h1>
+    <div class="container">
+      <div class="inner-container">
+        <h1 class="center">Allow only if Image</h1>
+        <hr />
+        <div class="left">
+          <span>Select Image: </span>
+          <input type="file" id="fileInput1" accept="image/*" /> <br />
+          <button onclick="uploadFile('fileInput1', 'message1')">Upload</button>
+          <div id="message1" class="message"></div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="container">
+      <div class="inner-container">
+        <h1 class="center">Allow only if Image</h1>
+        <hr />
+        <div class="left">
+          <span>Select Image: </span>
+          <input type="file" id="fileInput2" /> <br />
+          <button onclick="uploadFile('fileInput2', 'message2')">Upload</button>
+          <div id="message2" class="message"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

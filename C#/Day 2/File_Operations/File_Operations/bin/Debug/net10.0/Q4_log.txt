@@ -1,4 +1,0 @@
- Application Log 
-[17:54:27]  App started.
-[17:54:27]  User logged in.
-[17:54:27]  Record saved.

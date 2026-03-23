@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 2: Web Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-multiselect/dist/css/bootstrap-multiselect.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg satva-nav">
+      <div class="container">
+        <a class="navbar-brand text-white fw-bold">SATVA HEALTHCARE</a>
+
+        <ul class="navbar-nav mx-auto">
+          <!-- WORK -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+              >Work</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Portfolio</a></li>
+              <li><a class="dropdown-item">Case Studied</a></li>
+              <li><a class="dropdown-item">Testimonials</a></li>
+            </ul>
+          </li>
+
+          <!-- SERVICES MEGA MENU -->
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+              >Services</a
+            >
+
+            <div class="dropdown-menu mega-menu">
+              <div class="container">
+                <div class="row g-2">
+                  <div class="col-md">
+                    <h6>Pharmaceutical</h6>
+                    <a class="dropdown-item">Medicine Search</a>
+                    <a class="dropdown-item">Buy Medicine</a>
+                    <a class="dropdown-item">Locate Medical Store</a>
+                  </div>
+
+                  <div class="col-md">
+                    <h6>Diseases</h6>
+                    <a class="dropdown-item">Physical</a>
+                    <a class="dropdown-item">Internal</a>
+                    <a class="dropdown-item">Mental</a>
+                  </div>
+
+                  <div class="col-md">
+                    <h6>Medical</h6>
+                    <a class="dropdown-item">Search Hospitals</a>
+                    <a class="dropdown-item">Treatment Details</a>
+                  </div>
+
+                  <div class="col-md">
+                    <h6>Self Care</h6>
+                    <a class="dropdown-item">Self Medicine Reminder</a>
+                    <a class="dropdown-item">Health Tips</a>
+                  </div>
+
+                  <div class="col-md">
+                    <h6>Hire</h6>
+                    <a class="dropdown-item">Book Nursing Staff</a>
+                    <a class="dropdown-item">Book Ambulance</a>
+                    <a class="dropdown-item">Book Doctor</a>
+                    <a class="dropdown-item">Book Appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- ABOUT -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+              >About</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Who are we?</a></li>
+              <li><a class="dropdown-item">Motive and Motivation</a></li>
+              <li><a class="dropdown-item">Donate Us</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link">Sales Inquiry</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- FORM -->
+    <div class="container form-container mt-5">
+      <h5 class="text-center mb-4 p-3 bg-dark-subtle">BOOK NURSING STAFF</h5>
+
+      <form id="bookingForm" novalidate>
+        <div class="mb-3">
+          <label>Patient Name</label>
+          <input
+            type="text"
+            name="patientName"
+            class="form-control"
+            oninput="allowLettersOnly(this)"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label>Mobile Number</label>
+          <input
+            type="text"
+            name="mobile"
+            class="form-control"
+            maxlength="10"
+            oninput="allowNumbersOnly(this)"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label>Diseases List</label>
+          <select id="diseaseList" name="diseases" multiple>
+            <option>Fever</option>
+            <option>Cold</option>
+            <option>Mental</option>
+            <option>Blod Pressure</option>
+            <option>Diabetes</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label>City</label>
+          <input
+            type="text"
+            name="cityInput"
+            id="cityInput"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label>Service Date</label>
+          <input
+            type="text"
+            name="serviceDate"
+            id="serviceDate"
+            class="form-control"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label>No of Staff</label>
+          <input
+            type="text"
+            name="staffCount"
+            class="form-control"
+            oninput="allowNumbersOnly(this)"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label>Address</label>
+          <textarea name="address" class="form-control"></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary me-2">Book Staff</button>
+          <button type="button" id="clearBtn" class="btn btn-warning">
+            Clear
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-multiselect/dist/js/bootstrap-multiselect.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

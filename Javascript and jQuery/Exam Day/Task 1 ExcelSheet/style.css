@@ -1,0 +1,37 @@
+/* Ensure inputs stay inside table cells */
+table td {
+    vertical-align: middle;
+    padding: 6px;
+  }
+  
+  
+  /* Fix input overflow */
+  table input,
+  table select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Checkbox center */
+  table .form-check-input {
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Controls section */
+  .controls {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .controls input {
+    width: 120px;
+    display: inline-block;
+  }
+  
+  /* Data table spacing */
+  #tableWrapper {
+    margin-top: 30px;
+  }
+  

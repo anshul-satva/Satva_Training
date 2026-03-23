@@ -1,0 +1,143 @@
+body {
+    background: linear-gradient(135deg, #69aee2, #9bcdf0);
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  /* Quiz Card */
+  .quiz-container {
+    width: 520px;
+    margin: 80px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Heading */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f1f3f5;
+    border-radius: 6px;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  /* Question number */
+  #questionNumber {
+    font-weight: bold;
+    margin-bottom: 15px;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-left: 5px solid #28a745;
+    border-radius: 4px;
+  }
+  
+  /* Question text */
+  #questionText {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Options */
+  .options label {
+    display: block;
+    margin-bottom: 12px;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .options label:hover {
+    background-color: #f1f8ff;
+  }
+  
+  /* Text input */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Error message */
+  #errorMsg {
+    color: #dc3545;
+    margin-top: 15px;
+    font-weight: bold;
+    display: none;
+  }
+  
+  /* Buttons */
+  #nextBtn,
+  #restartBtn {
+    margin-top: 25px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    font-weight: bold;
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  #nextBtn:hover,
+  #restartBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Score display */
+  #scoreDisplay {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  /* Final Result Section */
+  #finalScore {
+    margin-top: 10px;
+  }
+  
+  #fresult {
+    /* background-color: #fff3cd; */
+    padding: 12px;
+    border-left: 5px solid #ffc107;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  /* Correct & Incorrect answers */
+  #correct-ans p {
+    /* background-color: #e8f5e9; */
+    padding: 8px;
+    border-left: 4px solid #28a745;
+    border-radius: 4px;
+  }
+  
+  #incorrect-ans p {
+    /* background-color: #fdecea; */
+    padding: 8px;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+  }
+  
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+  }
+  
+  #restartBtn {
+    display: none;
+  }
+  

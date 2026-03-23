@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ConsoleApp1/ConsoleApp1.csproj" />
+  <Project Path="Dependent_Project/Dependent_Project.csproj" Id="6fc4c10d-07c8-4366-ac09-a81822cc9824" />
+  <Project Path="PaybevFunctions/PaybevFunctions.csproj" Id="d22ef69e-f489-49df-82b2-3f7f07b76071" />
+</Solution>

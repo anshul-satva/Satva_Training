@@ -1,0 +1,39 @@
+body{
+    align-items: center;
+    text-align: center;
+}
+
+#photo{
+    width: 80%;
+    height: 80%;
+    padding: 0px;
+    padding-top: 0;
+}
+
+.nav{
+    display: flex;
+    /* margin: 50px; */
+    margin-bottom: 0px;
+    justify-content: end;
+    gap: 20px;
+    padding-right:110px;
+    font-style: oblique;
+    font-size:20px;
+}
+
+.content{
+    padding: 50px;
+    padding-left: 130px;
+    padding-top: 0px;
+    max-width:80%;
+    font-size:25px;
+}
+
+footer{
+    font-size:15px;
+
+}
+address{
+    font-size:20px;
+
+}

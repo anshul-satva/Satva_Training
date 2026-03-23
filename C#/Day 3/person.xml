@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <Name>Anshul</Name>
+    <Age>20</Age>
+    <City>
+      <Name>Ahmedabad</Name>
+      <Population>8000000</Population>
+    </City>
+  </Person>
+  <Person>
+    <Name>Virat</Name>
+    <Age>25</Age>
+    <City>
+      <Name>Delhi</Name>
+      <Population>9000000</Population>
+    </City>
+  </Person>
+</ArrayOfPerson>
