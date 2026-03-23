@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Training\\C#\\MultipleChoice_Quiz\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{85438656-C734-4E80-B909-2FE8025278A5}|MultipleChoice_Quiz\\MultipleChoice_Quiz.csproj|c:\\users\\admin\\desktop\\training\\c#\\multiplechoice_quiz\\multiplechoice_quiz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85438656-C734-4E80-B909-2FE8025278A5}|MultipleChoice_Quiz\\MultipleChoice_Quiz.csproj|solutionrelative:multiplechoice_quiz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Training\\C#\\MultipleChoice_Quiz\\MultipleChoice_Quiz\\Program.cs",
+              "RelativeDocumentMoniker": "MultipleChoice_Quiz\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Training\\C#\\MultipleChoice_Quiz\\MultipleChoice_Quiz\\Program.cs",
+              "RelativeToolTip": "MultipleChoice_Quiz\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T11:43:26.164Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
