@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="QBSync.API/QBSync.API.csproj" />
+  <Project Path="QBSync.Application/QBSync.Application.csproj" />
+  <Project Path="QBSync.Domain/QBSync.Domain.csproj" />
+  <Project Path="QBSync.Infrastructure/QBSync.Infrastructure.csproj" />
+</Solution>

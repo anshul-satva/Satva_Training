@@ -1,0 +1,6 @@
+@QBSync.API_HostAddress = http://localhost:5159
+
+GET {{QBSync.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
