@@ -1,3 +1,13 @@
+# Dotnet
+.dotnet/
+.codex-dotnet-home/
+
+# Logs
+*.log
+
+# Zip files
+*.zip
+
 bin/
 obj/
 .vs/

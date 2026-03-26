@@ -10,9 +10,12 @@ public class QboService
 {
     private readonly MongoDbContext _db;
     private const int USER_ID = 1;
-    private const string SANDBOX_BASE = "https://sandbox-quickbooks.api.intuit.com/v3/company";
+    private readonly string _sandboxBase;
 
-    public QboService(MongoDbContext db) => _db = db;
+    public QboService(MongoDbContext db, IConfiguration config) {
+        _db = db;
+        _sandboxBase = config["Sandbox:SANDBOX_BASE"];
+        }
 
     private async Task<QuickBooksToken?> GetTokenAsync()
     {
@@ -29,7 +32,7 @@ public class QboService
         if (token == null)
             return (false, "No active QuickBooks connection. Please connect first.");
 
-        var url = $"{SANDBOX_BASE}/{token.RealmId}/{endpoint}";
+        var url = $"{_sandboxBase}/{token.RealmId}/{endpoint}";
         var client = new RestClient(url);
         var request = new RestRequest() { Method = Method.Get };
         request.AddHeader("Authorization", $"Bearer {token.AccessToken}");
@@ -45,7 +48,7 @@ public class QboService
         if (token == null)
             return (false, "No active QuickBooks connection. Please connect first.");
 
-        var url = $"{SANDBOX_BASE}/{token.RealmId}/{endpoint}";
+        var url = $"{_sandboxBase}/{token.RealmId}/{endpoint}";
         var client = new RestClient(url);
         var request = new RestRequest() { Method = Method.Post };
 
