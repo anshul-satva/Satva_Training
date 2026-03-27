@@ -1,0 +1,76 @@
+┌──────────────────────────┐
+│        Client / Postman  │
+│  POST /api/order (JSON)  │
+└─────────────┬────────────┘
+              │
+              v
+┌──────────────────────────┐
+│ OrderHttpReceiver (HTTP) │
+│ - Validate JSON          │
+│ - Add Source=http        │
+│ - Send to Service Bus    │
+└─────────────┬────────────┘
+              │
+              v
+      ┌────────────────────────┐
+      │  Service Bus Queue      │
+      │      orders-queue       │
+      └────────────┬───────────┘
+                   │
+                   v
+┌──────────────────────────┐
+│ OrderQueueProcessor       │
+│ - Deserialize JSON        │
+│ - Validate fields         │
+│ - Save to SQL (Processed) │
+└──────────────────────────┘
+                   │
+                   v
+┌──────────────────────────┐
+│ Azure SQL Database        │
+│ Table: ProcessedOrders    │
+└──────────────────────────┘
+
+
+┌──────────────────────────┐
+│  Azure Blob Storage       │
+│  Container: orders-upload │
+│  (CSV file upload)        │
+└─────────────┬────────────┘
+              │
+              v
+┌──────────────────────────┐
+│ CsvBlobProcessor (Blob)  │
+│ - Parse CSV rows         │
+│ - Validate each order    │
+│ - Send to Service Bus    │
+│ - Log failed rows (SQL)  │
+└─────────────┬────────────┘
+              │
+              v
+      ┌────────────────────────┐
+      │  Service Bus Queue      │
+      │      orders-queue       │
+      └────────────┬───────────┘
+                   │
+                   v
+┌──────────────────────────┐
+│ OrderQueueProcessor       │
+│ (same as above)           │
+└──────────────────────────┘
+
+
+┌──────────────────────────┐
+│ DailySummaryTimer (Timer)│
+│ Runs every minute (now)  │
+│ - Reads SQL table         │
+│ - Calculates totals       │
+│ - Writes JSON summary     │
+└─────────────┬────────────┘
+              │
+              v
+┌──────────────────────────┐
+│ Azure Blob Storage        │
+│ Container: reports        │
+│ summary-YYYYMMDD.json     │
+└──────────────────────────┘
