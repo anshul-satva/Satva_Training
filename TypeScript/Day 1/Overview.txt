@@ -1,0 +1,89 @@
+🟢 1. TypeScript Basics (Fundamentals)
+
+These are the core building blocks:
+
+Primitive Types
+string, number, boolean
+Type Annotations
+Explicit typing of variables and functions
+any vs unknown
+Unsafe vs safe typing
+Type narrowing using typeof
+Arrays
+Typed arrays (number[], string[])
+ReadonlyArray
+🟡 2. Intermediate TypeScript Concepts
+
+These build on the basics:
+
+Tuples
+Fixed-length arrays with different types
+Optional tuple elements
+Literal Types
+Exact values (e.g. 'food' | 'transport')
+Type Inference Tricks
+as const
+
+Deriving union types using:
+
+typeof arr[number]
+🟠 3. Type System Features (Core Strength of TS)
+Union Types
+string | number
+Intersection Types
+TypeA & TypeB
+Type Aliases
+type User = {}
+Interfaces
+Defining object shapes
+Optional Properties
+?
+Readonly Properties
+readonly
+🔵 4. Advanced Interface Features
+Interface Extension
+extends
+Index Signatures
+
+Dynamic keys:
+
+[key: string]: any
+Declaration Merging
+Same interface declared multiple times
+🟣 5. Function & Safety Concepts
+Type Narrowing
+Using typeof
+Strict Typing
+No any
+Explicit Function Types
+Parameters + return types
+🔴 6. React + TypeScript (Application Level)
+Core React + TS Concepts:
+Typed Props using Interfaces
+Component-based typing
+
+useState with Generics
+
+useState<Expense[]>()
+React Event Typing
+React.ChangeEvent<HTMLInputElement>
+React.FormEvent<HTMLFormElement>
+Component Design with Types
+Props typing
+Reusable components
+Data flow (parent → child)
+🟤 7. Real-World TypeScript Utilities
+Utility Types
+Omit<T, K>
+ID generation
+crypto.randomUUID()
+⚫ 8. Project-Level Concepts
+Folder structure
+types.ts file separation
+Strict mode (tsconfig strict: true)
+No type assertions unless necessary
+No any usage
+🧠 Summary (All Topics in One Line)
+
+👉
+Types → Arrays → Tuples → Literal Types → Union & Intersection → Interfaces → Type Aliases → Advanced Interfaces → Type Narrowing → React + TypeScript → Event Typing → Utility Types → Strict Type Safety

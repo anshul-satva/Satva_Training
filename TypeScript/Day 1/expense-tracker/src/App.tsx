@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import type { Expense } from './types';
-import ExpenseForm from './components/ExpenseForm';
-import ExpenseList from './components/ExpenseList';
-import Summary from './components/Summary';
-import './App.css';
+import React, { useState } from "react";
+import type { Expense } from "./types";
+import ExpenseForm from "./components/ExpenseForm";
+import ExpenseList from "./components/ExpenseList";
+import Summary from "./components/Summary";
+import "./App.css";
 
 const App: React.FC = () => {
   // useState<Expense[]> = state that holds an array of Expense objects
   // It starts as an empty array []
-  const [expenses, setExpenses] = useState<Expense[]>([]);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [expenses, setExpenses] = useState<Expense[]>([]);
 
   // addExpense: receives everything EXCEPT the id
-  // We generate the id here using crypto.randomUUID()
-  const addExpense = (expenseData: Omit<Expense, 'id'>): void => {
+  // We generate the id here using crypto . randomUUID()
+  const addExpense = (expenseData: Omit<Expense, "id">): void => {
     const newExpense: Expense = {
-      ...expenseData,           // spread all the fields from the form
-      id: crypto.randomUUID(),  // generate a unique id
+      ...expenseData, // spread all the fields from the form
+      id: crypto.randomUUID(), // generate a unique id
     };
     setExpenses((prev) => [...prev, newExpense]);
   };
@@ -64,9 +64,11 @@ const App: React.FC = () => {
             <div className="modal-header">
               <div>
                 <h2>Add Expense</h2>
-                <p className="muted">All fields are the same — just quick entry.</p>
               </div>
-              <button className="ghost-button" onClick={() => setIsModalOpen(false)}>
+              <button
+                className="ghost-button"
+                onClick={() => setIsModalOpen(false)}
+              >
                 Close
               </button>
             </div>
