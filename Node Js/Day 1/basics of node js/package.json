@@ -1,0 +1,27 @@
+{
+  "name": "basics-of-node-js",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js basics: HTTP, fs, url, nodemailer, os, path in TypeScript",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node18 --outfile=dist/index.js --format=esm --packages=external --sourcemap",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/nodemailer": "^6.4.17",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
