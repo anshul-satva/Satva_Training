@@ -5,7 +5,7 @@ let username: string = "Virat";
 let userAge: number = 39;
 let isLoggedIn: boolean = true;
 let userId: string | number = "EMP001"; // can be either string or number
-
+console.log("Hello World");
 // --- any vs unknown ---
 // any allows you to assign any type of value and perform any operation without type checking
 let dangeourosValue: any = "Hello";
@@ -21,9 +21,9 @@ if (typeof safeValue === "string") {
 
 // --- Arrays ---
 let numbers: number[] = [1, 2, 3, 4, 5, 6, 18];
-let name: (string | number)[] = ["Anshul", "Divy", "Dhruv", 18];
-name.push("Virat"); // No error, because fruits can contain both strings and numbers
-name.push(11); // No error
+let FirstName: (string | number)[] = ["Anshul", "Divy", "Dhruv", 18];
+FirstName.push("Virat"); // No error, because fruits can contain both strings and numbers
+FirstName.push(11); // No error
 // numbers.push("Six"); // Error: Argument of type 'string' is not assignable to parameter of type 'number'
 
 printNumbers(numbers);
@@ -46,14 +46,12 @@ person.push("Anshul"); // valid, because the first element is a string
 //person.push(true); // Error: Argument of type 'boolean' is not assignable to parameter of type 'string | number'
 console.log(person);
 
-
 // --- as-const : used to create literal types ---
 const ROLES = ["Admin", "Editor", "Viewer"] as const;
 // this creates a type: "Admin" | "Editor" | "Viewer"
 type Role = (typeof ROLES)[number];
 let myRole: Role = "Admin"; // valid
 // let badRole: Role = "User"; // Error: Type "User" is not assignable to type 'Role'
-
 
 // SECTION 2: Interfaces & Type Aliases
 // --- Interfaces: User ---
@@ -72,8 +70,6 @@ const user1: User = {
 };
 // user1.createdAt = "2024-01-01"; // Error: Cannot assign to 'createdAt' because it is a read-only property
 
-
-
 // --- Extending Interfaces ---
 interface Employee extends User {
   role: "Admin" | "Editor" | "Viewer";
@@ -87,7 +83,6 @@ const admin: Employee = {
   role: "Admin",
 };
 
-
 // --- Type Aliases: same as interfaces but more flexible ---
 type UserType = {
   id: number;
@@ -100,7 +95,6 @@ type Address = {
   country: string;
 };
 
-
 // --- Intersection Types: combine multiple types into one ---
 type UserWithAddress = UserType & Address;
 const fullUser: UserWithAddress = {
@@ -110,7 +104,6 @@ const fullUser: UserWithAddress = {
   pinCode: 380015,
   country: "India",
 };
-
 
 // --- Index Signatures: for dynamic properties ---
 interface StringMap {
@@ -123,7 +116,6 @@ const translations: StringMap = {
   Thanks: "Dhanyavaad",
   // can add any key-value pair as long as value is a string
 };
-
 
 // --- Declaration Merging: declare the same interface multiple times and TypeScript will merge them ---
 // TypeScript MERGES them into one! Only works with interface, not type alias.
@@ -142,12 +134,11 @@ const appConfig: config = {
   language: "Gujarati",
 };
 
-
 // SECTION 3: Union, Literal, Intersection
 
 // --- Union Types: a variable can hold one of several types ---
 let employeeId: number | string; // can be either number or string
-employeeId = 123; // valid
+let employeeId1 = 123; // valid
 employeeId = "EMP001"; // also valid
 
 function printId(id: number | string) {
@@ -158,6 +149,8 @@ function printId(id: number | string) {
     console.log(`Employwee ID (String) : ${id}`);
   }
 }
+console.log(printId(employeeId));
+console.log(printId(employeeId1));
 
 // --- Literal Types: a variable can only hold a specific value ---
 type Direction = "North" | "South" | "East" | "West";
@@ -169,3 +162,4 @@ type DiceRoll = 1 | 2 | 3 | 4 | 5 | 6;
 let roll: DiceRoll;
 roll = 3; // valid
 // roll = 7; // Error: Type '7' is not assignable to type 'DiceRoll'
+console.log("Me");

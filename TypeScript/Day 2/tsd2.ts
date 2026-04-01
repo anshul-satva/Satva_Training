@@ -145,6 +145,7 @@ const defaultContainer: Container = {
 const numberContainer: Container<number> = {
   data: 123546,
 };
+console.log(numberContainer.data);
 
 // Utility types - built-in generic types provided by TypeScript
 // instead of writing this types ourselves, we can transform existing types using utility types
@@ -162,29 +163,82 @@ type PartialUser = Partial<User>;
 // same as { id?: number; name?: string; email?: string; age?: number}
 
 // Real use case: update function you only send what changed
-function updateUser(id: number, newData: Partial<User>): void {
+function updateUser(id: number, newData: PartialUser): void {
   // changes can have any combination of fields - not all fields are required
-  console.log(`Updating user ${id} with data:`, newData);             
+  console.log(`Updating user ${id} with data:`, newData);
 }
 
-updateUser(1, { name: "New Name" });         // only name
-updateUser(1, { email: "new@mail.com" });    // only email
-updateUser(1, { name: "X", email: "Y" });   // both
+updateUser(152, { name: "New Name" }); // only name
+updateUser(1, { email: "new@mail.com" }); // only email
+updateUser(1, { name: "X", email: "Y" }); // both
 
-// Required 
+// Required
 // Opposite of Partial — removes all ? from every field
 type RequiredUser = Required<User>;
 // same as: { id: number; name: string; email: string; age: number }
 // Notice age is now required even though it was optional!
 
 // Real use: after validation, when you KNOW all fields are present
-function saveUser(user: Required<User>): void {
-  // guaranteed all fields exist — safe to save
+function saveUser(user: RequiredUser): void {
+  console.log("Saving user:", user);
+}
+console.log(
+  saveUser({ id: 1, name: "Anshul", email: "anshul@gmail,com", age: 20 }),
+);
+
+//Readonly - makes all fields readonly
+type FrozenUser = Readonly<User>;
+const user2: FrozenUser = { id: 1, name: "Arjun", email: "a@b.com" };
+// user2.name = "Priya"; // ERROR — cannot reassign readonly property
+console.log("Console Check");
+// Real use: config objects, constants passed around the app
+
+// Pick - select specific fields from a type
+type UserPreiview = Pick<User, "id" | "name">;
+// result : {id: number; name: string}
+function getUserpreview(user: UserPreiview): UserPreiview {
+  console.log(`User Preview - ID: ${user.id}, Name: ${user.name}`);
+  return {
+    id: user.id,
+    name: user.name,
+  };
+}
+getUserpreview({ id: 1, name: "Rohit" });
+
+// OMIT - opposite of Pick, excludes specific fields
+type UserWithoutEmail = Omit<User, "email">;
+
+function printUserWithoutEmail(user: UserWithoutEmail): void {
+  console.log(`User without email - ID: ${user.id}, Name: ${user.name}`);
 }
 
-type FrozenUser = Readonly<User>;
+printUserWithoutEmail({ id: 4, name: "Ab de Villiers", age: 39 });
 
-const user2: FrozenUser = { id: 1, name: "Arjun", email: "a@b.com" };
-// user.name = "Priya"; // ❌ ERROR — cannot reassign readonly property
+// Record - creates an object type with specified keys and value types
+type CategoryCount = Record<string, number>;
 
-// Real use: config objects, constants passed around the app
+const categorycount: CategoryCount = {
+  Sports: 10,
+  Music: 5,
+  Movies: 8,
+};
+console.log(categorycount);
+
+
+// Omit — removes a KEY from an object type
+type NoEmail = Omit<User, "email">;
+// { id: number; name: string; age?: number }
+
+// Exclude — removes a MEMBER from a union type
+type Status = "active" | "inactive" | "banned";
+type AllowedStatus = Exclude<Status, "banned">;
+// "active" | "inactive"    — "banned" is removed
+
+// Extract — KEEPS only the matching members (opposite of Exclude)
+type OnlyActive = Extract<Status, "active" | "inactive">;
+// "active" | "inactive"    — only keeps what matches
+
+// NonNullable — removes null and undefined from a union
+type MaybeString = string | null | undefined;
+type DefiniteString = NonNullable<MaybeString>;
+// string    — null and undefined are gone
