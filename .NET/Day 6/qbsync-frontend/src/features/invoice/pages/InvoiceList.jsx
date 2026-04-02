@@ -5,6 +5,12 @@ import api from '../../../shared/api/client'
 import PageHeader from '../../../shared/components/PageHeader'
 import useConnectedCompanies from '../../../shared/hooks/useConnectedCompanies'
 import InvoiceEditor from '../components/InvoiceEditor'
+import {
+  getCachedInvoicesSnapshot,
+  removeInvoiceFromCache,
+  setCachedInvoices,
+  upsertInvoiceInCache
+} from '../store/invoiceCache'
 
 const STATUS_COLORS = {
   Paid: 'text-bg-success',
@@ -25,35 +31,49 @@ export default function InvoiceList() {
   const [search, setSearch] = useState('')
   const [companyFilter, setCompanyFilter] = useState('all')
   const [showCreateModal, setShowCreateModal] = useState(location.pathname.endsWith('/new'))
+  const initialRealmId = companyFilter !== 'all' ? companyFilter : (companies[0]?.realmId || '')
+  const initialCompanyName = companies.find((company) => company.realmId === initialRealmId)?.companyName || ''
 
   useEffect(() => {
     setShowCreateModal(location.pathname.endsWith('/new'))
   }, [location.pathname])
 
-  const fetchInvoices = async () => {
+  const fetchInvoices = async ({ force = false } = {}) => {
     if (companies.length === 0) {
       setInvoices([])
       setError('')
       return
     }
 
+    const cachedSnapshot = getCachedInvoicesSnapshot(companies)
+    if (!force && cachedSnapshot.missingRealmIds.length === 0) {
+      setInvoices(cachedSnapshot.invoices)
+      setError('')
+      setLoading(false)
+      return
+    }
+
     setLoading(true)
     setError('')
 
+    const companiesToFetch = force
+      ? companies
+      : companies.filter((company) => cachedSnapshot.missingRealmIds.includes(company.realmId))
+
     const results = await Promise.allSettled(
-      companies.map(async (company) => {
+      companiesToFetch.map(async (company) => {
         const res = await api.get(`/invoices?realmId=${encodeURIComponent(company.realmId)}`)
-        return (res.data.data || []).map((invoice) => ({
+        const rows = (res.data.data || []).map((invoice) => ({
           ...invoice,
           realmId: company.realmId,
           companyName: company.companyName
         }))
+        setCachedInvoices(company.realmId, rows)
+        return rows
       })
     )
 
-    const nextInvoices = results
-      .filter((result) => result.status === 'fulfilled')
-      .flatMap((result) => result.value)
+    const nextInvoices = getCachedInvoicesSnapshot(companies, { allowStale: true }).invoices
       .sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0))
 
     const firstError = results.find((result) => result.status === 'rejected')
@@ -110,7 +130,7 @@ export default function InvoiceList() {
       toast.success('Invoices synchronized with QuickBooks.')
     }
 
-    await fetchInvoices()
+    await fetchInvoices({ force: true })
   }
 
   const handleDelete = async (invoice) => {
@@ -120,7 +140,8 @@ export default function InvoiceList() {
     try {
       await api.delete(`/invoices/${invoice.id}?realmId=${encodeURIComponent(invoice.realmId)}`)
       toast.success('Invoice deleted successfully.')
-      fetchInvoices()
+      removeInvoiceFromCache(invoice.realmId, invoice.id)
+      setInvoices((prev) => prev.filter((row) => row.id !== invoice.id || row.realmId !== invoice.realmId))
     } catch (err) {
       toast.error(err.response?.data?.message || 'Failed to delete invoice.')
     } finally {
@@ -302,9 +323,15 @@ export default function InvoiceList() {
                 <div className="modal-body">
                   <InvoiceEditor
                     embedded
-                    initialRealmId={companyFilter !== 'all' ? companyFilter : (companies[0]?.realmId || '')}
+                    initialRealmId={initialRealmId}
                     onCancel={closeCreateModal}
-                    onSuccess={() => {
+                    onSuccess={(invoice) => {
+                      if (invoice) {
+                        upsertInvoiceInCache(invoice, {
+                          realmId: invoice.realmId || initialRealmId,
+                          companyName: invoice.companyName || initialCompanyName
+                        })
+                      }
                       closeCreateModal()
                       fetchInvoices()
                     }}

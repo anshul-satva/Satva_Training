@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import api from "../../../shared/api/client";
 import PageHeader from "../../../shared/components/PageHeader";
 import useConnectedCompanies from "../../../shared/hooks/useConnectedCompanies";
+import { getCachedInvoicesSnapshot, setCachedInvoices } from "../../invoice/store/invoiceCache";
 
 const STATUS_COLORS = {
   Paid: "text-bg-success",
@@ -56,26 +57,36 @@ export default function Dashboard() {
         return;
       }
 
+      const cachedSnapshot = getCachedInvoicesSnapshot(companies);
+      if (cachedSnapshot.missingRealmIds.length === 0) {
+        setInvoices(cachedSnapshot.invoices);
+        setInvoiceError("");
+        setLoadingInvoices(false);
+        return;
+      }
+
       setLoadingInvoices(true);
       setInvoiceError("");
 
       const results = await Promise.allSettled(
-        companies.map(async (company) => {
+        companies
+          .filter((company) => cachedSnapshot.missingRealmIds.includes(company.realmId))
+          .map(async (company) => {
           const res = await api.get(
             `/invoices?realmId=${encodeURIComponent(company.realmId)}`,
           );
           const rows = res.data.data || [];
-          return rows.map((invoice) => ({
+          const mapped = rows.map((invoice) => ({
             ...invoice,
             realmId: company.realmId,
             companyName: company.companyName,
           }));
+          setCachedInvoices(company.realmId, mapped);
+          return mapped;
         }),
       );
 
-      const nextInvoices = results
-        .filter((result) => result.status === "fulfilled")
-        .flatMap((result) => result.value)
+      const nextInvoices = getCachedInvoicesSnapshot(companies, { allowStale: true }).invoices
         .sort(
           (a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0),
         );

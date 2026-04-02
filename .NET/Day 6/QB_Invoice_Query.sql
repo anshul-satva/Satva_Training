@@ -32,3 +32,4 @@ WHERE TABLE_NAME = 'Invoices'
 SELECT * FROM __EFMigrationsHistory
 
 select * from Invoices
+select * from InvoiceLineItems

@@ -2,8 +2,17 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { toast } from 'react-toastify'
 import api from '../../../shared/api/client'
 import useConnectedCompanies from '../../../shared/hooks/useConnectedCompanies'
+import { getCachedInvoiceById } from '../store/invoiceCache'
 
-const emptyLine = { itemId: '', itemName: '', description: '', quantity: 1, unitPrice: 0 }
+const createLineKey = () => `line_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`
+const createEmptyLine = () => ({
+  lineKey: createLineKey(),
+  itemId: '',
+  itemName: '',
+  description: '',
+  quantity: 1,
+  unitPrice: 0
+})
 
 export default function InvoiceEditor({
   invoiceId = null,
@@ -29,7 +38,7 @@ export default function InvoiceEditor({
     customerEmail: '',
     dueDate: '',
     memo: '',
-    lineItems: [{ ...emptyLine }]
+    lineItems: [createEmptyLine()]
   })
 
   const [customers, setCustomers] = useState([])
@@ -54,13 +63,14 @@ export default function InvoiceEditor({
       memo: invoice.memo || '',
       lineItems: invoice.lineItems?.length
         ? invoice.lineItems.map((line) => ({
+            lineKey: line.id ? `line-${line.id}` : createLineKey(),
             itemId: line.itemId || '',
             itemName: line.itemName || '',
             description: line.description || '',
             quantity: Number(line.quantity) || 1,
             unitPrice: Number(line.unitPrice) || 0
           }))
-        : [{ ...emptyLine }]
+        : [createEmptyLine()]
     })
   }, [setSelectedRealmId])
 
@@ -103,6 +113,13 @@ export default function InvoiceEditor({
     if (prefetchedMatches) {
       hasLoadedInvoiceRef.current = true
       applyInvoiceToForm(prefetchedInvoice)
+      return
+    }
+
+    const cachedInvoice = getCachedInvoiceById(invoiceId)
+    if (cachedInvoice && Array.isArray(cachedInvoice.lineItems)) {
+      hasLoadedInvoiceRef.current = true
+      applyInvoiceToForm(cachedInvoice)
       return
     }
 
@@ -163,34 +180,40 @@ export default function InvoiceEditor({
     }))
   }
 
-  const handleLineChange = (index, field, value) => {
-    const lines = [...form.lineItems]
-    lines[index] = { ...lines[index], [field]: value }
+  const handleLineChange = (lineKey, field, value) => {
+    setForm((prev) => ({
+      ...prev,
+      lineItems: prev.lineItems.map((line) => {
+        if (line.lineKey !== lineKey) return line
 
-    if (field === 'itemId') {
-      const item = items.find((row) => row.id === value)
-      if (item) {
-        lines[index].itemName = item.name || ''
-        lines[index].description = item.description || ''
-        lines[index].unitPrice = item.unitPrice || 0
-      }
-    }
+        const updated = { ...line, [field]: value }
 
-    setForm((prev) => ({ ...prev, lineItems: lines }))
+        if (field === 'itemId') {
+          const item = items.find((row) => row.id === value)
+          if (item) {
+            updated.itemName = item.name || ''
+            updated.description = item.description || ''
+            updated.unitPrice = item.unitPrice || 0
+          }
+        }
+
+        return updated
+      })
+    }))
   }
 
   const addLine = () => {
-    setForm((prev) => ({ ...prev, lineItems: [...prev.lineItems, { ...emptyLine }] }))
+    setForm((prev) => ({ ...prev, lineItems: [...prev.lineItems, createEmptyLine()] }))
   }
 
-  const removeLine = (index) => {
+  const removeLine = (lineKey) => {
     if (form.lineItems.length === 1) {
       toast.error('At least one line item is required.')
       return
     }
     setForm((prev) => ({
       ...prev,
-      lineItems: prev.lineItems.filter((_, currentIndex) => currentIndex !== index)
+      lineItems: prev.lineItems.filter((line) => line.lineKey !== lineKey)
     }))
   }
 
@@ -203,12 +226,20 @@ export default function InvoiceEditor({
     if (!form.customerId.trim()) { toast.error('Please select a customer.'); return false }
     if (!form.dueDate) { toast.error('Due date is required.'); return false }
 
+    const itemIds = new Set()
+
     for (let index = 0; index < form.lineItems.length; index += 1) {
       const line = form.lineItems[index]
       if (!line.itemId.trim()) {
         toast.error(`Line ${index + 1}: Please select an item.`)
         return false
       }
+      if (itemIds.has(line.itemId.trim())) {
+        toast.error(`Line ${index + 1}: Item is already added to this invoice. Items must be unique.`)
+        return false
+      }
+      itemIds.add(line.itemId.trim())
+      
       if (!line.quantity || Number(line.quantity) <= 0) {
         toast.error(`Line ${index + 1}: Quantity must be greater than 0.`)
         return false
@@ -259,31 +290,6 @@ export default function InvoiceEditor({
       toast.success(invoiceNumber
         ? `Invoice ${isEdit ? 'updated' : 'created'} successfully. Invoice #: ${invoiceNumber}`
         : `Invoice ${isEdit ? 'updated' : 'created'} successfully.`)
-
-      onSuccess?.(invoice)
-    } catch (err) {
-      // toast.error(err.response?.data?.message || 'Failed to save invoice.')
-    } finally {
-      setLoading(false)
-      submittingRef.current = false
-    }
-  }
-
-  if (!loadingCompanies && companies.length === 0) {
-    return <div className="alert alert-warning mb-0">No connected QuickBooks company found. Connect a company first.</div>
-  }
-
-  if (fetching) {
-    return <div className="loading">Loading invoice...</div>
-  }
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <div className="card shadow-sm border-0">
-        <div className="card-body">
-          {!embedded && (
-            <div className="card-title d-flex align-items-center gap-2">
-              <i className="bi bi-card-checklist text-primary"></i>
               <span>Invoice Details</span>
             </div>
           )}
@@ -399,10 +405,10 @@ export default function InvoiceEditor({
               </thead>
               <tbody>
                 {form.lineItems.map((line, index) => (
-                  <tr key={index}>
+                  <tr key={line.lineKey}>
                     <td>
                       {items.length > 0 ? (
-                        <select value={line.itemId} onChange={(e) => handleLineChange(index, 'itemId', e.target.value)}>
+                        <select value={line.itemId} onChange={(e) => handleLineChange(line.lineKey, 'itemId', e.target.value)}>
                           <option value="">Select item...</option>
                           {items.map((item) => (
                             <option key={item.id} value={item.id}>
@@ -413,7 +419,7 @@ export default function InvoiceEditor({
                       ) : (
                         <input
                           value={line.itemId}
-                          onChange={(e) => handleLineChange(index, 'itemId', e.target.value)}
+                          onChange={(e) => handleLineChange(line.lineKey, 'itemId', e.target.value)}
                           placeholder="Item ID"
                         />
                       )}
@@ -421,7 +427,7 @@ export default function InvoiceEditor({
                     <td>
                       <input
                         value={line.description}
-                        onChange={(e) => handleLineChange(index, 'description', e.target.value)}
+                        onChange={(e) => handleLineChange(line.lineKey, 'description', e.target.value)}
                         placeholder="Description"
                       />
                     </td>
@@ -429,7 +435,7 @@ export default function InvoiceEditor({
                       <input
                         type="number"
                         value={line.quantity}
-                        onChange={(e) => handleLineChange(index, 'quantity', e.target.value)}
+                        onChange={(e) => handleLineChange(line.lineKey, 'quantity', e.target.value)}
                         min="1"
                         step="1"
                       />
@@ -438,14 +444,14 @@ export default function InvoiceEditor({
                       <input
                         type="number"
                         value={line.unitPrice}
-                        onChange={(e) => handleLineChange(index, 'unitPrice', e.target.value)}
+                        onChange={(e) => handleLineChange(line.lineKey, 'unitPrice', e.target.value)}
                         min="0"
                         step="0.01"
                       />
                     </td>
                     <td><strong>${calcLineTotal(line).toFixed(2)}</strong></td>
                     <td>
-                      <button type="button" className="btn btn-outline-danger btn-sm" onClick={() => removeLine(index)}>
+                      <button type="button" className="btn btn-outline-danger btn-sm" onClick={() => removeLine(line.lineKey)}>
                         <i className="bi bi-trash"></i>
                       </button>
                     </td>

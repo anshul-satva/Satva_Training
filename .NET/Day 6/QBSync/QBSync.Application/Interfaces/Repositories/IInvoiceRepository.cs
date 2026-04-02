@@ -9,6 +9,6 @@ public interface IInvoiceRepository
     Task<List<Invoice>> GetByUserIdAsync(string userId);
     Task<List<Invoice>> GetByRealmIdAsync(string realmId);
     Task<Invoice> CreateAsync(Invoice invoice);
-    Task UpdateAsync(Invoice invoice, bool replaceLineItems = true);
+    Task UpdateAsync(Invoice invoice, IEnumerable<InvoiceLineItem>? newLineItems = null);
     Task DeleteAsync(int id);
 }

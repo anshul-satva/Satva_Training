@@ -141,7 +141,7 @@ public class InvoiceService : IInvoiceService
         invoice.DueDate = dto.DueDate;
         invoice.TotalAmount = dto.LineItems.Sum(i => i.Quantity * i.UnitPrice);
         invoice.UpdatedAt = DateTime.UtcNow;
-        invoice.LineItems = dto.LineItems.Select(i => new InvoiceLineItem
+        var newLineItems = dto.LineItems.Select(i => new InvoiceLineItem
         {
             ItemId = i.ItemId,
             ItemName = i.ItemName,
@@ -151,7 +151,7 @@ public class InvoiceService : IInvoiceService
             Amount = i.Quantity * i.UnitPrice
         }).ToList();
 
-        await _invoiceRepository.UpdateAsync(invoice, replaceLineItems: true);
+        await _invoiceRepository.UpdateAsync(invoice, newLineItems);
 
         var updatedInvoice = await _invoiceRepository.GetByIdAsync(invoiceId) ?? invoice;
         return MapInvoice(updatedInvoice);
@@ -274,9 +274,11 @@ public class InvoiceService : IInvoiceService
             invoice.Status = string.IsNullOrWhiteSpace(snapshot.Status) ? invoice.Status : snapshot.Status;
             invoice.UpdatedAt = DateTime.UtcNow;
 
+            List<InvoiceLineItem>? newLineItems = null;
+
             if (snapshot.LineItems.Count > 0)
             {
-                invoice.LineItems = snapshot.LineItems.Select(line => new InvoiceLineItem
+                newLineItems = snapshot.LineItems.Select(line => new InvoiceLineItem
                 {
                     ItemId = line.ItemId,
                     ItemName = line.ItemName,
@@ -287,7 +289,25 @@ public class InvoiceService : IInvoiceService
                 }).ToList();
             }
 
-            await _invoiceRepository.UpdateAsync(invoice, replaceLineItems: true);
+            await _invoiceRepository.UpdateAsync(invoice, newLineItems);
+
+            var refreshed = await _invoiceRepository.GetByIdAsync(invoice.Id);
+            if (refreshed is not null)
+            {
+                invoice.QBInvoiceId = refreshed.QBInvoiceId;
+                invoice.SyncToken = refreshed.SyncToken;
+                invoice.DocNumber = refreshed.DocNumber;
+                invoice.CustomerId = refreshed.CustomerId;
+                invoice.CustomerName = refreshed.CustomerName;
+                invoice.RealmId = refreshed.RealmId;
+                invoice.UserId = refreshed.UserId;
+                invoice.TotalAmount = refreshed.TotalAmount;
+                invoice.Status = refreshed.Status;
+                invoice.DueDate = refreshed.DueDate;
+                invoice.CreatedAt = refreshed.CreatedAt;
+                invoice.UpdatedAt = refreshed.UpdatedAt;
+                invoice.LineItems = refreshed.LineItems.ToList();
+            }
             return true;
         }
         catch (HttpRequestException ex) when (

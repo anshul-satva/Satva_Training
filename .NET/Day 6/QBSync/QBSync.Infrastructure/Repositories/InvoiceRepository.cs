@@ -42,44 +42,35 @@ public class InvoiceRepository : IInvoiceRepository
         return invoice;
     }
 
-    public async Task UpdateAsync(Invoice invoice, bool replaceLineItems = true)
+    public async Task UpdateAsync(Invoice invoice, IEnumerable<InvoiceLineItem>? newLineItems = null)
     {
         var existingInvoice = await _context.Invoices
             .Include(i => i.LineItems)
             .FirstOrDefaultAsync(i => i.Id == invoice.Id)
             ?? throw new KeyNotFoundException("Invoice not found.");
 
-        existingInvoice.QBInvoiceId = invoice.QBInvoiceId;
-        existingInvoice.SyncToken = invoice.SyncToken;
-        existingInvoice.DocNumber = invoice.DocNumber;
-        existingInvoice.CustomerId = invoice.CustomerId;
-        existingInvoice.CustomerName = invoice.CustomerName;
-        existingInvoice.RealmId = invoice.RealmId;
-        existingInvoice.UserId = invoice.UserId;
-        existingInvoice.TotalAmount = invoice.TotalAmount;
-        existingInvoice.Status = invoice.Status;
-        existingInvoice.DueDate = invoice.DueDate;
-        existingInvoice.CreatedAt = invoice.CreatedAt;
-        existingInvoice.UpdatedAt = invoice.UpdatedAt;
-
-        if (replaceLineItems)
+        if (!ReferenceEquals(existingInvoice, invoice))
         {
-            var sourceLineItems = (invoice.LineItems ?? new List<InvoiceLineItem>())
-                .Select(line => new InvoiceLineItem
-                {
-                    ItemId = line.ItemId,
-                    ItemName = line.ItemName,
-                    Description = line.Description,
-                    Quantity = line.Quantity,
-                    UnitPrice = line.UnitPrice,
-                    Amount = line.Amount
-                })
-                .ToList();
+            existingInvoice.QBInvoiceId = invoice.QBInvoiceId;
+            existingInvoice.SyncToken = invoice.SyncToken;
+            existingInvoice.DocNumber = invoice.DocNumber;
+            existingInvoice.CustomerId = invoice.CustomerId;
+            existingInvoice.CustomerName = invoice.CustomerName;
+            existingInvoice.RealmId = invoice.RealmId;
+            existingInvoice.UserId = invoice.UserId;
+            existingInvoice.TotalAmount = invoice.TotalAmount;
+            existingInvoice.Status = invoice.Status;
+            existingInvoice.DueDate = invoice.DueDate;
+            existingInvoice.CreatedAt = invoice.CreatedAt;
+            existingInvoice.UpdatedAt = invoice.UpdatedAt;
+        }
 
+        if (newLineItems != null)
+        {
             _context.InvoiceLineItems.RemoveRange(existingInvoice.LineItems);
             existingInvoice.LineItems.Clear();
 
-            foreach (var lineItem in sourceLineItems)
+            foreach (var lineItem in newLineItems)
             {
                 existingInvoice.LineItems.Add(lineItem);
             }
