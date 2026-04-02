@@ -1,5 +1,4 @@
 "use strict";
-// ─── Enums ───────────────────────────────────────────────────────────────────
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LogLevel = void 0;
 var LogLevel;

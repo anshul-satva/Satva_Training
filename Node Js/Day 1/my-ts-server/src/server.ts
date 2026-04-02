@@ -46,7 +46,7 @@ function buildSystemSnapshot(): SystemSnapshot {
     }
     return accumulator;
   }, {});
-  const snapshot: SystemSnapshot = { 
+  const snapshot: SystemSnapshot = {
     platform: os.platform(),
     arch: os.arch(),
     totalMemory: os.totalmem(),
@@ -57,7 +57,9 @@ function buildSystemSnapshot(): SystemSnapshot {
   return snapshot;
 }
 
-function normalizeQuery(query: ParsedUrlQuery): Record<string, string | string[]> {
+function normalizeQuery(
+  query: ParsedUrlQuery,
+): Record<string, string | string[]> {
   const normalizedQuery: Record<string, string | string[]> = {};
 
   for (const key of Object.keys(query)) {

@@ -1,12 +1,8 @@
-// ─── Enums ───────────────────────────────────────────────────────────────────
-
 export enum LogLevel {
   INFO = "INFO",
   WARN = "WARN",
   ERROR = "ERROR",
 }
-
-// ─── Interfaces ───────────────────────────────────────────────────────────────
 
 export interface ServerConfig {
   port: number;
