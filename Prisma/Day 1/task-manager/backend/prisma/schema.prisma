@@ -19,25 +19,101 @@ enum Priority {
   HIGH
 }
 
+enum ReactionType {
+  LIKE
+  HELPFUL
+  QUESTION
+}
+
 model User {
+  id          String            @id @default(cuid())
+  name        String
+  email       String            @unique
+  password    String
+  tasks       Task[]
+  comments    Comment[]
+  attachments Attachment[]
+  reactions   CommentReaction[]
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+}
+
+model Category {
   id        String   @id @default(cuid())
-  name      String
-  email     String   @unique
-  password  String
+  name      String   @unique
   tasks     Task[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
+model Tag {
+  id        String    @id @default(cuid())
+  name      String    @unique
+  tasks     TaskTag[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
 model Task {
-  id          String     @id @default(cuid())
+  id          String       @id @default(cuid())
   title       String
   description String?
-  status      TaskStatus @default(TODO)
-  priority    Priority   @default(MEDIUM)
+  status      TaskStatus   @default(TODO)
+  priority    Priority     @default(MEDIUM)
   dueDate     DateTime?
   userId      String
-  user        User       @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @updatedAt
+  categoryId  String?
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category    Category?    @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  tags        TaskTag[]
+  attachments Attachment[]
+  comments    Comment[]
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model TaskTag {
+  taskId      String
+  tagId       String
+  assignedAt  DateTime @default(now())
+  task        Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  tag         Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([taskId, tagId])
+}
+
+model Attachment {
+  id        String   @id @default(cuid())
+  url       String
+  filename  String
+  fileSize  Int
+  taskId    String
+  userId    String
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model Comment {
+  id        String            @id @default(cuid())
+  content   String
+  taskId    String
+  userId    String
+  task      Task              @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  user      User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reactions CommentReaction[]
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
+}
+
+model CommentReaction {
+  id           String       @id @default(cuid())
+  reactionType ReactionType
+  commentId     String
+  userId        String
+  comment       Comment      @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt     DateTime     @default(now())
+
+  @@unique([commentId, userId])
 }
