@@ -1,4 +1,4 @@
-import { Priority, ReactionType, TaskStatus } from "@prisma/client";
+import { Priority, ReactionType, TaskStatus } from "../../generated/prisma/client";
 
 export interface CreateTaskInput {
   title: string;

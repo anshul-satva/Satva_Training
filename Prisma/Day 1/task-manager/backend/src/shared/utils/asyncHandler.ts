@@ -1,9 +1,4 @@
-import {
-  NextFunction,
-  Request,
-  RequestHandler,
-  Response,
-} from "express";
+import { NextFunction, Request, RequestHandler, Response } from "express";
 import { ParamsDictionary } from "express-serve-static-core";
 import { ParsedQs } from "qs";
 

@@ -1,8 +1,7 @@
-import { ENV } from "../../shared/config/env";
-import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
 import prisma from "../../shared/config/database";
 import { ConflictError, UnauthorizedError } from "../../shared/errors/HttpErrors";
+import { hashPassword, verifyPassword } from "../../shared/utils/password";
+import { signAuthToken } from "../../shared/utils/token";
 import { RegisterInput, LoginInput } from "./auth.types";
 
 export const registerUser = async (data: RegisterInput) => {
@@ -13,7 +12,7 @@ export const registerUser = async (data: RegisterInput) => {
     throw new ConflictError("Email already exists");
   }
 
-  const hashedPassword = await bcrypt.hash(data.password, 10);
+  const hashedPassword = await hashPassword(data.password);
 
   const user = await prisma.user.create({
     data: {
@@ -22,13 +21,11 @@ export const registerUser = async (data: RegisterInput) => {
       password: hashedPassword,
     },
   });
-  const token = jwt.sign(
-    { userId: user.id, name: user.name, email: user.email },
-    ENV.JWT_SECRET,
-    {
-      expiresIn: "7d",
-    },
-  );
+  const token = signAuthToken({
+    userId: user.id,
+    name: user.name,
+    email: user.email,
+  });
 
   return {
     token,
@@ -42,20 +39,16 @@ export const loginUser = async (data: LoginInput) => {
     throw new UnauthorizedError("Invalid credentials");
   }
 
-  const isMatch = await bcrypt.compare(data.password, user.password);
+  const isMatch = await verifyPassword(data.password, user.password);
   if (!isMatch) {
     throw new UnauthorizedError("Invalid credentials");
   }
 
-  const token = jwt.sign(
-    {
-      userId: user.id,
-      name: user.name,
-      email: user.email,
-    },
-    ENV.JWT_SECRET,
-    { expiresIn: "7d" },
-  );
+  const token = signAuthToken({
+    userId: user.id,
+    name: user.name,
+    email: user.email,
+  });
 
   return {
     token,

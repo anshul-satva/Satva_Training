@@ -1,24 +1,18 @@
-import fs from "fs";
-import path from "path";
 import multer from "multer";
+import {
+  createUploadFileName,
+  ensureUploadsDirectory,
+  uploadsDirectory,
+} from "../utils/file";
 
-const uploadDirectory = path.join(process.cwd(), "uploads");
-
-if (!fs.existsSync(uploadDirectory)) {
-  fs.mkdirSync(uploadDirectory, { recursive: true });
-}
-
-const sanitizeFileName = (fileName: string) => {
-  return fileName.replace(/[^a-zA-Z0-9._-]/g, "_");
-};
+ensureUploadsDirectory();
 
 const storage = multer.diskStorage({
   destination: (_req, _file, callback) => {
-    callback(null, uploadDirectory);
+    callback(null, uploadsDirectory);
   },
   filename: (_req, file, callback) => {
-    const uniquePrefix = `${Date.now()}-${Math.round(Math.random() * 1e9)}`;
-    callback(null, `${uniquePrefix}-${sanitizeFileName(file.originalname)}`);
+    callback(null, createUploadFileName(file.originalname));
   },
 });
 

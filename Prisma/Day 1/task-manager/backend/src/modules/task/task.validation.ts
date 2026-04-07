@@ -1,280 +1,148 @@
-import { Priority, ReactionType, TaskStatus } from "@prisma/client";
-import { ValidationResult } from "../../shared/types/api.types";
-import {
-  AddAttachmentInput,
-  CreateCommentInput,
-  CreateTaskInput,
-  ReactToCommentInput,
-  TaskFilters,
-  UpdateTaskInput,
-} from "./task.types";
+import { body, oneOf, param, query } from "express-validator";
+import { Priority, ReactionType, TaskStatus } from "../../generated/prisma/client";
 
 const taskStatuses = Object.values(TaskStatus);
 const priorities = Object.values(Priority);
 const reactionTypes = Object.values(ReactionType);
 
-const isValidDateString = (value: string): boolean => {
-  return !Number.isNaN(Date.parse(value));
-};
+const optionalTrimmedString = (field: string) =>
+  body(field)
+    .optional()
+    .isString()
+    .withMessage(`${field} must be a string`)
+    .bail()
+    .trim();
 
-const isValidStringArray = (value: unknown): value is string[] => {
-  return Array.isArray(value) && value.every((item) => typeof item === "string");
-};
+export const taskIdParamValidators = [
+  param("id").trim().notEmpty().withMessage("Task id is required"),
+];
 
-export const validateCreateTaskInput = (
-  body: unknown,
-): ValidationResult<CreateTaskInput> => {
-  const input = (body ?? {}) as Partial<Record<keyof CreateTaskInput, unknown>>;
-  const errors: Record<string, string[]> = {};
-  const title = typeof input.title === "string" ? input.title.trim() : "";
-  const description =
-    typeof input.description === "string" ? input.description.trim() : undefined;
+export const taskTagParamValidators = [
+  ...taskIdParamValidators,
+  param("tagId").trim().notEmpty().withMessage("Tag id is required"),
+];
 
-  if (!title) {
-    errors.title = ["Title is required"];
-  }
+export const taskAttachmentParamValidators = [
+  ...taskIdParamValidators,
+  param("attachmentId").trim().notEmpty().withMessage("Attachment id is required"),
+];
 
-  if (input.status !== undefined && !taskStatuses.includes(input.status as TaskStatus)) {
-    errors.status = [`Invalid status. Expected one of: ${taskStatuses.join(", ")}`];
-  }
+export const taskCommentParamValidators = [...taskIdParamValidators];
 
-  if (input.priority !== undefined && !priorities.includes(input.priority as Priority)) {
-    errors.priority = [`Invalid priority. Expected one of: ${priorities.join(", ")}`];
-  }
+export const commentIdParamValidators = [
+  param("commentId").trim().notEmpty().withMessage("Comment id is required"),
+];
 
-  if (input.dueDate !== undefined) {
-    if (typeof input.dueDate !== "string" || !isValidDateString(input.dueDate)) {
-      errors.dueDate = ["dueDate must be a valid date string"];
-    }
-  }
+export const createTaskValidators = [
+  body("title").trim().notEmpty().withMessage("Title is required"),
+  optionalTrimmedString("description"),
+  body("status")
+    .optional()
+    .isIn(taskStatuses)
+    .withMessage(`Invalid status. Expected one of: ${taskStatuses.join(", ")}`),
+  body("priority")
+    .optional()
+    .isIn(priorities)
+    .withMessage(`Invalid priority. Expected one of: ${priorities.join(", ")}`),
+  body("dueDate")
+    .optional()
+    .isISO8601()
+    .withMessage("dueDate must be a valid date string")
+    .bail()
+    .toDate(),
+  body("categoryId")
+    .optional()
+    .isString()
+    .withMessage("categoryId must be a string")
+    .bail()
+    .trim()
+    .notEmpty()
+    .withMessage("categoryId must be a non-empty string"),
+  body("tagIds")
+    .optional()
+    .isArray()
+    .withMessage("tagIds must be an array of tag ids"),
+  body("tagIds.*").optional().isString().withMessage("tagIds must contain only strings").trim(),
+];
 
-  if (input.categoryId !== undefined && typeof input.categoryId !== "string") {
-    errors.categoryId = ["categoryId must be a string"];
-  }
+export const updateTaskValidators = [
+  optionalTrimmedString("title")
+    .if(body("title").exists())
+    .notEmpty()
+    .withMessage("Title must be a non-empty string"),
+  optionalTrimmedString("description"),
+  body("status")
+    .optional()
+    .isIn(taskStatuses)
+    .withMessage(`Invalid status. Expected one of: ${taskStatuses.join(", ")}`),
+  body("priority")
+    .optional()
+    .isIn(priorities)
+    .withMessage(`Invalid priority. Expected one of: ${priorities.join(", ")}`),
+  body("dueDate")
+    .optional()
+    .isISO8601()
+    .withMessage("dueDate must be a valid date string")
+    .bail()
+    .toDate(),
+  body("categoryId")
+    .optional({ values: "null" })
+    .custom((value) => value === null || typeof value === "string")
+    .withMessage("categoryId must be a string or null")
+    .bail()
+    .customSanitizer((value) => (typeof value === "string" ? value.trim() : value)),
+  body("tagIds")
+    .optional()
+    .isArray()
+    .withMessage("tagIds must be an array of tag ids"),
+  body("tagIds.*").optional().isString().withMessage("tagIds must contain only strings").trim(),
+  oneOf(
+    [
+      body("title").exists(),
+      body("description").exists(),
+      body("status").exists(),
+      body("priority").exists(),
+      body("dueDate").exists(),
+      body("categoryId").exists(),
+      body("tagIds").exists(),
+    ],
+    { message: "Provide at least one field to update" },
+  ),
+];
 
-  if (input.tagIds !== undefined && !isValidStringArray(input.tagIds)) {
-    errors.tagIds = ["tagIds must be an array of tag ids"];
-  }
+export const taskFilterValidators = [
+  query("status")
+    .optional()
+    .isIn(taskStatuses)
+    .withMessage(`Invalid status. Expected one of: ${taskStatuses.join(", ")}`),
+  query("priority")
+    .optional()
+    .isIn(priorities)
+    .withMessage(`Invalid priority. Expected one of: ${priorities.join(", ")}`),
+  query("tagId").optional().isString().withMessage("tagId must be a string").trim(),
+  query("categoryId")
+    .optional()
+    .isString()
+    .withMessage("categoryId must be a string")
+    .trim(),
+];
 
-  if (Object.keys(errors).length > 0) {
-    return { success: false, errors };
-  }
+export const assignTaskTagsValidators = [
+  ...taskIdParamValidators,
+  body("tagIds")
+    .isArray({ min: 1 })
+    .withMessage("tagIds must be an array of tag ids"),
+  body("tagIds.*").isString().withMessage("tagIds must contain only strings").trim(),
+];
 
-  return {
-    success: true,
-    data: {
-      title,
-      ...(description ? { description } : {}),
-      ...(input.status ? { status: input.status as TaskStatus } : {}),
-      ...(input.priority ? { priority: input.priority as Priority } : {}),
-      ...(typeof input.dueDate === "string" ? { dueDate: new Date(input.dueDate) } : {}),
-      ...(typeof input.categoryId === "string" && input.categoryId.trim()
-        ? { categoryId: input.categoryId }
-        : {}),
-      ...(isValidStringArray(input.tagIds) ? { tagIds: input.tagIds } : {}),
-    },
-  };
-};
+export const createTaskCommentValidators = [
+  ...taskCommentParamValidators,
+  body("content").trim().notEmpty().withMessage("content is required"),
+];
 
-export const validateUpdateTaskInput = (
-  body: unknown,
-): ValidationResult<UpdateTaskInput> => {
-  const input = (body ?? {}) as Partial<Record<keyof UpdateTaskInput, unknown>>;
-  const errors: Record<string, string[]> = {};
-  const data: UpdateTaskInput = {};
-
-  if (input.title !== undefined) {
-    if (typeof input.title !== "string" || !input.title.trim()) {
-      errors.title = ["Title must be a non-empty string"];
-    } else {
-      data.title = input.title.trim();
-    }
-  }
-
-  if (input.description !== undefined) {
-    if (typeof input.description !== "string") {
-      errors.description = ["Description must be a string"];
-    } else {
-      data.description = input.description.trim();
-    }
-  }
-
-  if (input.status !== undefined) {
-    if (!taskStatuses.includes(input.status as TaskStatus)) {
-      errors.status = [`Invalid status. Expected one of: ${taskStatuses.join(", ")}`];
-    } else {
-      data.status = input.status as TaskStatus;
-    }
-  }
-
-  if (input.priority !== undefined) {
-    if (!priorities.includes(input.priority as Priority)) {
-      errors.priority = [`Invalid priority. Expected one of: ${priorities.join(", ")}`];
-    } else {
-      data.priority = input.priority as Priority;
-    }
-  }
-
-  if (input.dueDate !== undefined) {
-    if (typeof input.dueDate !== "string" || !isValidDateString(input.dueDate)) {
-      errors.dueDate = ["dueDate must be a valid date string"];
-    } else {
-      data.dueDate = new Date(input.dueDate);
-    }
-  }
-
-  if (input.categoryId !== undefined) {
-    if (input.categoryId !== null && typeof input.categoryId !== "string") {
-      errors.categoryId = ["categoryId must be a string or null"];
-    } else {
-      data.categoryId = input.categoryId as string | null;
-    }
-  }
-
-  if (input.tagIds !== undefined) {
-    if (!isValidStringArray(input.tagIds)) {
-      errors.tagIds = ["tagIds must be an array of tag ids"];
-    } else {
-      data.tagIds = input.tagIds;
-    }
-  }
-
-  if (Object.keys(data).length === 0 && Object.keys(errors).length === 0) {
-    errors.body = ["Provide at least one field to update"];
-  }
-
-  if (Object.keys(errors).length > 0) {
-    return { success: false, errors };
-  }
-
-  return { success: true, data };
-};
-
-export const validateTaskFilters = (
-  query: unknown,
-): ValidationResult<TaskFilters> => {
-  const input = (query ?? {}) as Record<string, unknown>;
-  const errors: Record<string, string[]> = {};
-  const filters: TaskFilters = {};
-
-  if (input.status !== undefined) {
-    if (typeof input.status !== "string" || !taskStatuses.includes(input.status as TaskStatus)) {
-      errors.status = [`Invalid status. Expected one of: ${taskStatuses.join(", ")}`];
-    } else {
-      filters.status = input.status as TaskStatus;
-    }
-  }
-
-  if (input.priority !== undefined) {
-    if (typeof input.priority !== "string" || !priorities.includes(input.priority as Priority)) {
-      errors.priority = [`Invalid priority. Expected one of: ${priorities.join(", ")}`];
-    } else {
-      filters.priority = input.priority as Priority;
-    }
-  }
-
-  if (input.tagId !== undefined) {
-    if (typeof input.tagId !== "string") {
-      errors.tagId = ["tagId must be a string"];
-    } else {
-      filters.tagId = input.tagId;
-    }
-  }
-
-  if (input.categoryId !== undefined) {
-    if (typeof input.categoryId !== "string") {
-      errors.categoryId = ["categoryId must be a string"];
-    } else {
-      filters.categoryId = input.categoryId;
-    }
-  }
-
-  if (Object.keys(errors).length > 0) {
-    return { success: false, errors };
-  }
-
-  return { success: true, data: filters };
-};
-
-export const validateAttachmentInput = (
-  body: unknown,
-): ValidationResult<AddAttachmentInput> => {
-  const input = (body ?? {}) as Partial<Record<keyof AddAttachmentInput, unknown>>;
-  const errors: Record<string, string[]> = {};
-  const url = typeof input.url === "string" ? input.url.trim() : "";
-  const filename = typeof input.filename === "string" ? input.filename.trim() : "";
-  const fileSize = typeof input.fileSize === "number" ? input.fileSize : undefined;
-
-  if (!url) {
-    errors.url = ["url is required"];
-  }
-
-  if (!filename) {
-    errors.filename = ["filename is required"];
-  }
-
-  if (fileSize === undefined || Number.isNaN(fileSize) || fileSize < 0) {
-    errors.fileSize = ["fileSize must be a positive number"];
-  }
-
-  if (Object.keys(errors).length > 0) {
-    return { success: false, errors };
-  }
-
-  return {
-    success: true,
-    data: {
-      url,
-      filename,
-      fileSize: fileSize as number,
-    },
-  };
-};
-
-export const validateCommentInput = (
-  body: unknown,
-): ValidationResult<CreateCommentInput> => {
-  const input = (body ?? {}) as Partial<Record<keyof CreateCommentInput, unknown>>;
-  const errors: Record<string, string[]> = {};
-  const content = typeof input.content === "string" ? input.content.trim() : "";
-
-  if (!content) {
-    errors.content = ["content is required"];
-  }
-
-  if (Object.keys(errors).length > 0) {
-    return { success: false, errors };
-  }
-
-  return {
-    success: true,
-    data: {
-      content,
-    },
-  };
-};
-
-export const validateCommentReactionInput = (
-  body: unknown,
-): ValidationResult<ReactToCommentInput> => {
-  const input = (body ?? {}) as Partial<Record<keyof ReactToCommentInput, unknown>>;
-  const errors: Record<string, string[]> = {};
-
-  if (
-    input.reactionType === undefined ||
-    !reactionTypes.includes(input.reactionType as ReactionType)
-  ) {
-    errors.reactionType = [`Invalid reactionType. Expected one of: ${reactionTypes.join(", ")}`];
-  }
-
-  if (Object.keys(errors).length > 0) {
-    return { success: false, errors };
-  }
-
-  return {
-    success: true,
-    data: {
-      reactionType: input.reactionType as ReactionType,
-    },
-  };
-};
+export const createCommentReactionValidators = [
+  ...commentIdParamValidators,
+  body("reactionType")
+    .isIn(reactionTypes)
+    .withMessage(`Invalid reactionType. Expected one of: ${reactionTypes.join(", ")}`),
+];
