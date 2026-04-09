@@ -82,7 +82,9 @@ export const listMembers = async (request: Request, response: Response) => {
 export const addMember = async (request: Request, response: Response) => {
   const membership = await organizationService.addMember({
     organizationId: request.params.organizationId,
+    name: request.body.name,
     email: request.body.email,
+    password: request.body.password,
     role: request.body.role as OrganizationRole | undefined,
   });
 

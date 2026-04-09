@@ -4,7 +4,10 @@ import { sendResponse } from "../../utils/response.util.js";
 import { taskService } from "./task.service.js";
 
 export const listTasks = async (request: Request, response: Response) => {
-  const tasks = await taskService.listTasks(request.params.projectId);
+  const tasks = await taskService.listTasks(
+    request.params.projectId,
+    request.query.includeArchived === "true",
+  );
 
   return sendResponse(response, 200, "Tasks fetched successfully", tasks);
 };

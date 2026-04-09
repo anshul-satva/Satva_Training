@@ -83,8 +83,19 @@ export const organizationRepository = {
   },
 
   findUserByEmail(email: string) {
-    return prisma.user.findUnique({
-      where: { email },
+    return prisma.user.findFirst({
+      where: {
+        email: {
+          equals: email,
+          mode: "insensitive",
+        },
+      },
+    });
+  },
+
+  createUser(data: { email: string; name?: string; passwordHash: string }) {
+    return prisma.user.create({
+      data,
     });
   },
 

@@ -1,6 +1,7 @@
 import { OrganizationRole } from "@prisma/client";
 import { Router } from "express";
 import {
+  requireActiveOrganizationAdmin,
   requireOrganizationAccess,
   requireOrganizationRole,
 } from "../../middlewares/access.middleware.js";
@@ -34,6 +35,7 @@ organizationRoutes.get("/", asyncHandler(listOrganizations));
 organizationRoutes.post(
   "/",
   validateRequest({ body: createOrganizationSchema }),
+  asyncHandler(requireActiveOrganizationAdmin),
   asyncHandler(createOrganization),
 );
 organizationRoutes.get(
@@ -48,9 +50,7 @@ organizationRoutes.patch(
     params: organizationParamsSchema,
     body: updateOrganizationSchema,
   }),
-  asyncHandler(
-    requireOrganizationRole([OrganizationRole.ADMIN, OrganizationRole.MANAGER]),
-  ),
+  asyncHandler(requireOrganizationRole([OrganizationRole.ADMIN])),
   asyncHandler(updateOrganization),
 );
 organizationRoutes.get(
@@ -62,9 +62,7 @@ organizationRoutes.get(
 organizationRoutes.post(
   "/:organizationId/members",
   validateRequest({ params: organizationParamsSchema, body: addMemberSchema }),
-  asyncHandler(
-    requireOrganizationRole([OrganizationRole.ADMIN, OrganizationRole.MANAGER]),
-  ),
+  asyncHandler(requireOrganizationRole([OrganizationRole.ADMIN])),
   asyncHandler(addMember),
 );
 organizationRoutes.patch(

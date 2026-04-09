@@ -1,0 +1,694 @@
+%PDF-1.4
+%ÿÿÿÿ
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R] /Count 10 >>
+endobj
+3 0 obj
+<< /Length 1837 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+40 802 Td
+(# CollabSpace Frontend Full Explanation Guide) Tj
+T*() Tj
+T*(This guide explains the whole frontend codebase file by file, with architecture flow, syntax) Tj
+T*(meaning, and visual understanding.) Tj
+T*(Backend is intentionally excluded based on your request.) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 1\) Big Picture: What This Frontend Does) Tj
+T*() Tj
+T*(This frontend is a React + TypeScript + Vite SPA for multi-tenant project collaboration:) Tj
+T*(- Authentication \(login/register\)) Tj
+T*(- Organization management) Tj
+T*(- Member/role management) Tj
+T*(- Project management) Tj
+T*(- Kanban board \(task drag/drop by status\)) Tj
+T*(- Task detail with comments, activity, assignment history) Tj
+T*(- Tag management) Tj
+T*(- Light/dark theme support) Tj
+T*() Tj
+T*(### Runtime visual flow) Tj
+T*() Tj
+T*(```text) Tj
+T*(Browser loads index.html) Tj
+T*(  -> src/main.tsx mounts React app) Tj
+T*(    -> Providers wrap app:) Tj
+T*(       ColorModeProvider -> AuthProvider -> ThemedApp) Tj
+T*(         -> ConfigProvider \(Ant theme by mode\)) Tj
+T*(           -> RouterProvider \(all routes\)) Tj
+T*(             -> ProtectedRoute gates private routes) Tj
+T*(               -> AppShell layout) Tj
+T*(                 -> Page components) Tj
+T*(```) Tj
+T*() Tj
+T*(### Data flow visual) Tj
+T*() Tj
+T*(```text) Tj
+T*(UI action \(button/form\)) Tj
+T*(  -> Page component handler) Tj
+T*(    -> Service call \(axios\)) Tj
+T*(      -> Backend API) Tj
+T*(        -> ApiResponse<T>) Tj
+T*(      <- Result) Tj
+T*(    -> setState/useEffect refresh) Tj
+T*(  -> UI rerender) Tj
+T*(```) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 2\) Tech Stack and Why It Matters) Tj
+T*() Tj
+T*(- React 19 + TypeScript: component logic + type safety) Tj
+T*(- Vite: fast dev server and build) Tj
+T*(- React Router v7: client-side route tree) Tj
+T*ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Length 1911 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+40 802 Td
+(- Ant Design: ready-made UI components) Tj
+T*(- Tailwind v4: utility class styling \(including `important` suffix style like `text-sm!`\)) Tj
+T*(- Axios: HTTP client with interceptors) Tj
+T*(- ESLint + hooks/refresh rules: code quality and safe Fast Refresh) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 3\) Root-Level Files \(Frontend Root\)) Tj
+T*() Tj
+T*(### `package.json`) Tj
+T*(- Defines scripts: `dev`, `build`, `lint`, `preview`) Tj
+T*(- Dependencies include React, Router, AntD, Axios, Tailwind Vite plugin) Tj
+T*(- This is where build and lint behavior starts.) Tj
+T*() Tj
+T*(### `package-lock.json`) Tj
+T*(- Auto-generated dependency lock.) Tj
+T*(- Ensures exact package versions for consistent install.) Tj
+T*() Tj
+T*(### `vite.config.ts`) Tj
+T*(- Registers plugins:) Tj
+T*(  - `@vitejs/plugin-react`) Tj
+T*(  - `@tailwindcss/vite`) Tj
+T*() Tj
+T*(### `eslint.config.js`) Tj
+T*(- Enables:) Tj
+T*(  - JS recommended rules) Tj
+T*(  - TypeScript ESLint recommended rules) Tj
+T*(  - React hooks rules) Tj
+T*(  - React refresh \(Vite\) rules) Tj
+T*(- Important for warnings you recently fixed.) Tj
+T*() Tj
+T*(### `tsconfig.json`, `tsconfig.app.json`, `tsconfig.node.json`) Tj
+T*(- Project references and compiler options.) Tj
+T*(- App config includes DOM libs and JSX mode.) Tj
+T*(- Node config covers Vite config typing.) Tj
+T*() Tj
+T*(### `index.html`) Tj
+T*(- Single root element `<div id="root"></div>`) Tj
+T*(- Boot script points to `/src/main.tsx`.) Tj
+T*() Tj
+T*(### `.gitignore`) Tj
+T*(- Standard ignore behavior for node, build artifacts, etc.) Tj
+T*() Tj
+T*(### `README.md`) Tj
+T*(- Vite template README \(not project-specific docs\).) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 4\) `src/` Top-Level Files) Tj
+T*() Tj
+T*(### `src/main.tsx`) Tj
+T*(Main entry point:) Tj
+T*(- Gets theme mode from `useColorMode\(\)`) Tj
+T*(- Applies Ant Design theme through `ConfigProvider`) Tj
+T*ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2088 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+40 802 Td
+(- Injects router through `RouterProvider`) Tj
+T*(- Wraps with `ColorModeProvider` and `AuthProvider`) Tj
+T*(- Uses singleton root pattern to avoid duplicate `createRoot` warnings in HMR:) Tj
+T*() Tj
+T*(```tsx) Tj
+T*(const root = windowWithRoot.__collabspaceRoot__ ?? createRoot\(container\);) Tj
+T*(windowWithRoot.__collabspaceRoot__ = root;) Tj
+T*(```) Tj
+T*() Tj
+T*(### `src/App.tsx`) Tj
+T*(- Minimal route shell returning `<Outlet />`) Tj
+T*(- Used as top route parent.) Tj
+T*() Tj
+T*(### `src/index.css`) Tj
+T*(Global styling system:) Tj
+T*(- Tailwind import: `@import "tailwindcss";`) Tj
+T*(- CSS variables for light/dark theme \(`--surface`, `--ink`, `--primary`, etc.\)) Tj
+T*(- Sidebar/topbar card styles) Tj
+T*(- Utility classes for repeated layout blocks \(`compact-list`, `compact-metric`, etc.\)) Tj
+T*(- This file defines most of the app visual identity.) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 5\) App Setup Layer \(`src/app`\)) Tj
+T*() Tj
+T*(### `src/app/router.tsx`) Tj
+T*(Defines full route tree:) Tj
+T*(- Public: `/login`, `/register`) Tj
+T*(- Protected \(inside `ProtectedRoute` + `AppShell`\):) Tj
+T*(  - `/dashboard`) Tj
+T*(  - `/organizations`, `/organizations/:organizationId`, `/organizations/:organizationId/members`) Tj
+T*(  - `/projects`, `/projects/:projectId`, `/projects/:projectId/board`) Tj
+T*(  - `/board` \(redirect page\)) Tj
+T*(  - `/tasks/:taskId`) Tj
+T*(  - `/tags`) Tj
+T*(  - `/settings`) Tj
+T*() Tj
+T*(### `src/app/theme.ts`) Tj
+T*(Function `getAppTheme\(mode\)` returns Ant theme config:) Tj
+T*(- Switches `theme.darkAlgorithm` vs default) Tj
+T*(- Custom tokens: colors, fonts, radius, shadows) Tj
+T*(- Component-level tokens for Button/Card/Input) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 6\) Hooks Layer \(`src/hooks`\)) Tj
+T*() Tj
+T*(### `src/hooks/use-color-mode.tsx`) Tj
+T*(Color mode context/provider:) Tj
+T*(- Mode type: `'light' | 'dark'`) Tj
+T*(- Persists mode in localStorage key `collabspace_color_mode`) Tj
+T*(- Applies mode to `document.documentElement.dataset.theme`) Tj
+T*(- Exposes:) Tj
+T*(  - `mode`) Tj
+T*ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 1849 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+40 802 Td
+(  - `toggleMode\(\)`) Tj
+T*(  - `setMode\(\)`) Tj
+T*() Tj
+T*(### `src/hooks/auth-context.ts`) Tj
+T*(- Holds auth context type and context instance only.) Tj
+T*(- Split intentionally for Fast Refresh lint compatibility.) Tj
+T*() Tj
+T*(### `src/hooks/auth-provider.tsx`) Tj
+T*(Owns auth state and business flow:) Tj
+T*(- State:) Tj
+T*(  - `user`) Tj
+T*(  - `loading`) Tj
+T*(  - `activeOrganizationId`) Tj
+T*(- Bootstraps `/auth/me` only once via `hasBootstrappedRef`) Tj
+T*(- `login\(\)` stores token + user + active org) Tj
+T*(- `register\(\)` calls register API \(no auto-login now\)) Tj
+T*(- `logout\(\)` clears token and active org) Tj
+T*(- `refreshMe\(\)` refetches profile) Tj
+T*() Tj
+T*(### `src/hooks/use-auth.ts`) Tj
+T*(- Simple custom hook:) Tj
+T*(  - reads AuthContext) Tj
+T*(  - throws if used outside `AuthProvider`) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 7\) Shared Utility Layer) Tj
+T*() Tj
+T*(### `src/lib/storage.ts`) Tj
+T*(LocalStorage abstraction:) Tj
+T*(- token key: `collabspace_token`) Tj
+T*(- active org key: `collabspace_active_org`) Tj
+T*(- centralized get/set/clear methods) Tj
+T*() Tj
+T*(### `src/types/api.ts`) Tj
+T*(- `ApiResponse<T>` structure from backend) Tj
+T*(- union types for `OrganizationRole`, `TaskStatus`) Tj
+T*() Tj
+T*(### `src/types/entities.ts`) Tj
+T*(Defines app entity contracts:) Tj
+T*(- `User`, `Organization`, `Project`, `TagEntity`, `TaskEntity`, etc.) Tj
+T*(- `TaskEntity` includes `createdBy`, `assignedUser`, tags, comment fields) Tj
+T*(- These types power service signatures and page state typing.) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 8\) API Service Layer \(`src/services`\)) Tj
+T*() Tj
+T*(## Common pattern) Tj
+T*(All services follow:) Tj
+T*(```ts) Tj
+T*(const { data } = await apiClient.get<ApiResponse<SomeType>>\(url\);) Tj
+T*(return data.Result;) Tj
+T*(```) Tj
+T*ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 1969 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+40 802 Td
+() Tj
+T*(### `src/services/api.ts`) Tj
+T*(Axios client + interceptor:) Tj
+T*(- Base URL from `VITE_API_BASE_URL` fallback `http://localhost:5000/api`) Tj
+T*(- Adds `Authorization: Bearer <token>` if token exists) Tj
+T*(- Adds `x-organization-id` header if active org exists) Tj
+T*(- `getErrorMessage\(\)` normalizes Axios/non-Axios error text) Tj
+T*() Tj
+T*(### `src/services/auth.ts`) Tj
+T*(- `login`, `register`, `me`) Tj
+T*(- normalizes email before send) Tj
+T*(- note: register expects `AuthUser` response, not token payload) Tj
+T*() Tj
+T*(### `src/services/organizations.ts`) Tj
+T*(- organization CRUD + members CRUD) Tj
+T*(- includes role update and remove member) Tj
+T*() Tj
+T*(### `src/services/projects.ts`) Tj
+T*(- list/create/get/update/remove project) Tj
+T*() Tj
+T*(### `src/services/tags.ts`) Tj
+T*(- list/create/update/remove tag) Tj
+T*() Tj
+T*(### `src/services/tasks.ts`) Tj
+T*(- list/board/create/get/update/archive task) Tj
+T*(- comment endpoints) Tj
+T*(- activity and assignment-history endpoints) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 9\) Reusable UI Components \(`src/components`\)) Tj
+T*() Tj
+T*(### `src/components/common/feedback.tsx`) Tj
+T*(- `PageLoader`, `CardLoader`, `EmptyState`, `ErrorState`) Tj
+T*(- Provides loading/error empty UX consistency) Tj
+T*() Tj
+T*(### `src/components/common/ui.tsx`) Tj
+T*(Reusable domain UI:) Tj
+T*(- `SectionHeader`) Tj
+T*(- `StatCard`) Tj
+T*(- `StatusBadge` \(Task status to Tag color\)) Tj
+T*(- `RoleBadge` \(Role to Tag color\)) Tj
+T*(- `IconActionButton` \(tooltip icon button\)) Tj
+T*(- `ProjectCard`, `TaskPreviewCard`) Tj
+T*() Tj
+T*(This prevents repeating identical card/badge/header logic in every page.) Tj
+T*() Tj
+T*(### `src/components/routing/protected-route.tsx`) Tj
+T*(Auth gate:) Tj
+T*(- If loading: loader) Tj
+T*(- If no user: redirect `/login`) Tj
+T*(- Else: render nested routes via `<Outlet />`) Tj
+T*() Tj
+T*(### `src/components/layout/app-shell.tsx`) Tj
+T*ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 1977 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+40 802 Td
+(Main authenticated layout:) Tj
+T*(- Left sidebar with navigation and org selector) Tj
+T*(- Top bar with workspace title + collapse toggle) Tj
+T*(- Theme toggle and logout controls) Tj
+T*(- Uses `useAuth` and `useColorMode`) Tj
+T*(- Fetches project list to decide if board menu should be enabled) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 10\) Feature Entry Files) Tj
+T*() Tj
+T*(### `src/features/pages.tsx`) Tj
+T*(- Explicit re-export list for all page components.) Tj
+T*(- Router imports from this single entry.) Tj
+T*() Tj
+T*(### `src/features/pages/index.ts`) Tj
+T*(- Internal pages folder barrel, also explicit exports.) Tj
+T*() Tj
+T*(### `src/features/pages/shared.ts`) Tj
+T*(Shared constants/helpers:) Tj
+T*(- color presets) Tj
+T*(- role and status options) Tj
+T*(- permission helpers:) Tj
+T*(  - `canManageMembers`) Tj
+T*(  - `canManageProjects`) Tj
+T*(  - `canManageTags`) Tj
+T*(  - `canEditOrganization`) Tj
+T*(  - `canCreateOrganizations`) Tj
+T*(- normalization helper for email) Tj
+T*(- options mappers for members/tags) Tj
+T*(- `useSelectedOrganization\(\)` reads auth context and returns current org and membership) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 11\) Page Files \(`src/features/pages/*`\)) Tj
+T*() Tj
+T*(Below is route-order flow from first login to deep task work.) Tj
+T*() Tj
+T*(### 11.1 `login-page.tsx` \(`/login`\)) Tj
+T*(- Form for email/password) Tj
+T*(- Calls `login\(\)`) Tj
+T*(- On success: message + navigate `/dashboard`) Tj
+T*(- If already authenticated, auto-redirects to dashboard in `useEffect`) Tj
+T*() Tj
+T*(### 11.2 `register-page.tsx` \(`/register`\)) Tj
+T*(- Form for first admin + organization creation) Tj
+T*(- Calls `register\(\)`) Tj
+T*(- On success: redirects to `/login` \(intentional, no auto-login\)) Tj
+T*() Tj
+T*(### 11.3 `dashboard-page.tsx` \(`/dashboard`\)) Tj
+T*(- Loads active organization details and projects) Tj
+T*(- Computes:) Tj
+T*(  - project counts) Tj
+T*(  - per-project task count) Tj
+T*ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 2147 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+40 802 Td
+(  - recently updated tasks) Tj
+T*(- Shows top-level workspace summary widgets) Tj
+T*() Tj
+T*(### 11.4 `organizations-page.tsx` \(`/organizations`\)) Tj
+T*(- Shows org cards from memberships) Tj
+T*(- Create organization modal \(permission-guarded\)) Tj
+T*(- Buttons to open org detail and member list) Tj
+T*() Tj
+T*(### 11.5 `organization-detail-page.tsx` \(`/organizations/:organizationId`\)) Tj
+T*(- Loads one organization) Tj
+T*(- Displays stats: members/projects/tags) Tj
+T*(- Shows member preview and project/tag preview) Tj
+T*(- Edit organization modal \(admin only\)) Tj
+T*() Tj
+T*(### 11.6 `members-page.tsx` \(`/organizations/:organizationId/members`\)) Tj
+T*(- Member list + role badges) Tj
+T*(- Register member modal) Tj
+T*(- Update member role modal) Tj
+T*(- Remove member action with centered `modal.confirm`) Tj
+T*() Tj
+T*(### 11.7 `projects-page.tsx` \(`/projects`\)) Tj
+T*(- Project portfolio cards) Tj
+T*(- Create/edit project modal) Tj
+T*(- Archive project confirmation modal) Tj
+T*(- Quick actions:) Tj
+T*(  - open details) Tj
+T*(  - open board) Tj
+T*(  - edit) Tj
+T*(  - archive) Tj
+T*() Tj
+T*(### 11.8 `project-detail-page.tsx` \(`/projects/:projectId`\)) Tj
+T*(- Fetches project + tasks) Tj
+T*(- Splits tasks into active/archived via `useMemo`) Tj
+T*(- Tabs for active and archived lists) Tj
+T*() Tj
+T*(### 11.9 `board-redirect-page.tsx` \(`/board`\)) Tj
+T*(- Finds first project in active org) Tj
+T*(- Redirects to that project board) Tj
+T*(- If none, shows empty state) Tj
+T*() Tj
+T*(### 11.10 `board-page.tsx` \(`/projects/:projectId/board`\)) Tj
+T*(- Kanban board with 3 columns from `statusOptions`) Tj
+T*(- Loads project, board data, members, tags) Tj
+T*(- Create task modal) Tj
+T*(- Drag-and-drop task movement:) Tj
+T*(  - on drop, calls `taskService.update\(taskId, {status}\)`) Tj
+T*(  - optimistically updates local board state) Tj
+T*(  - reload fallback on failure) Tj
+T*() Tj
+T*(### 11.11 `task-detail-page.tsx` \(`/tasks/:taskId`\)) Tj
+T*(- Full task detail view) Tj
+T*(- 3-dot menu:) Tj
+T*(  - Edit task \(modal form\)) Tj
+T*(  - Delete task \(archives with confirm modal\)) Tj
+T*ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 1384 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+40 802 Td
+(- Displays:) Tj
+T*(  - status + active/archived badge) Tj
+T*(  - description) Tj
+T*(  - assignee) Tj
+T*(  - created by) Tj
+T*(  - created/updated timestamp) Tj
+T*(  - tags) Tj
+T*(- Tabs:) Tj
+T*(  - comments \(add + list\)) Tj
+T*(  - activity history) Tj
+T*(  - assignment history) Tj
+T*() Tj
+T*(### 11.12 `tags-page.tsx` \(`/tags`\)) Tj
+T*(- List and manage tags) Tj
+T*(- Create/edit modal with accent color picker) Tj
+T*(- Delete confirmation via centered modal) Tj
+T*() Tj
+T*(### 11.13 `settings-page.tsx` \(`/settings`\)) Tj
+T*(- Profile and access summary) Tj
+T*(- simple refresh profile action) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 12\) Route and Permission Summary \(Visual\)) Tj
+T*() Tj
+T*(```text) Tj
+T*(Public:) Tj
+T*(  /login) Tj
+T*(  /register) Tj
+T*() Tj
+T*(Protected:) Tj
+T*(  /dashboard) Tj
+T*(  /organizations) Tj
+T*(  /organizations/:organizationId) Tj
+T*(  /organizations/:organizationId/members) Tj
+T*(  /projects) Tj
+T*(  /projects/:projectId) Tj
+T*(  /projects/:projectId/board) Tj
+T*(  /board) Tj
+T*(  /tasks/:taskId) Tj
+T*(  /tags) Tj
+T*(  /settings) Tj
+T*(```) Tj
+T*() Tj
+T*(Permission decisions are UI-side helper checks in `pages/shared.ts`:) Tj
+T*(- Admin:) Tj
+T*(  - create org) Tj
+T*(  - manage members) Tj
+T*(  - edit org) Tj
+T*(- Admin or Manager:) Tj
+T*(  - manage projects) Tj
+T*(  - manage tags) Tj
+T*() Tj
+T*(---) Tj
+T*ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 1685 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+40 802 Td
+() Tj
+T*(## 13\) Important Syntax Patterns You Should Explain in GD) Tj
+T*() Tj
+T*(1. React context provider + custom hook guard:) Tj
+T*(```ts) Tj
+T*(const context = useContext\(AuthContext\);) Tj
+T*(if \(!context\) throw new Error\(...\);) Tj
+T*(```) Tj
+T*() Tj
+T*(2. API typing with generics:) Tj
+T*(```ts) Tj
+T*(apiClient.get<ApiResponse<Project[]>>\(...\)) Tj
+T*(```) Tj
+T*() Tj
+T*(3. Conditional route guard:) Tj
+T*(```tsx) Tj
+T*(if \(!user\) return <Navigate to="/login" replace />;) Tj
+T*(```) Tj
+T*() Tj
+T*(4. useEffect bootstrap pattern:) Tj
+T*(```ts) Tj
+T*(const hasBootstrappedRef = useRef\(false\);) Tj
+T*(```) Tj
+T*() Tj
+T*(5. Memoized loaders with `useCallback` for lint-safe dependencies:) Tj
+T*(```ts) Tj
+T*(const loadData = useCallback\(async \(\) => {...}, [deps]\);) Tj
+T*(useEffect\(\(\) => { void loadData\(\); }, [loadData]\);) Tj
+T*(```) Tj
+T*() Tj
+T*(6. AntD modal confirm for destructive actions:) Tj
+T*(```ts) Tj
+T*(modal.confirm\({ title, onOk: async \(\) => await removeX\(\) }\);) Tj
+T*(```) Tj
+T*() Tj
+T*(7. Tailwind v4 important suffix style:) Tj
+T*(```tsx) Tj
+T*(className="text-slate-500!") Tj
+T*(```) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 14\) End-to-End User Journey \(Mentor-Friendly Story\)) Tj
+T*() Tj
+T*(1. User opens app -> `main.tsx` mounts providers + router.) Tj
+T*(2. AuthProvider checks token:) Tj
+T*(   - if token valid -> fetch `/auth/me` and open private area) Tj
+T*(   - else -> redirect to login) Tj
+T*(3. After login:) Tj
+T*(   - token saved) Tj
+T*(   - active organization selected) Tj
+T*(   - AppShell appears) Tj
+T*(4. User manages organizations/projects/members/tags) Tj
+T*(5. User opens board:) Tj
+T*ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 1399 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+40 802 Td
+(   - sees tasks grouped by status) Tj
+T*(   - drags task to change status) Tj
+T*(6. User opens task detail:) Tj
+T*(   - reviews full task context) Tj
+T*(   - edits through modal) Tj
+T*(   - comments and checks activity/history) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 15\) Frontend GD Preparation Checklist) Tj
+T*() Tj
+T*(- Explain why `apiClient` interceptor centralizes auth/org headers.) Tj
+T*(- Explain why context split \(`auth-context`, `auth-provider`, `use-auth`\) helps Fast Refresh) Tj
+T*(lint.) Tj
+T*(- Explain route nesting \(`ProtectedRoute` + `AppShell`\) and why it avoids duplication.) Tj
+T*(- Explain why shared UI components improve maintainability.) Tj
+T*(- Explain board drag/drop state update path and fallback reload.) Tj
+T*(- Explain difference between UI permissions \(client\) and real backend authorization \(server\).) Tj
+T*(- Explain theme flow:) Tj
+T*(  - mode in localStorage) Tj
+T*(  - CSS vars on root) Tj
+T*(  - Ant theme tokens from mode) Tj
+T*() Tj
+T*(---) Tj
+T*() Tj
+T*(## 16\) File Coverage Checklist \(Nothing Missed\)) Tj
+T*() Tj
+T*(Covered:) Tj
+T*(- Root frontend config files: yes) Tj
+T*(- All `src` files listed by `rg --files`: yes) Tj
+T*(- All route pages: yes) Tj
+T*(- All hooks/services/types/components: yes) Tj
+T*(- Shared and barrel files: yes) Tj
+T*() Tj
+T*(This is the complete frontend explanation scope.) Tj
+T*() Tj
+T*ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+xref
+0 24
+0000000000 65535 f 
+0000000019 00000 n 
+0000000089 00000 n 
+0000000208 00000 n 
+0000002097 00000 n 
+0000002223 00000 n 
+0000004186 00000 n 
+0000004312 00000 n 
+0000006452 00000 n 
+0000006578 00000 n 
+0000008479 00000 n 
+0000008606 00000 n 
+0000010628 00000 n 
+0000010756 00000 n 
+0000012786 00000 n 
+0000012914 00000 n 
+0000015114 00000 n 
+0000015242 00000 n 
+0000016679 00000 n 
+0000016807 00000 n 
+0000018545 00000 n 
+0000018673 00000 n 
+0000020125 00000 n 
+0000020253 00000 n 
+trailer
+<< /Size 24 /Root 23 0 R >>
+startxref
+20303
+%%EOF

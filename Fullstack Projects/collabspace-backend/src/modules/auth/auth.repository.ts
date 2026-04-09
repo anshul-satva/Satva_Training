@@ -3,8 +3,13 @@ import { prisma } from "../../config/prisma.js";
 
 export const authRepository = {
   findUserByEmail(email: string) {
-    return prisma.user.findUnique({
-      where: { email },
+    return prisma.user.findFirst({
+      where: {
+        email: {
+          equals: email,
+          mode: "insensitive",
+        },
+      },
       include: {
         organizationMembers: {
           include: {

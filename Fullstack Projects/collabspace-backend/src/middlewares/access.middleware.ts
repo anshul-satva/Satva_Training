@@ -5,6 +5,36 @@ import { ResponseStatus } from "../constants/app.constant.js";
 import { ensureMemberHasRole, findOrganizationMembership } from "../utils/membership.util.js";
 import { AppError } from "./error.middleware.js";
 
+export const requireActiveOrganizationAdmin = async (
+  request: Request,
+  _response: Response,
+  next: NextFunction,
+) => {
+  const organizationId = request.header("x-organization-id");
+  const userId = request.currentUser?.id;
+
+  if (!organizationId || !userId) {
+    return next(
+      new AppError("An active organization is required for this action", 400),
+    );
+  }
+
+  const membership = await findOrganizationMembership(organizationId, userId);
+
+  if (!membership || membership.role !== "ADMIN") {
+    return next(
+      new AppError(
+        "Only organization admins can perform this action",
+        403,
+        ResponseStatus.Forbidden,
+      ),
+    );
+  }
+
+  request.currentMembership = membership;
+  next();
+};
+
 export const requireOrganizationAccess =
   (organizationParam = "organizationId") =>
   async (request: Request, _response: Response, next: NextFunction) => {

@@ -18,7 +18,18 @@ export const requireAuth = async (
   }
 
   const token = authorizationHeader.replace("Bearer ", "");
-  const payload = verifyAccessToken(token);
+  let payload: { userId: string; email: string };
+  try {
+    payload = verifyAccessToken(token);
+  } catch {
+    return next(
+      new AppError(
+        "Invalid or expired authentication token",
+        401,
+        ResponseStatus.Unauthorized,
+      ),
+    );
+  }
 
   const user = await prisma.user.findUnique({
     where: { id: payload.userId },

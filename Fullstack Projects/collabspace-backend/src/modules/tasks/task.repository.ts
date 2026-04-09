@@ -24,11 +24,11 @@ export const taskRepository = {
     });
   },
 
-  findTasksByProject(projectId: string) {
+  findTasksByProject(projectId: string, includeArchived = false) {
     return prisma.task.findMany({
       where: {
         projectId,
-        archivedAt: null,
+        archivedAt: includeArchived ? undefined : null,
       },
       include: {
         assignedUser: {
@@ -54,6 +54,13 @@ export const taskRepository = {
     return prisma.task.findUnique({
       where: { id: taskId },
       include: {
+        createdBy: {
+          select: {
+            id: true,
+            name: true,
+            email: true,
+          },
+        },
         assignedUser: {
           select: {
             id: true,

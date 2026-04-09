@@ -1,0 +1,371 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-family: "Segoe UI Variable", "Segoe UI", Inter, system-ui, sans-serif;
+  color: #121c2a;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 104, 95, 0.11),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(55, 85, 195, 0.12),
+      transparent 26%
+    ),
+    #f8f9ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --surface: #f8f9ff;
+  --surface-low: #eff4ff;
+  --surface-high: #d9e3f6;
+  --surface-card: rgba(255, 255, 255, 0.92);
+  --ink: #121c2a;
+  --muted: #5f6d7b;
+  --primary: #00685f;
+  --primary-strong: #008378;
+  --secondary: #3755c3;
+  --tertiary: #825100;
+  --ghost: rgba(188, 201, 198, 0.35);
+  --shadow: 0 12px 32px rgba(18, 28, 42, 0.08);
+  --sidebar-start: #14344b;
+  --sidebar-end: #235b59;
+  --topbar-bg: rgba(255, 255, 255, 0.82);
+  --topbar-border: rgba(207, 220, 235, 0.55);
+  --toggle-bg: #ffffff;
+  --toggle-ink: #183247;
+  --sidebar-bg: #e2e8f0;
+  --sidebar-border: #cbd5e1;
+  --sidebar-ink: #0f172a;
+  --sidebar-muted: #475569;
+  --sidebar-item: rgba(15, 23, 42, 0.08);
+  --sidebar-item-active: #0f172a;
+  --sidebar-item-active-bg: rgba(15, 23, 42, 0.12);
+  --panel-bg: rgba(255, 255, 255, 0.4);
+}
+
+:root[data-theme="dark"] {
+  color: #ebf2ff;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(15, 139, 141, 0.16),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(91, 124, 250, 0.18),
+      transparent 26%
+    ),
+    #09131d;
+  --surface: #09131d;
+  --surface-low: #12202d;
+  --surface-high: #1b3042;
+  --surface-card: rgba(18, 32, 45, 0.9);
+  --ink: #ebf2ff;
+  --muted: #9fb2c8;
+  --primary: #0f8b8d;
+  --primary-strong: #13a38b;
+  --secondary: #5b7cfa;
+  --tertiary: #d39a37;
+  --ghost: rgba(132, 157, 186, 0.18);
+  --shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+  --sidebar-start: #0d1e2c;
+  --sidebar-end: #123848;
+  --topbar-bg: rgba(18, 32, 45, 0.82);
+  --topbar-border: rgba(95, 118, 145, 0.26);
+  --toggle-bg: #132536;
+  --toggle-ink: #ebf2ff;
+  --sidebar-bg: #1e293b;
+  --sidebar-border: #334155;
+  --sidebar-ink: #f8fafc;
+  --sidebar-muted: #94a3b8;
+  --sidebar-item: rgba(255, 255, 255, 0.06);
+  --sidebar-item-active: #ffffff;
+  --sidebar-item-active-bg: rgba(255, 255, 255, 0.15);
+  --panel-bg: rgba(15, 23, 42, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.font-\[Manrope\] {
+  font-family:
+    "Segoe UI Variable", "Segoe UI", Inter, system-ui, sans-serif !important;
+}
+
+html,
+body,
+#root {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.glass-card {
+  background: color-mix(in srgb, var(--surface-card) 88%, transparent);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow);
+}
+
+.editorial-shell {
+  background:
+    radial-gradient(
+      circle at top left,
+      color-mix(in srgb, var(--primary) 10%, transparent),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at top right,
+      color-mix(in srgb, var(--secondary) 10%, transparent),
+      transparent 28%
+    ),
+    var(--surface);
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-shell .ant-layout-sider-children {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.sidebar-shell {
+  position: relative;
+  z-index: 1;
+  box-shadow: inset -1px 0 0 var(--sidebar-border);
+}
+
+.sidebar-menu .ant-menu-item,
+.sidebar-menu .ant-menu-submenu-title {
+  color: var(--sidebar-ink) !important;
+  border-radius: 18px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  margin-inline: 0 !important;
+  margin-block: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.sidebar-menu .ant-menu-item-selected {
+  background: var(--sidebar-item-active-bg) !important;
+  color: var(--sidebar-item-active) !important;
+}
+
+.sidebar-menu .ant-menu-title-content {
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
+
+.sidebar-menu .ant-menu {
+  background: transparent !important;
+}
+
+.sidebar-menu {
+  overflow: hidden !important;
+  width: 100%;
+}
+
+.sidebar-menu .ant-menu-item .ant-menu-item-icon,
+.sidebar-menu .ant-menu-item .anticon {
+  min-width: 18px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-inline-end: 14px !important;
+}
+
+.sidebar-shell-collapsed .sidebar-menu .ant-menu-item {
+  justify-content: center !important;
+  padding-inline: 0 !important;
+  width: 56px !important;
+  margin-inline: auto !important;
+  border-radius: 18px !important;
+}
+
+.sidebar-shell-collapsed .sidebar-menu .ant-menu-item .ant-menu-item-icon,
+.sidebar-shell-collapsed .sidebar-menu .ant-menu-item .anticon {
+  margin-inline-end: 0 !important;
+}
+
+.sidebar-menu .ant-menu-item {
+  width: 100%;
+}
+
+.sidebar-menu-collapsed {
+  width: 100%;
+}
+
+.sidebar-shell-collapsed .ant-menu-title-content,
+.sidebar-shell-collapsed .ant-menu-item .ant-menu-title-content,
+.sidebar-shell-collapsed .ant-menu-item .ant-menu-title-content a {
+  display: none !important;
+}
+
+.sidebar-shell-collapsed .sidebar-menu .ant-menu-item {
+  overflow: hidden !important;
+}
+
+.sidebar-actions-collapsed {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-menu .ant-menu-item-disabled {
+  color: color-mix(in srgb, var(--sidebar-ink) 38%, transparent) !important;
+}
+
+.sidebar-shell {
+  flex: 0 0 auto !important;
+  max-width: none !important;
+  overflow: hidden !important;
+  background: var(--sidebar-bg) !important;
+}
+
+.brand-mark {
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      color-mix(in srgb, var(--primary) 18%, white),
+      transparent 45%
+    ),
+    color-mix(in srgb, var(--primary) 12%, var(--surface-card));
+  color: var(--primary);
+  border: 1px solid var(--ghost);
+}
+
+.shell-topbar {
+  background: var(--topbar-bg);
+  border: 1px solid var(--topbar-border);
+  box-shadow: var(--shadow);
+}
+
+.shell-toggle {
+  background: var(--toggle-bg) !important;
+  color: var(--toggle-ink) !important;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--ghost) !important;
+  transform: none;
+}
+
+.sidebar-panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--ghost);
+}
+
+.sidebar-action {
+  border: 1px solid var(--ghost) !important;
+  background: var(--panel-bg) !important;
+  color: var(--sidebar-ink) !important;
+}
+
+.sidebar-action:hover {
+  background: color-mix(
+    in srgb,
+    var(--panel-bg) 85%,
+    var(--primary) 15%
+  ) !important;
+}
+
+.sidebar-shell .ant-typography,
+.sidebar-shell .ant-menu,
+.sidebar-shell .ant-menu .ant-menu-title-content > a,
+.sidebar-shell .ant-menu-item .ant-menu-title-content > a {
+  color: var(--sidebar-ink);
+}
+
+.sidebar-shell .ant-select .ant-select-selector {
+  background: color-mix(
+    in srgb,
+    var(--surface-card) 82%,
+    transparent
+  ) !important;
+  border-color: var(--ghost) !important;
+  color: var(--sidebar-ink) !important;
+}
+
+.sidebar-shell .ant-select-arrow,
+.sidebar-shell .ant-menu-item-icon,
+.sidebar-shell .anticon {
+  color: inherit;
+}
+
+.auth-surface {
+  background: color-mix(in srgb, var(--surface-card) 92%, transparent);
+  border: 1px solid var(--ghost);
+}
+
+.brand-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+}
+
+.soft-panel {
+  background: var(--surface-low);
+}
+
+.content-card {
+  background: var(--surface-card);
+  box-shadow: var(--shadow);
+}
+
+.editorial-shell > main {
+  min-width: 0;
+}
+
+.compact-list {
+  display: grid;
+  gap: 12px;
+}
+
+.compact-list-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid var(--ghost);
+  border-radius: 18px;
+  padding: 14px 16px;
+  background: color-mix(in srgb, var(--surface-card) 92%, transparent);
+}
+
+.compact-metric {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.compact-metric-card {
+  border: 1px solid var(--ghost);
+  border-radius: 18px;
+  padding: 14px 16px;
+  background: color-mix(in srgb, var(--surface-card) 94%, transparent);
+}
+
+.action-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+}

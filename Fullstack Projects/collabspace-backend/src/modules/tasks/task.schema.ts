@@ -9,6 +9,10 @@ export const taskParamsSchema = z.object({
   taskId: z.string().min(1),
 });
 
+export const taskQuerySchema = z.object({
+  includeArchived: z.coerce.boolean().optional(),
+});
+
 export const createTaskSchema = z.object({
   title: z.string().trim().min(1).max(200).optional(),
   description: z.string().trim().max(2000).optional(),

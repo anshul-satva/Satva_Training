@@ -1,6 +1,9 @@
 import { OrganizationRole } from "@prisma/client";
 import { AppError } from "../../middlewares/error.middleware.js";
+import { hashPassword } from "../../utils/bcrypt.util.js";
 import { organizationRepository } from "./organization.repository.js";
+
+const normalizeEmail = (email: string) => email.trim().toLowerCase();
 
 export const organizationService = {
   listOrganizations(userId: string) {
@@ -29,13 +32,25 @@ export const organizationService = {
 
   async addMember(payload: {
     organizationId: string;
+    name?: string;
     email: string;
+    password?: string;
     role?: OrganizationRole;
   }) {
-    const user = await organizationRepository.findUserByEmail(payload.email);
+    const normalizedEmail = normalizeEmail(payload.email);
+    let user = await organizationRepository.findUserByEmail(normalizedEmail);
 
     if (!user) {
-      throw new AppError("User with this email does not exist", 404);
+      if (!payload.password) {
+        throw new AppError("Password is required when registering a new organization user", 400);
+      }
+
+      const passwordHash = await hashPassword(payload.password);
+      user = await organizationRepository.createUser({
+        email: normalizedEmail,
+        name: payload.name,
+        passwordHash,
+      });
     }
 
     return organizationRepository.upsertMember({

@@ -14,6 +14,7 @@ import {
 import {
   createTaskSchema,
   projectTaskParamsSchema,
+  taskQuerySchema,
   taskParamsSchema,
   updateTaskSchema,
 } from "./task.schema.js";
@@ -24,7 +25,7 @@ taskRoutes.use(asyncHandler(requireAuth));
 
 taskRoutes.get(
   "/projects/:projectId/tasks",
-  validateRequest({ params: projectTaskParamsSchema }),
+  validateRequest({ params: projectTaskParamsSchema, query: taskQuerySchema }),
   asyncHandler(requireProjectAccess()),
   asyncHandler(listTasks),
 );

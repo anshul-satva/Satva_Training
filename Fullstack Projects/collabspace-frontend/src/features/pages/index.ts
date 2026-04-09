@@ -1,0 +1,13 @@
+export { BoardPage } from './board-page';
+export { BoardRedirectPage } from './board-redirect-page';
+export { DashboardPage } from './dashboard-page';
+export { LoginPage } from './login-page';
+export { MembersPage } from './members-page';
+export { OrganizationDetailPage } from './organization-detail-page';
+export { OrganizationsPage } from './organizations-page';
+export { ProjectDetailPage } from './project-detail-page';
+export { ProjectsPage } from './projects-page';
+export { RegisterPage } from './register-page';
+export { SettingsPage } from './settings-page';
+export { TagsPage } from './tags-page';
+export { TaskDetailPage } from './task-detail-page';

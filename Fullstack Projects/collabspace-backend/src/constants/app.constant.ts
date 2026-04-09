@@ -11,6 +11,5 @@ export enum ResponseStatus {
 export const TASK_STATUS_ORDER = [
   "TODO",
   "IN_PROGRESS",
-  "IN_REVIEW",
   "DONE",
 ] as const;

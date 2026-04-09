@@ -9,4 +9,12 @@ const envSchema = z.object({
   JWT_EXPIRES_IN: z.string().default("7d"),
 });
 
-export const env = envSchema.parse(process.env);
+const parsedEnv = envSchema.parse(process.env);
+
+export const env = {
+  ...parsedEnv,
+  CORS_ORIGINS:
+    parsedEnv.CORS_ORIGIN === "*"
+      ? ["*"]
+      : parsedEnv.CORS_ORIGIN.split(",").map((origin) => origin.trim()).filter(Boolean),
+};

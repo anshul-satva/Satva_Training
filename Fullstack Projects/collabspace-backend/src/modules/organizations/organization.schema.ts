@@ -18,7 +18,9 @@ export const createOrganizationSchema = z.object({
 export const updateOrganizationSchema = createOrganizationSchema;
 
 export const addMemberSchema = z.object({
+  name: z.string().trim().min(1).max(100).optional(),
   email: z.string().trim().email(),
+  password: z.string().min(6).max(50).optional(),
   role: z.nativeEnum(OrganizationRole).optional(),
 });
 

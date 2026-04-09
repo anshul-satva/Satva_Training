@@ -39,8 +39,8 @@ const ensureTagsBelongToOrganization = async (
 };
 
 export const taskService = {
-  listTasks(projectId: string) {
-    return taskRepository.findTasksByProject(projectId);
+  listTasks(projectId: string, includeArchived = false) {
+    return taskRepository.findTasksByProject(projectId, includeArchived);
   },
 
   async getProjectBoard(projectId: string) {
@@ -49,7 +49,6 @@ export const taskService = {
     return {
       TODO: tasks.filter((task) => task.status === TaskStatus.TODO),
       IN_PROGRESS: tasks.filter((task) => task.status === TaskStatus.IN_PROGRESS),
-      IN_REVIEW: tasks.filter((task) => task.status === TaskStatus.IN_REVIEW),
       DONE: tasks.filter((task) => task.status === TaskStatus.DONE),
     };
   },

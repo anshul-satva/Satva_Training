@@ -3,6 +3,8 @@ import { comparePassword, hashPassword } from "../../utils/bcrypt.util.js";
 import { signAccessToken } from "../../utils/jwt.util.js";
 import { authRepository } from "./auth.repository.js";
 
+const normalizeEmail = (email: string) => email.trim().toLowerCase();
+
 export const authService = {
   async register(payload: {
     email: string;
@@ -10,7 +12,8 @@ export const authService = {
     password: string;
     organizationName?: string;
   }) {
-    const existingUser = await authRepository.findUserByEmail(payload.email);
+    const email = normalizeEmail(payload.email);
+    const existingUser = await authRepository.findUserByEmail(email);
 
     if (existingUser) {
       throw new AppError("User already exists", 409);
@@ -18,7 +21,7 @@ export const authService = {
     const passwordHash = await hashPassword(payload.password);
 
     const user = await authRepository.createUser({
-      email: payload.email,
+      email,
       name: payload.name,
       passwordHash,
       organizationName: payload.organizationName,
@@ -28,7 +31,7 @@ export const authService = {
   },
 
   async login(payload: { email: string; password: string }) {
-    const user = await authRepository.findUserByEmail(payload.email);
+    const user = await authRepository.findUserByEmail(normalizeEmail(payload.email));
 
     if (!user) {
       throw new AppError("Invalid email or password", 401);
