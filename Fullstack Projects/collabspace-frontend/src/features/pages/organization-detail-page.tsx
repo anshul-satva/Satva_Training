@@ -11,7 +11,7 @@ import { canEditOrganization, canManageMembers, useSelectedOrganization } from '
 
 export function OrganizationDetailPage() {
   const { message } = AntApp.useApp();
-  const { activeMembership } = useSelectedOrganization();
+  const { activeMembership, activeOrganizationId } = useSelectedOrganization();
   const { organizationId } = useParams();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
@@ -58,6 +58,7 @@ export function OrganizationDetailPage() {
     }
   };
 
+  if (organizationId !== activeOrganizationId) return <ErrorState title="Access Restricted" subtitle="You must select this organization from the sidebar dropdown to view its details." />;
   if (loading) return <PageLoader />;
   if (error) return <ErrorState title="Failed to load organization" subtitle={error} />;
   if (!organization) return <EmptyState title="Organization not found" description="The organization could not be loaded." />;

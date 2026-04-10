@@ -137,7 +137,16 @@ export const organizationRepository = {
     });
   },
 
+  findMemberByOrganizationAndUserId(organizationId: string, userId: string) {
+    return prisma.organizationMember.findUnique({
+      where: {
+        organizationId_userId: { organizationId, userId },
+      },
+    });
+  },
+
   updateMemberRole(memberId: string, role: OrganizationRole) {
+
     return prisma.organizationMember.update({
       where: { id: memberId },
       data: { role },

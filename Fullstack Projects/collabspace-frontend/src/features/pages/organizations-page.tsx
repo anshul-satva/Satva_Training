@@ -10,7 +10,7 @@ import { canCreateOrganizations, useSelectedOrganization } from './shared';
 
 export function OrganizationsPage() {
   const { message } = AntApp.useApp();
-  const { memberships, refreshMe } = useAuth();
+  const { memberships, refreshMe, activeOrganizationId, setActiveOrganizationId } = useAuth();
   const { activeMembership } = useSelectedOrganization();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -45,7 +45,13 @@ export function OrganizationsPage() {
         }
       />
       <Row gutter={[20, 20]}>
-        {memberships.map((membership) => (
+        {[...memberships]
+          .sort((a, b) => {
+            if (a.organizationId === activeOrganizationId) return -1;
+            if (b.organizationId === activeOrganizationId) return 1;
+            return 0;
+          })
+          .map((membership) => (
           <Col xs={24} lg={12} key={membership.id}>
             <Card className="content-card border-0!">
               <Space orientation="vertical" size={18} className="w-full">
@@ -65,10 +71,16 @@ export function OrganizationsPage() {
                   </div>
                   <RoleBadge role={membership.role ?? 'MEMBER'} />
                 </div>
-                <Space size={10} wrap={false}>
-                  <Button icon={<EyeOutlined />} onClick={() => navigate(`/organizations/${membership.organizationId}`)}>Open</Button>
-                  <Button icon={<ArrowRightOutlined />} onClick={() => navigate(`/organizations/${membership.organizationId}/members`)}>Members</Button>
-                </Space>
+                {membership.organizationId === activeOrganizationId ? (
+                  <Space size={10} wrap={false}>
+                    <Button icon={<EyeOutlined />} onClick={() => navigate(`/organizations/${membership.organizationId}`)}>Open Options</Button>
+                    <Button icon={<ArrowRightOutlined />} onClick={() => navigate(`/organizations/${membership.organizationId}/members`)}>Members</Button>
+                  </Space>
+                ) : (
+                  <Button onClick={() => setActiveOrganizationId(membership.organizationId)}>
+                    Select as Active
+                  </Button>
+                )}
               </Space>
             </Card>
           </Col>

@@ -14,7 +14,7 @@ import {
 } from "@ant-design/icons";
 import { Button, Menu, Select, Typography } from "antd";
 import { useEffect, useMemo, useState } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useColorMode } from "../../hooks/use-color-mode";
 import { useAuth } from "../../hooks/use-auth";
 import { projectService } from "../../services/projects";
@@ -32,6 +32,7 @@ function getSelectedKey(pathname: string) {
 
 export function AppShell() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
   const {
     memberships,
@@ -149,7 +150,10 @@ export function AppShell() {
                 value={activeOrganizationId ?? undefined}
                 options={organizationOptions}
                 className="w-full"
-                onChange={setActiveOrganizationId}
+                onChange={(val) => {
+                  setActiveOrganizationId(val);
+                  navigate('/dashboard');
+                }}
               />
               <Typography.Text className="mt-3! block! text-sm! text-(--sidebar-ink)!">
                 Role: {activeMembership?.role ?? "N/A"}

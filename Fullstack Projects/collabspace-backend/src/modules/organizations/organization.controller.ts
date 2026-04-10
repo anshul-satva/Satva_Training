@@ -113,6 +113,7 @@ export const removeMember = async (request: Request, response: Response) => {
   await organizationService.removeMember({
     organizationId: request.params.organizationId,
     memberId: request.params.memberId,
+    currentUserId: request.currentUser?.id as string,
   });
 
   return sendResponse(response, 200, "Member removed successfully", null);

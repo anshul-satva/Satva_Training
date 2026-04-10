@@ -38,13 +38,22 @@ export const organizationService = {
     role?: OrganizationRole;
   }) {
     const normalizedEmail = normalizeEmail(payload.email);
-    let user = await organizationRepository.findUserByEmail(normalizedEmail);
+    let user = await organizationRepository.findUserByEmail(
+      normalizedEmail,
+    );
 
-    if (!user) {
-      if (!payload.password) {
-        throw new AppError("Password is required when registering a new organization user", 400);
+    if (user) {
+      const existingMember = await organizationRepository.findMemberByOrganizationAndUserId(
+        payload.organizationId,
+        user.id
+      );
+      if (existingMember) {
+        throw new AppError("User is already a member of this organization", 409);
       }
-
+    } else {
+      if (!payload.password) {
+        throw new AppError("Password is required for new users", 400);
+      }
       const passwordHash = await hashPassword(payload.password);
       user = await organizationRepository.createUser({
         email: normalizedEmail,
@@ -71,14 +80,33 @@ export const organizationService = {
       throw new AppError("Member not found", 404);
     }
 
+    if (
+      existingMember.role === OrganizationRole.ADMIN &&
+      payload.role !== OrganizationRole.ADMIN
+    ) {
+      throw new AppError("Admin role cannot be changed", 403);
+    }
+
     return organizationRepository.updateMemberRole(payload.memberId, payload.role);
   },
 
-  async removeMember(payload: { organizationId: string; memberId: string }) {
+  async removeMember(payload: {
+    organizationId: string;
+    memberId: string;
+    currentUserId: string;
+  }) {
     const existingMember = await organizationRepository.findMemberById(payload.memberId);
 
     if (!existingMember || existingMember.organizationId !== payload.organizationId) {
       throw new AppError("Member not found", 404);
+    }
+
+    if (existingMember.userId === payload.currentUserId) {
+      throw new AppError("You cannot delete yourself", 403);
+    }
+
+    if (existingMember.role === OrganizationRole.ADMIN) {
+      throw new AppError("Admin members cannot be deleted", 403);
     }
 
     await organizationRepository.deleteMember(payload.memberId);

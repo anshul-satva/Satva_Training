@@ -12,7 +12,7 @@ import { canManageMembers, normalizeEmail, roleOptions, useSelectedOrganization 
 
 export function MembersPage() {
   const { message, modal } = AntApp.useApp();
-  const { activeMembership } = useSelectedOrganization();
+  const { activeMembership, activeOrganizationId } = useSelectedOrganization();
   const { organizationId } = useParams();
   const [members, setMembers] = useState<OrganizationMembership[]>([]);
   const [loading, setLoading] = useState(true);
@@ -22,6 +22,7 @@ export function MembersPage() {
   const [submitting, setSubmitting] = useState(false);
   const [addForm] = Form.useForm();
   const [editForm] = Form.useForm();
+  const [memberType, setMemberType] = useState<'new' | 'existing'>('existing');
 
   const loadMembers = useCallback(async () => {
     if (!organizationId) return;
@@ -51,6 +52,7 @@ export function MembersPage() {
       message.success('Member added');
       setAddOpen(false);
       addForm.resetFields();
+      setMemberType('existing');
       await loadMembers();
     } catch (error) {
       message.error(getErrorMessage(error));
@@ -104,6 +106,7 @@ export function MembersPage() {
     }
   }, [editForm, editMember]);
 
+  if (organizationId !== activeOrganizationId) return <ErrorState title="Access Restricted" subtitle="You must select this organization from the sidebar dropdown to manage its members." />;
   if (loading) return <PageLoader />;
   if (error) return <ErrorState title="Failed to load members" subtitle={error} />;
 
@@ -134,7 +137,7 @@ export function MembersPage() {
               </div>
               <div className="flex items-center justify-between gap-3 md:justify-end">
                 <RoleBadge role={item.role ?? 'MEMBER'} />
-                {canManageMembers(activeMembership?.role) ? (
+                {canManageMembers(activeMembership?.role) && item.role !== 'ADMIN' ? (
                   <Space size={10}>
                     <IconActionButton title="Edit role" icon={<UserSwitchOutlined />} onClick={() => setEditMember(item)} />
                     <IconActionButton title="Remove member" icon={<DeleteOutlined />} danger onClick={() => confirmRemoveMember(item.id)} />
@@ -145,8 +148,18 @@ export function MembersPage() {
           ))}
         </div>
       </Card>
-      <Modal open={addOpen} title="Register Member" footer={null} onCancel={() => setAddOpen(false)} forceRender>
-        <Form form={addForm} layout="vertical" onFinish={addMember}>
+      <Modal open={addOpen} title="Register / Add Member" footer={null} onCancel={() => setAddOpen(false)} forceRender>
+        <Form form={addForm} layout="vertical" onFinish={addMember} initialValues={{ memberType: 'existing' }}>
+          <Form.Item name="memberType" label="User Type">
+            <Select 
+              value={memberType}
+              onChange={(val) => setMemberType(val)}
+              options={[
+                { label: 'Existing User (From another organization)', value: 'existing' },
+                { label: 'New User (Register)', value: 'new' }
+              ]} 
+            />
+          </Form.Item>
           <Form.Item name="name" label="Full Name">
             <Input prefix={<UserOutlined className="text-slate-400!" />} />
           </Form.Item>
@@ -156,9 +169,10 @@ export function MembersPage() {
           <Form.Item
             name="password"
             label="Password"
-            extra="Required for a brand new user. Leave blank only if this email already has an account."
+            extra={memberType === 'new' ? "Required for a brand new user." : "Not required. User is already registered."}
+            rules={memberType === 'new' ? [{ required: true, message: 'Password is required' }] : []}
           >
-            <Input.Password prefix={<LockOutlined className="text-slate-400!" />} />
+            <Input.Password prefix={<LockOutlined className="text-slate-400!" />} disabled={memberType === 'existing'} />
           </Form.Item>
           <Form.Item name="role" label="Role">
             <Select options={roleOptions.map((role) => ({ label: role, value: role }))} />

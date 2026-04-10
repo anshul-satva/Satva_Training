@@ -2,7 +2,10 @@ import type { OrganizationRole } from "@prisma/client";
 import type { NextFunction, Request, Response } from "express";
 import { prisma } from "../config/prisma.js";
 import { ResponseStatus } from "../constants/app.constant.js";
-import { ensureMemberHasRole, findOrganizationMembership } from "../utils/membership.util.js";
+import {
+  ensureMemberHasRole,
+  findOrganizationMembership,
+} from "../utils/membership.util.js";
 import { AppError } from "./error.middleware.js";
 
 export const requireActiveOrganizationAdmin = async (
@@ -42,13 +45,21 @@ export const requireOrganizationAccess =
     const userId = request.currentUser?.id;
 
     if (!organizationId || !userId) {
-      return next(new AppError("Organization access could not be verified", 400));
+      return next(
+        new AppError("Organization access could not be verified", 400),
+      );
     }
 
     const membership = await findOrganizationMembership(organizationId, userId);
 
     if (!membership) {
-      return next(new AppError("You do not have access to this organization", 403, ResponseStatus.Forbidden));
+      return next(
+        new AppError(
+          "You do not have access to this organization",
+          403,
+          ResponseStatus.Forbidden,
+        ),
+      );
     }
 
     request.currentMembership = membership;
@@ -58,25 +69,29 @@ export const requireOrganizationAccess =
 export const requireOrganizationRole =
   (roles: OrganizationRole[], organizationParam = "organizationId") =>
   async (request: Request, response: Response, next: NextFunction) => {
-    await requireOrganizationAccess(organizationParam)(request, response, async (error?: unknown) => {
-      if (error) {
-        return next(error);
-      }
+    await requireOrganizationAccess(organizationParam)(
+      request,
+      response,
+      async (error?: unknown) => {
+        if (error) {
+          return next(error);
+        }
 
-      const currentRole = request.currentMembership?.role;
+        const currentRole = request.currentMembership?.role;
 
-      if (!currentRole || !ensureMemberHasRole(currentRole, roles)) {
-        return next(
-          new AppError(
-            "You do not have permission to perform this action",
-            403,
-            ResponseStatus.Forbidden,
-          ),
-        );
-      }
+        if (!currentRole || !ensureMemberHasRole(currentRole, roles)) {
+          return next(
+            new AppError(
+              "You do not have permission to perform this action",
+              403,
+              ResponseStatus.Forbidden,
+            ),
+          );
+        }
 
-      next();
-    });
+        next();
+      },
+    );
   };
 
 export const requireProjectAccess =
@@ -94,13 +109,24 @@ export const requireProjectAccess =
     });
 
     if (!project || project.deletedAt) {
-      return next(new AppError("Project not found", 404, ResponseStatus.NotFound));
+      return next(
+        new AppError("Project not found", 404, ResponseStatus.NotFound),
+      );
     }
 
-    const membership = await findOrganizationMembership(project.organizationId, userId);
+    const membership = await findOrganizationMembership(
+      project.organizationId,
+      userId,
+    );
 
     if (!membership) {
-      return next(new AppError("You do not have access to this project", 403, ResponseStatus.Forbidden));
+      return next(
+        new AppError(
+          "You do not have access to this project",
+          403,
+          ResponseStatus.Forbidden,
+        ),
+      );
     }
 
     request.currentProject = project;
@@ -111,25 +137,29 @@ export const requireProjectAccess =
 export const requireProjectRole =
   (roles: OrganizationRole[], projectParam = "projectId") =>
   async (request: Request, response: Response, next: NextFunction) => {
-    await requireProjectAccess(projectParam)(request, response, async (error?: unknown) => {
-      if (error) {
-        return next(error);
-      }
+    await requireProjectAccess(projectParam)(
+      request,
+      response,
+      async (error?: unknown) => {
+        if (error) {
+          return next(error);
+        }
 
-      const currentRole = request.currentMembership?.role;
+        const currentRole = request.currentMembership?.role;
 
-      if (!currentRole || !ensureMemberHasRole(currentRole, roles)) {
-        return next(
-          new AppError(
-            "You do not have permission to perform this action",
-            403,
-            ResponseStatus.Forbidden,
-          ),
-        );
-      }
+        if (!currentRole || !ensureMemberHasRole(currentRole, roles)) {
+          return next(
+            new AppError(
+              "You do not have permission to perform this action",
+              403,
+              ResponseStatus.Forbidden,
+            ),
+          );
+        }
 
-      next();
-    });
+        next();
+      },
+    );
   };
 
 export const requireTaskAccess =
@@ -153,10 +183,19 @@ export const requireTaskAccess =
       return next(new AppError("Task not found", 404, ResponseStatus.NotFound));
     }
 
-    const membership = await findOrganizationMembership(task.organizationId, userId);
+    const membership = await findOrganizationMembership(
+      task.organizationId,
+      userId,
+    );
 
     if (!membership) {
-      return next(new AppError("You do not have access to this task", 403, ResponseStatus.Forbidden));
+      return next(
+        new AppError(
+          "You do not have access to this task",
+          403,
+          ResponseStatus.Forbidden,
+        ),
+      );
     }
 
     request.currentTask = task;
@@ -183,10 +222,19 @@ export const requireTagRole =
       return next(new AppError("Tag not found", 404, ResponseStatus.NotFound));
     }
 
-    const membership = await findOrganizationMembership(tag.organizationId, userId);
+    const membership = await findOrganizationMembership(
+      tag.organizationId,
+      userId,
+    );
 
     if (!membership) {
-      return next(new AppError("You do not have access to this tag", 403, ResponseStatus.Forbidden));
+      return next(
+        new AppError(
+          "You do not have access to this tag",
+          403,
+          ResponseStatus.Forbidden,
+        ),
+      );
     }
 
     if (!ensureMemberHasRole(membership.role, roles)) {

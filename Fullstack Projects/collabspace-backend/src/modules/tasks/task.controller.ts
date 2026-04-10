@@ -4,9 +4,11 @@ import { sendResponse } from "../../utils/response.util.js";
 import { taskService } from "./task.service.js";
 
 export const listTasks = async (request: Request, response: Response) => {
+  const includeArchived =
+    String(request.query.includeArchived ?? "false") === "true";
   const tasks = await taskService.listTasks(
     request.params.projectId,
-    request.query.includeArchived === "true",
+    includeArchived,
   );
 
   return sendResponse(response, 200, "Tasks fetched successfully", tasks);

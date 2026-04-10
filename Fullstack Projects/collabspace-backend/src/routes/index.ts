@@ -1,4 +1,6 @@
 import { Router } from "express";
+import { requireAuth } from "../middlewares/auth.middleware.js";
+import { asyncHandler } from "../utils/async-handler.util.js";
 import activityRoutes from "../modules/activities/activity.routes.js";
 import authRoutes from "../modules/auth/auth.routes.js";
 import commentRoutes from "../modules/comments/comment.routes.js";
@@ -10,6 +12,9 @@ import taskRoutes from "../modules/tasks/task.routes.js";
 const apiRoutes = Router();
 
 apiRoutes.use("/auth", authRoutes);
+// Global authentication middleware for all subsequent routes
+apiRoutes.use(asyncHandler(requireAuth));
+
 apiRoutes.use("/organizations", organizationRoutes);
 apiRoutes.use("/", projectRoutes);
 apiRoutes.use("/", tagRoutes);

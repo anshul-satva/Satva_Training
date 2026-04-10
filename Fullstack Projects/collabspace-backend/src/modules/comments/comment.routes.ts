@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { requireTaskAccess } from "../../middlewares/access.middleware.js";
-import { requireAuth } from "../../middlewares/auth.middleware.js";
+
 import { validateRequest } from "../../middlewares/validate.middleware.js";
 import { asyncHandler } from "../../utils/async-handler.util.js";
 import { createComment, listComments } from "./comment.controller.js";
@@ -8,7 +8,7 @@ import { commentParamsSchema, createCommentSchema } from "./comment.schema.js";
 
 const commentRoutes = Router();
 
-commentRoutes.use(asyncHandler(requireAuth));
+
 
 commentRoutes.get(
   "/tasks/:taskId/comments",
