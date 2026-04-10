@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Critic {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  bio       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  reviews   Review[]
+}
+
+model Movie {
+  id          String       @id @default(cuid())
+  title       String
+  releaseYear Int
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  detail      MovieDetail?
+  reviews     Review[]
+  genres      Genre[] // implicit many-to-many
+}
+
+model MovieDetail {
+  id             String @id @default(cuid())
+  runtimeMinutes Int
+  language       String
+  plot           String
+  movie          Movie  @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  movieId        String @unique
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  rating    Float // 1.0-10.0
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  critic    Critic   @relation(fields: [criticId], references: [id], onDelete: Cascade)
+  criticId  String
+  movie     Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  movieId   String
+}
+
+model Genre {
+  id     String  @id @default(cuid())
+  name   String  @unique
+  movies Movie[]
+}

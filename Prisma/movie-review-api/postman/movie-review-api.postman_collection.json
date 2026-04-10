@@ -1,0 +1,436 @@
+{
+  "info": {
+    "_postman_id": "b6e7cf24-6198-4bdb-a6da-8a8e8e1d2f89",
+    "name": "Movie Review API",
+    "description": "Import-ready Postman collection for all routes currently defined in the Movie Review API project.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "criticId",
+      "value": ""
+    },
+    {
+      "key": "movieId",
+      "value": ""
+    },
+    {
+      "key": "reviewId",
+      "value": ""
+    },
+    {
+      "key": "genreId",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "System",
+      "item": [
+        {
+          "name": "Root",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/"
+          },
+          "response": []
+        },
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/health"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Critics",
+      "item": [
+        {
+          "name": "Get All Critics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/critics"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Critic By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/critics/{{criticId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Critic",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code >= 200 && pm.response.code < 300) {",
+                  "  const data = pm.response.json();",
+                  "  if (data && data.id) {",
+                  "    pm.collectionVariables.set(\"criticId\", data.id);",
+                  "  }",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Roger Ebert\",\n  \"email\": \"roger.ebert@example.com\",\n  \"bio\": \"Award-winning film critic\"\n}"
+            },
+            "url": "{{baseUrl}}/api/critics"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Critic",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Roger Joseph Ebert\",\n  \"email\": \"roger.ebert.updated@example.com\",\n  \"bio\": \"Updated critic bio\"\n}"
+            },
+            "url": "{{baseUrl}}/api/critics/{{criticId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Critic",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/critics/{{criticId}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Genres",
+      "item": [
+        {
+          "name": "Get All Genres",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/genres"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Genre By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/genres/{{genreId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Genre",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code >= 200 && pm.response.code < 300) {",
+                  "  const data = pm.response.json();",
+                  "  if (data && data.id) {",
+                  "    pm.collectionVariables.set(\"genreId\", data.id);",
+                  "  }",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Sci-Fi\"\n}"
+            },
+            "url": "{{baseUrl}}/api/genres"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Genre",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Science Fiction\"\n}"
+            },
+            "url": "{{baseUrl}}/api/genres/{{genreId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Genre",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/genres/{{genreId}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Movies",
+      "item": [
+        {
+          "name": "Get All Movies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/movies"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Movie By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/movies/{{movieId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Movie",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code >= 200 && pm.response.code < 300) {",
+                  "  const data = pm.response.json();",
+                  "  if (data && data.id) {",
+                  "    pm.collectionVariables.set(\"movieId\", data.id);",
+                  "  }",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Inception\",\n  \"releaseYear\": 2010,\n  \"detail\": {\n    \"runtimeMinutes\": 148,\n    \"language\": \"English\",\n    \"plot\": \"A skilled thief enters dreams to steal secrets and plant ideas.\"\n  },\n  \"genreNames\": [\n    \"Sci-Fi\",\n    \"Thriller\"\n  ]\n}"
+            },
+            "url": "{{baseUrl}}/api/movies"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Movie",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Inception Extended\",\n  \"releaseYear\": 2011\n}"
+            },
+            "url": "{{baseUrl}}/api/movies/{{movieId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Genres To Movie",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"genreNames\": [\n    \"Action\",\n    \"Adventure\"\n  ],\n  \"genreIds\": [\n    \"{{genreId}}\"\n  ]\n}"
+            },
+            "url": "{{baseUrl}}/api/movies/{{movieId}}/genres"
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Genre From Movie",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/movies/{{movieId}}/genres/{{genreId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Movie",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/movies/{{movieId}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "item": [
+        {
+          "name": "Get All Reviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/reviews"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Reviews By Movie",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/reviews/movie/{{movieId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Reviews By Critic",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/reviews/critic/{{criticId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Review By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/reviews/{{reviewId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Review",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code >= 200 && pm.response.code < 300) {",
+                  "  const data = pm.response.json();",
+                  "  if (data && data.id) {",
+                  "    pm.collectionVariables.set(\"reviewId\", data.id);",
+                  "  }",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rating\": 9,\n  \"content\": \"A visually stunning and emotionally layered film.\",\n  \"criticId\": \"{{criticId}}\",\n  \"movieId\": \"{{movieId}}\"\n}"
+            },
+            "url": "{{baseUrl}}/api/reviews"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Review",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rating\": 8,\n  \"content\": \"Updated review content\"\n}"
+            },
+            "url": "{{baseUrl}}/api/reviews/{{reviewId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Review",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/reviews/{{reviewId}}"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
