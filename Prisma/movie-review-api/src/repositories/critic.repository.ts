@@ -4,7 +4,7 @@ import { Prisma } from "@prisma/client";
 export const criticRepository = {
   findAll() {
     return prisma.critic.findMany({
-      include: { reviews: true },
+      include: { reviews: { include: { movie: true } } },
     });
   },
 

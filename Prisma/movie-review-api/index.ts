@@ -13,9 +13,20 @@ app.use("/api/genres", genreRoutes);
 app.use("/api/movies", movieRoutes);
 app.use("/api/reviews", reviewRoutes);
 
-app.get("/health", (_req, res) => {
+app.post("/health", (_req, res) => {
   res.json({
-    message: `System is working fine at ${new Date().toISOString()}`,
+    message: "Movie Review API is Healthy!!",
+    time: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+    body: _req.body,
+    query: _req.query,
+  });
+});
+
+app.get("/users/:id", (req, res) => {
+  console.log(req.params);
+
+  res.json({
+    params: req.params,
   });
 });
 
