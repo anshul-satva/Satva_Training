@@ -60,7 +60,15 @@ namespace JwtAuthProject.Controllers
         [HttpGet("admin-only")]
         public IActionResult AdminOnlyEndpoint()
         {
-            return Ok("You are and admin!");
+            return Ok("You are an admin!");
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("users")]
+        public async Task<ActionResult<List<UserDto>>> GetAllUsers()
+        {
+            var users = await authService.GetAllUsersAsync();
+            return Ok(users);
         }
     }
 }
