@@ -63,12 +63,39 @@ namespace JwtAuthProject.Controllers
             return Ok("You are an admin!");
         }
 
-        [Authorize(Roles = "Admin")]
-        [HttpGet("users")]
-        public async Task<ActionResult<List<UserDto>>> GetAllUsers()
+        //[Authorize(Roles = "Admin")]
+        //[HttpGet("users")]
+        //public async Task<ActionResult<List<UserDto>>> GetAllUsers()
+        //{
+        //    var users = await authService.GetAllUsersAsync();
+        //    return Ok(users);
+        //}
+        [Authorize(Policy = "AdminOnly")]
+        [HttpGet("policy-admin")]
+        public IActionResult PolicyAdmin()
         {
-            var users = await authService.GetAllUsersAsync();
-            return Ok(users);
+            return Ok("SUCCESS : Only Admin can access this policy endpoint.");
+        }
+
+        [Authorize(Policy = "UserOnly")]
+        [HttpGet("policy-user")]
+        public IActionResult PolicyUser()
+        {
+            return Ok("SUCCESS : Only User role can access.");
+        }
+
+        [Authorize(Policy = "StartsWithA")]
+        [HttpGet("policy-a-user")]
+        public IActionResult PolicyAUser()
+        {
+            return Ok("SUCCESS : Only usernames starting with A can access.");
+        }
+
+        [Authorize]
+        [HttpGet("userbyId")]
+        public async Task<ActionResult<UserDto>> GetUserById(Guid id)
+        {
+            return Ok(await authService.GetUserByIdAsync(id));
         }
     }
 }

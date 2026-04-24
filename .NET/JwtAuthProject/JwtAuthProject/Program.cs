@@ -33,6 +33,23 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireRole("Admin"));
+
+    options.AddPolicy("UserOnly", policy =>
+        policy.RequireRole("User"));
+
+    options.AddPolicy("StartsWithA", policy =>
+        policy.RequireClaim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")
+              .RequireAssertion(context =>
+              {
+                  var username = context.User.Identity?.Name;
+                  return username != null && username.StartsWith("A");
+              }));
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

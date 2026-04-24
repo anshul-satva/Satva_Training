@@ -1,13 +1,15 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text;
+using Azure.Core;
 using JwtAuthProject.Data;
 using JwtAuthProject.Entities;
 using JwtAuthProject.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace JwtAuthProject.Services
 {
@@ -21,6 +23,7 @@ namespace JwtAuthProject.Services
                 return null;
             }
 
+            //userz = context.Users.
             var user = new User();
             var hashedPassword = new PasswordHasher<User>()
                 .HashPassword(user, request.Password);
@@ -138,6 +141,21 @@ namespace JwtAuthProject.Services
                 Username = u.Username, 
                 Role = u.Role 
             }).ToList();
+        }
+
+        public async Task<UserDto?> GetUserByIdAsync(Guid id)
+        {
+            var user = await context.FindAsync<User>(id);
+            if(user is null)
+            {
+                return null;
+            }
+            user = await context.Users.FirstOrDefaultAsync(u => user.Id == id);
+            return new UserDto
+            {
+                Username = user.Username,
+                Role = user.Role
+            };
         }
     }
 }

@@ -10,5 +10,6 @@ namespace JwtAuthProject.Services
         Task<TokenResponseDto?> LoginAsync(UserDto request);
         Task<TokenResponseDto?> RefreshTokensAsync(RefreshTokenRequestDto request);
         Task<List<UserDto>> GetAllUsersAsync();
+        Task<UserDto?> GetUserByIdAsync(Guid id);
     }
 }
