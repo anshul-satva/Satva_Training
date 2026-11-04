@@ -1,0 +1,40 @@
+<ul>
+  @for (friend of Friends; track $index) {
+    <li>{{ $index + 1 }} : {{ friend }}</li>
+  }
+
+  @for (fruit of items; track $index; let i = $index) {
+    <p>{{ fruit }}</p>
+    <button (click)="delete(i)">Delete</button>
+  }
+</ul>
+<div>
+  <h3 class="cmp">Numbers</h3>
+  @for (num of numbers; track $index) {
+    @if (numbers.length === 0) {
+      <p>There are no numbers</p>
+    } @else if (num % 2 === 0) {
+      <p>{{ num }} is even</p>
+    } @else if (num % 2 !== 0) {
+      <p>{{ num }} is odd</p>
+    } @else {
+      <p>{{ num }}</p>
+    }
+  }
+</div>
+<h2 class="cmp">For loop conceptual variables</h2>
+<div>
+  @for (item of items; track $index; let i = $index; let isFirst = $first) {
+    @if (isFirst) {
+      <h3>1: First Item : {{ item }}</h3>
+    } @else {
+      <p
+        [style.background]="$even ? 'white' : 'antiquewhite'"
+        [style.color]="$even ? 'black' : 'blue'"
+        [style.fontWeight]="$even ? 'normal' : 'bold'"
+      >
+        {{ i + 1 }} : {{ item }} - {{ isFirst }}
+      </p>
+    }
+  }
+</div>

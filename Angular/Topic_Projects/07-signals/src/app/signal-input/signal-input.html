@@ -1,0 +1,8 @@
+<p>Parent Cmponent!</p>
+
+<!-- <app-child [name]="username"></app-child> -->
+
+<!-- <app-child (notify)="onMessage($event)"></app-child> -->
+<app-child #child></app-child>
+
+<p>Message from child: {{ child.messsage() }}</p>

@@ -1,0 +1,12 @@
+.cmp {
+  color: #b1ef90;
+}
+.cmp2 {
+  color: #90b1ef;
+}
+.card {
+  border: 1px solid #c4c3c3;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

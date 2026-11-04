@@ -1,0 +1,30 @@
+@if (isLoggedIn) {
+      <h1>Welcome, User!</h1>
+    } @else {
+      <h1>Please log in.</h1>
+    }
+    <h2>Box:</h2>
+    @if (showBox) {
+      <div style="width: 100px; height: 100px; background-color: rgb(255, 120, 181)"></div>
+    }
+    <button (click)="toggleBox()">Toggle Box</button>
+
+    <h1>Switch</h1>
+    <button (click)="btn = 'home'">Home</button>
+    <button (click)="btn = 'about'">About</button>
+    <button (click)="btn = 'contact'">Contact</button>
+
+    @switch (btn) {
+      @case ('home') {
+        <h2>Home</h2>
+      }
+      @case ('about') {
+        <h2>About</h2>
+      }
+      @case ('contact') {
+        <h2>Contact</h2>
+      }
+      @default {
+        <h2>Default</h2>
+      }
+    }

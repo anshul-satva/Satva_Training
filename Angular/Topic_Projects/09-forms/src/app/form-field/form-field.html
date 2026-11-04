@@ -1,0 +1,4 @@
+<label>
+  {{ label() }} :
+  <input [type]="type()" [value]="value()" (input)="onInput($event.target.value)" />
+</label>

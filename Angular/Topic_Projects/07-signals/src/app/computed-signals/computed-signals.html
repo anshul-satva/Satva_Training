@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    COUNT : {{ count() }}<br />
+    <!-- {{ doubleCount() }} -->
+
+    PLUS 2 : {{ getPlus2() }} <br />
+    <!-- {{ trippleCount() }} -->
+    <button (click)="double_Count()">Double</button>
+    <button (click)="tripple_Count()">Triple</button>
+    <!-- <button (click)="plus_2()">+2</button> -->
+    <button (click)="increment()">Incrementttt</button>
+    <div>
+      <h3>Form</h3>
+      <p>Enter your Firstname:</p>
+      <input type="text" name="" id="" (input)="FInput($event.target.value)" />
+      <p>Enter your Lastname:</p>
+      <input type="text" name="" id="" (input)="LInput($event.target.value)" /><br />
+      <button (click)="getFullName()">Get Full Name</button>
+      <p>Your fullname is : {{ fullName() }}</p>
+      <h3>Numbers : {{ numbers() }}</h3>
+      <h3>Total : {{ total() }}</h3>
+    </div>
+    <div>
+      <h3>Your Cart Total: {{ cart_total() }}</h3>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,550 @@
+###### INSTALLATION :
+
+1. Angular 21 Mindset Shift
+
+Angular has moved strongly toward Signals for state management and reactivity.
+
+Old Angular relied heavily on:
+
+@Input()
+@Output()
+RxJS Subjects
+EventEmitter
+Change Detection cycles
+
+Modern Angular prefers:
+
+signal()
+computed()
+effect()
+input()
+output()
+model()
+Signal Stores
+
+👉 Signals make Angular faster, cleaner, easier to reason about.
+
+👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉👉
+
+npm install -g @angular/cli // No need everytime, just once
+
+NEW APP CREATION:
+ng new "App Name"
+
+VERSION:
+ng version
+
+RUN APP:
+ng serve
+
+OLD VERSION : app.component.html, app.component.css
+21th NEW VERSION: app.html, app.css
+
+DATA INTERPOLLATION: the method to show typerscript variable : Execute in one direction: typescript ---> Html
+used to bind the data in Html
+"{{}}" : Using double curly bracket we can bind the data in Angular
+
+COMPONENT in ANGULAR:
+HTML + CSS + TS
+
+Main files: index.html, main.ts, style.css
+app ---> app.config.ts : Routing + Providers + Global settings
+
+Angular related Configuration :---> angular.json
+
+###### ANGULAR RENDERING PROCESS:
+Angular COMPONENT will Find COMPONENT CLASS (@Component) ---> in which variables, signals etc are there in class file ---> it'll find Template(ex: HTML with Binding)
+---> it'll combine both of these file(class + component) and then finally it will render UI in browser
+
+Singnals & Zones: Before Signals there were zones, in Angular 21 there are signals
+
+CHANGE DETECTION: It'll find the changes in UI or component, before Angular 21 Zones were finding the changes in whole component
+in Angular 21 it'll check the signals which were changed and then it will change that perticular thing (FAST)
+
+###### INTERPOLLATION:
+Allowed to use in interpollation:
+	All variables
+	functions
+	mathematical expressions
+	js snippent
+
+Not Allowed to use in interpollation:
+	"new" keyword
+	Assignment operators
+	Arrow functions
+	loops
+	template literal
+	Direct access of DOM
+
+Multiple variables then use diff interpollation brackets for each one:
+FALSE: {{name, count, isAdmin }}
+TRUE: {{name}}, {{count}}, {{isAdmin}}
+
+Methods are recommended to use with SIGNALS not directly in interpollation
+
+###### SIGNALS: To display logics
+it can be used using {{}} interpollation but have signal keyword in variables or methods
+ex:
+JS: title = signal("Angular template");
+HTML: {{title()}}
+
+Do not use loops inside signals
+Do not use big functions inside signals
+Do not Modify values inside INTERPOLLATION
+
+###### ANGULAR CLI : Use to create new project, componetns, services
+
+COMMANDS to generate:
+COMPONENT: ng g c name_of_the_componet
+SERVICE: ng g s name_of_the_service
+DIRECTORY: ng g d name_of_the_directory
+PIPE FILE: ng g p name_of_the_pipeFile
+BUILD for production: ng g build
+
+###### COMPONENTS: group of building block
+Html + Css + Typecript
+An HTML template that controls what renders into the DOM.
+
+Parts: StandAlone component (new) , Modular components(old version)
+==========================================================================================================================
+StandAlone component: @Component : selector(Which app is running), templateUrl(), styleUrl(style file)
+==========================================================================================================================
+Summary Table
+==========================================================================================================================
+Asset 				Convention						Example
+File Name			kebab-case						user-list.component.ts
+Class Name			UpperCamelCase					UserListComponent
+Selector			kebab-case (with prefix)		app-user-list
+Inputs/Outputs		camelCase						listItems, itemSelected
+
+###### COMPONENT DECORATOR: in every component 1 decorator is compulsory
+
+Decorators in TypeScript and Angular are functions prefixed with the @ symbol that attach metadata or modify the behavior of classes and their members at design time.
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, Login],
+  templateUrl: './app.html',
+  styleUrl: './app.css',
+})
+
+
+
+Modular component: @ng module
+in Angular 21 and above newer versions the standAlone component is default
+previous version component (modular) we have to expliitly describe "standAlone = true"
+in newer versions by default standAlone is true
+
+###### CUSTOM COMPONENTS:
+Naming conventions for componets: name of the components are always in small latter
+mandatory file in Component: typerscript file(.ts)
+that .ts file should be export using "export class name_of_the_.tsFile"
+
+template and templateUrl
+template: we can write normal HTML in our .ts file only
+templateUrl: external html file
+
+style and styleUrl
+style: we can write normal style in our .ts file only
+styleUrl: external css file
+
+
+###### PROPERTY BINDING: [] :
+whichever data are written in typeScript and we have to access those data from html's property that is called property binding
+
+Property binding in Angular is a one-way data-binding technique that allows you to set the values of properties for HTML elements, directives, or Angular components
+ex:
+src is the html img property so we can declare img_url in typecript and we can use property binding in html usong [src]
+we can use any HTML properties from .ts file ---> HTML file in components
+we can use any of the properties: src, class, style, stylewidth, styleHeight
+
+Do not use Properties in interpollation:
+Ex:
+WRONG:
+<img src={{img_url}} />
+
+RIGHT:
+<img [src]="img_url" />
+
+use interpollation for texts and variables etc]
+use property binding for html properties
+
+###### EVENT BINDING: Perform actions from HTML to typescript
+(eventName) = "methodName()"
+
+$event : Angular way of passing native browser event to your method : it is special keyword which is used to send event data (Capture the event)
+we can fetch any event using $event
+ex:
+<!-- Template -->
+<button (click)="onSave($event)">Save</button>
+<button (dblclick)="openDetail()">Open</button>
+<div (mouseenter)="showTooltip()" (mouseleave)="hideTooltip()">Hover me</div>
+
+<!-- Instead of checking event.key === 'Enter' manually, Angular does it for you -->
+<input (keyup.enter)="search()" (keydown.escape)="clearSearch()">
+<input (keyup.arrowUp)="selectPrev()" (keyup.arrowDown)="selectNext()">
+
+.ts:
+showEvent(event: any) {
+    console.log(event);
+  }
+
+.Html:
+<button (click)="showEvent($event)">Show Event</button>
+
+OR
+
+.ts:
+username = '';
+  showName(userName: string){
+    this.username = userName;
+  }
+
+.HTML:
+<input (input)="showName($event.target.value)" placeholder="Enter your name" />
+
+EVENTS with signals:
+this.count.update(() => ...)
+
+EVENTS without signals (normal)
+this.count++;
+
+Form submit : (submit)
+Input  : (input)
+
+###### PROPERTY & VARIABLES
+export class user
+{
+	name : "Anshul",
+	age: 20
+}
+name and age are properties
+
+handleSubmit = () =>
+{
+	let count = 0;
+}
+count is variable
+
+----------------------------------------------------------------------------------------------
+###### Get and Set input field value:
+There are 3 methods to get and set input field value:
+<!-- Method 1: Function + event -->
+<input (input)="updateName($event.target.value)" />
+
+<!-- Method 2: Direct inline (no TS function needed) -->
+<input (input)="city = $event.target.value" />
+
+<!-- Method 3: Template Reference Variable (#) — cleanest way -->
+<input #userInput type="text" />
+<button (click)="getEmail(userInput.value)">Get Value</button>
+
+1) componet style : own component's .css file
+#### Styling in Angular
+2) Global style : Normal global style.css
+3) new Global file: global.css and add in angular.json in styles: "___"
+4) internal style : in html elements
+5) Inline style in component.ts : style : [``]
+6) Multiple css in component: styleUrl"s"
+
+##### if-else:
+ngif: old syntax
+@if: new syntax
+
+#### Else-if adn Switch:
+else-if: complex login which is having multiple conditions
+Switch: Fixed multiple choice/Conditions
+
+  <button (click)="btn = 'home'">Home</button>
+    <button (click)="btn = 'about'">About</button>
+    <button (click)="btn = 'contact'">Contact</button>
+
+    @switch (btn) {
+      @case ('home') {
+        <h2>Home</h2>
+      }
+      @case ('about') {
+        <h2>About</h2>
+      }
+      @case ('contact') {
+        <h2>Contact</h2>
+      }
+      @default {
+        <h2>Default</h2>
+      }
+    }
+
+##### @Loops
+Before Angular 17: it was used as *ngfor...
+After Angular 17: @for directly
+
+##### For- conceptual variable
+$index
+$first
+$last
+$even
+$odd
+
+##### SIGNALS : Reactive system that makes Angular fast, simeple, more predictble, can detect change
+--: Act as a Wrapper that check and notify users about changes
+in Angular use signals with type only:
+
+export class App {
+count = signal<number>(0);
+name = signal<string>('Angular');
+isAdmin = signal<boolean>(true);
+numbers = signal<number[]>([1,20,25,30]);
+user = signal<{name:string,age:number}>({
+name: 'Mohit',
+age: 24
+})
+We generally use interface to give reference type in object: Example:
+interface User {name:string,age:number};
+user = signal<User>({
+name: 'Mohit',
+age: 24 )}
+
+if you want to access signal veriables use "variable_name()"
+
+in React : usestate()
+in Angular : signal()
+
+Angular updates only those values which updated
+ex:
+.ts file:
+count = signal(5);
+
+.Html file:
+<h2> Count : {{count}} </h2>
+// and if we want to change the value then we can use:
+<button (Click) = "count.set(5)"> SET </button>
+
+Old version: to update "mutate" was used, ex: items.mutate(a => a.push(1));
+New Version :
+item.update(v => v + 1); // to update value
+cnt = 0;
+cnt.set(50); // to replace value
+
+
+COMPUTED SIGNALS: Pure functions , can use when creating value
+can detect automatically if dependent variable change:
+ex: i have number : 2
+and i am creating another fn to compute the double of the number:
+double = computed<number>(() => this.number() * 2) // whenever the number will be changed the double will also be changed because double is dependent on number
+// improve performance optimization
+NOTES: Do not call API in computed signals + Do not call "Set" and "update" method in it.
+REACT: useMemo()
+Angular : computed signals
+
+##### EFFECTS: Used in Side effect of component(UI), console logging, Browser API handling, DOM access, Communicate with component, Auto logic run
+
+::::  a "watcher" for signals : An effect() watches one or more signals. Whenever any of those signals change, Angular
+
+automatically re-runs the effect function. You don't subscribe, you don't unsubscribe — Angular handles it.
+The key rule: read a signal inside an effect → effect subscribes to it automatically.
+
+Derive a value from signals:---->>>> computed()
+Call an API when signal changes:---->>>> effect()
+Format a display string :---->>>> computed()
+Write to localStorage :---->>>> effect()
+Calculate a total price :---->>>> computed()
+Update a canvas/chart :---->>>> effect()
+Log/analytics:---->>>> effect()
+
+// Do not use set and update methods inside effect
+
+##### PIPES:
+uppercase
+lowwercase
+date
+currency
+json
+
+ex:
+
+1) uppercase lowwercase
+	<h1> {{ lName | uppercase }}
+	<h1> {{ uName | lowwercase }}
+2) Date
+	<h1> Short Date : {{ date | date: "short"}}
+	<h1> Full Date: {{ date | date: "fullDate"}}
+	<h1> Custom Date : {{ date | date: "dd/MM/yyyy"}}
+3) Percent
+	<h2> Percentage: {{ Revenue | Percent}} </h2>
+4) JSON
+
+	user = {
+			name: 'Anshul',
+			age: 20,
+		   };
+	<h3>{{user | json}}</h3>
+5) Currency:
+	<h3> {{money() | currency : "INR" }} </h3>
+	<h3> {{money() | currency : "EUR" }} </h3>
+	<h3> {{money() | currency }} </h3> // By default in Dollar
+
+
+:::: Create new pipe: ng g p "pipe_name"
+pipe_name.ts :  transform(parameter1: unknown, ...args(parameter2, parameter3,...) : unknown[]): unknown
+					{
+					return null;
+					}
+app.js :  variable declaration + functions
+app.html : <h2>{{ parameter1 | pipe_name: parameter2, parameter3,... }}</h2>
+
+We can use build in pipe in custom pipe also: Just have to import "CommonModule" and add in @component section in .ts file
+"Transform" Function in pipe_name.ts file : Converts input into Output
+
+##### SIGNAL DEEP DIVE: Fine-grained reactivity
+SIGNAL GRAPH: whatever is connected with variable if it changes, the connceted ones will also trigger, and just connected ones will be changed, other will not be changed!
+
+#### Tow Way Binding:
+Typecript to UI and UI to Typecript
+OLD method: [(ngModel)]: Traditional approch to do tow way binding,
+import "FormsModule"
+
+<input [(ngModel)] = "userName" placeholder= "Enter your name" />
+<p>{{ userName }} </p>
+
+Morden version: use direct as signals
+<input [value = name()] (input) = "name.set($event.target.value)" placeholder= "Enter your name"/>
+<p> {{ userName }} </p>
+
+"We can not use signal in ngModel"
+##### TODO APP:
+
+##### Parameter passing from parent to child:
+Declare valriable in parent .ts fie //   username: string = 'Anshul (passed from Parent)';
+import child in parent .ts file //  imports: [Child]
+in parent .html file bind the valriable/data in <app-child> component // <app-child [name]="username"></app-child>
+take variable in child .ts file as "parent_variable = input<>()"
+create some html in child .html file and include/use variable/data passed from parent // <h2> {{name()}} </h2>
+
+##### Event Emmiter / SIGNAL
+OLD : EVENT Emmiter : was not reactive, boiler plate more
+NEW : Signals : Reactive, less boiler plate
+
+##### STORE: Central/Global store/state to store data  // Redux in React
+|| SERVICE + STORE = GLOBAL REACTIVE STATE
+NgRx vs signal store // NgRx was heavy to set up, more boiler plate || signal store is easy to unserstand and easy to set up and we can create with injectable
+
+##### Angular Forms
+Types of FORMS :
+1) ngModel Form (Template Driven form using signals ||
+2) Reactive form using Signal
+||
+Simple form : (login, contact, search) : Signal Form
+Complex form : (registration, multi-step, dynamic) : Reactive form
+||
+FORMAT 1 — Signal Form (Simple Forms):
+Every input = [value]="signal()"  +  (input)="signal.set($event.target.value)"
+That one line is the entire two-way binding for signals. Memorize it.That one line is the entire two-way binding for signals. Memorize it.
+
+FORMAT 2 - Reactive form (complex form):
+
+
+
+┌─────────────────────────────────────────────────────┐
+│              ANGULAR 21 FORMS — MY FORMAT           │
+├─────────────────┬───────────────────────────────────┤
+│  Signal Form    │  Reactive Form                    │
+├─────────────────┼───────────────────────────────────┤
+│  Simple forms   │  Complex forms                    │
+│  No import      │  Import ReactiveFormsModule       │
+│  signal<type>() │  new FormGroup({})                │
+│  isFormValid    │  form.invalid                     │
+│  computed()     │  Validators.required etc          │
+│  .set() on      │  formControlName="x"              │
+│  (input) event  │  getter?.invalid && touched       │
+└─────────────────┴───────────────────────────────────┘
+
+
+
+ngModel
+angular form usinng()
+
+@for( badge of badges() ; track $badge.id){
+	<li class="user-badge">{{ badge.name }} </li>
+}
+
+📝 Quick Recap — Cheat Sheet
+
+🔹 Signals Mindset
+Signals replaced Zones — Angular now updates only changed parts, not the whole tree
+
+🔹 signal()
+Smart reactive variable
+Read: count()
+Update: .set() / .update()
+
+🔹 computed()
+Auto-calculated signal (like Excel formula)
+Read-only
+Do not use API calls inside
+
+🔹 effect()
+Runs side effects when signals change
+Do not use .set() inside
+
+🔹 {{ }}
+Interpolation — display TS values in HTML
+One-way binding (TS → HTML)
+
+🔹 [ ]
+Property binding — set HTML properties from TS
+Used for: src, disabled, class
+
+🔹 ( )
+Event binding — HTML triggers TS methods
+Use $event to capture event data
+
+🔹 Two-way binding
+Old: [(ngModel)]
+Modern: [value] + (input) using signals
+
+🔹 @if / @switch
+Modern control flow
+Replaces *ngIf / *ngSwitch
+
+🔹 @for
+Modern loop
+Always use track
+Helpers: $index, $first, $last, $even, $odd
+
+🔹 Pipes
+Format data in templates
+Built-in: uppercase, date, currency, json
+Custom: ng g p
+
+🔹 Parent → Child
+Pass data: [data]="value"
+Receive in child: input<type>()
+
+🔹 Components
+Self-contained (HTML + CSS + TS)
+Use @Component
+Standalone by default
+
+🔹 CLI Commands
+ng g c → component
+ng g s → service
+ng g p → pipe
+ng serve → run project
+
+##### Reusable components in Angular
+variable = input<string>(); // we will get input from another components (can be anyrthing string or etc)
+
+##### ROUTING : based on URL changes --> UI will be changed
+1) Create Diff components and add contents in it:
+have to declare all the path and corresponding components in app.routes.ts
+ex: { path: 'home', component: HomeCompo }
++
+Wherever we have to show Our componets we have to show it there with routelink:
+Ex:
+<nav>
+	<a routeLink='profile'> Profile </a>
+	<a routeLink='companies'> Companies </a>
+</nav>
+
+
+

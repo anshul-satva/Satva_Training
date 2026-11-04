@@ -1,0 +1,25 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="topic">
+      <section>
+        <h1 class="cmp">Built In Pipes</h1>
+        <app-pipes></app-pipes>
+      </section>
+      <section>
+        <h1 class="cmp">Custom Pipes</h1>
+        <input type="text" #name /><button (click)="fillName(name.value)">Get Name</button>
+        <h3>Full Name : {{ fullname }}</h3>
+        <h3>Short Name : {{ fullname | pipeShortcut }}</h3>
+        <input type="number" #amt /><button (click)="convertAmt(amt.value)">Convert</button>
+        <h2>{{ usd | currency }}</h2>
+        <h2>{{ usd | convert: usdToInr | currency: 'INR' }}</h2>
+      </section>
+    </div>
+  </body>
+</html>

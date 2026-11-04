@@ -1,0 +1,29 @@
+.btn {
+  /* justify-content: center; */
+  /* text-align: center; */
+  font:
+    bold 20px Arial,
+    sans-serif;
+  color: #c22e2e;
+  display: flex;
+  gap: 50px;
+  width: 200px;
+  /* margin: 20px auto; */
+  height: 50px;
+}
+
+#count {
+  font:
+    bold 20px Arial,
+    sans-serif;
+  color: #c22e2e;
+  width: 200px;
+}
+
+/* body {
+  justify-content: center;
+  text-align: center;
+  font:
+    bold 20px Arial,
+    sans-serif;
+} */

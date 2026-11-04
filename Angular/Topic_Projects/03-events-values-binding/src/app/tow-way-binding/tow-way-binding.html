@@ -1,0 +1,14 @@
+<!-- <input type="text" name="" id="" [value]="name()" (input)="name.set($event.target.value)" /> -->
+    <!-- <h2>{{ name() }}</h2> -->
+
+    <div>
+      <input type="text" placeholder="Enter name" (input)="updateName($event.target.value)" />
+      <input type="text" placeholder="Enter age" (input)="updateAge($event.target.value)" />
+      <h3 class="cmp">{{ user().name }}</h3>
+      <h3 class="cmp">{{ user().age }}</h3>
+    </div>
+    <div>
+      <h3>TEB</h3>
+      <input [(ngModel)]="username" placeholder="Enter your name" />
+      <p>{{ username }}</p>
+    </div>

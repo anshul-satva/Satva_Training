@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #8a8989;
+  color: white;
+}
+
+nav a.active {
+  border-bottom: 2px solid #dcbf4c;
+}
+
+.logo {
+  color: white;
+  margin: 0;
+  cursor: pointer;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 500;
+}
+nav a:hover {
+  border-bottom: 2px solid #4cdadc;
+}

@@ -1,0 +1,21 @@
+<input (focus)="focus_input()" (blur)="blur_input()" /><br />
+
+    <button [disabled]="isActive">BTN</button><br />
+    <button (click)="toggleActive()">Toggle Active</button><br />
+    <button (mouseover)="mouse_over()" (mouseout)="mouse_leave()">Mouse Over</button><br />
+    <div
+      [style.backgroundColor]="bg_color"
+      [style.width]="width + 'px'"
+      [style.height]="height + 'px'"
+      (mouseenter)="change_color()"
+      (mouseleave)="change_color()"
+    >
+      Box
+    </div>
+    <br />
+    <h2>Type something:</h2>
+    <input (input)="onInput($event)" />
+    <div>
+      <h3>Click anywhere on Button to get ClienX and ClientY in console:</h3>
+      <button (click)="onSave($event)">Click Me</button>
+    </div>

@@ -1,0 +1,22 @@
+<h1>Using Function</h1>
+<div>
+  <h2>Enter Your Name:</h2>
+  <input type="text" (input)="updateName($event.target.value)" />
+</div>
+<p>Your name is: {{ name }}</p>
+
+<h1>Using Event object</h1>
+<div>
+  <h2>Enter City:</h2>
+  <input type="text" (input)="city = $event.target.value" />
+  <p>Your city = {{ city }}</p>
+</div>
+
+<h1>Using Template Refrence</h1>
+<div>
+  <h1>EMAIL</h1>
+  <p>Enter Your email:</p>
+  <input type="text" #userInput />
+  <button (click)="getEmail(userInput.value)">Get Email</button>
+  <p>Your Email : {{ email }}</p>
+</div>

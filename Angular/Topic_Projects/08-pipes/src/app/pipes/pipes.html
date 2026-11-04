@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>Case</h2>
+      <h3>{{ lname() | uppercase }}</h3>
+      <h3>{{ uname() | lowercase }}</h3>
+    </div>
+    <h2>Date Pipe</h2>
+    <div>
+      <h3>Short Date : {{ date | date: 'short' }}</h3>
+      <h3>Full Date: {{ date | date: 'fullDate' }}</h3>
+      <h3>Custom Date : {{ date | date: 'dd/MM/yyyy' }}</h3>
+      <h3>Custom Date : {{ date | date: 'dd/MMM/yyyy' }}</h3>
+      <h3>Custom Date : {{ date | date: 'MM/dd/yyyy' }}</h3>
+    </div>
+    <h2>Currency</h2>
+    <div>
+      <h3>INR money : {{ money() | currency: 'INR' }}</h3>
+      <h3>US money: {{ money() | currency: 'USD' }}</h3>
+      <!-- <h3>Maxican money : {{ money() | currency: 'MXN' }}</h3> -->
+      <h3>Europian money : {{ money() | currency: 'EUR' }}</h3>
+    </div>
+    <h2>Percentage</h2>
+    <div>
+      <h2>Percentage: {{ Revenue() | percent }}</h2>
+    </div>
+    <div>
+      <h2>JSON</h2>
+      <h3>{{ user | json }}</h3>
+    </div>
+  </body>
+</html>

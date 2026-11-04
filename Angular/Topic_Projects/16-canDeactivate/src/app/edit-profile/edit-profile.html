@@ -1,0 +1,24 @@
+<section class="panel">
+  <div class="heading">
+    <h1>Edit Profile</h1>
+    <span [class.dirty]="hasUnsavedChanges">
+      {{ hasUnsavedChanges ? 'Unsaved changes' : 'Saved' }}
+    </span>
+  </div>
+
+  <form #profileForm="ngForm" (ngSubmit)="save()">
+    <label>
+      Name
+      <input name="name" [(ngModel)]="name" required />
+    </label>
+
+    <label>
+      Email
+      <input name="email" type="email" [(ngModel)]="email" required />
+    </label>
+
+    <button type="submit" [disabled]="profileForm.invalid || !hasUnsavedChanges">Save</button>
+  </form>
+</section>
+
+

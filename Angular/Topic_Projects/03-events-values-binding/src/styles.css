@@ -1,0 +1,19 @@
+/* Global styles belong here so they apply to the whole document. */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(0, 0, 0);
+  color: wheat;
+  /* background: #ffffff; */
+  padding: 20px;
+}
+button {
+  padding: 5px;
+  background: #8a64c0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 0px !important;
+  margin: 5px;
+}

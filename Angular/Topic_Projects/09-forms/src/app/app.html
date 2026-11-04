@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="topic">
+      <section>
+        <h1 class="cmp">Angular Forms</h1>
+        <app-form></app-form>
+      </section>
+      <section>
+        <h1 class="cmp">Signal Form</h1>
+        <app-signal-form></app-signal-form>
+      </section>
+      <section>
+        <h1 class="cmp">Reactive Form</h1>
+        <app-reactive-form></app-reactive-form>
+      </section>
+      <section>
+        <h1 class="cmp">User Form</h1>
+        <app-user-form></app-user-form>
+      </section>
+      <section>
+        <h1 class="cmp">Form Field</h1>
+        <app-form-field
+          [label]="'Email'"
+          [type]="'email'"
+          [value]="'anshul@gmail.com'"
+          (valuechange)="onEmailChange($event)"
+        ></app-form-field>
+        <p>Email : {{ email }}</p>
+      </section>
+    </div>
+  </body>
+</html>

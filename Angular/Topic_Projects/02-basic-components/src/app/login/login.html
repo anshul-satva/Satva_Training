@@ -1,0 +1,29 @@
+<p>login works!</p>
+<h1>{{ name }}</h1>
+<!-- Property binding in html using [] we can use typecript code of html property -->
+<img [src]="img_url" [alt]="alter" /> <br />
+<br />
+<button [disabled]="isDisabled">Submit</button> <br /><br />
+<button [class.active]="isActive">Button</button><br /><br />
+<div
+  [style.width.px]="boxWidth"
+  [style.height.px]="boxHeight"
+  style="background-color: rgb(195, 0, 255)"
+>
+  BOX
+</div>
+<p [innerText]="'Count: ' + count()"></p>
+<input (input)="setCount($event.target.value)" placeholder="Enter Count" />
+<p [innerText]="'Count:' + countX"></p>
+<form (ngSubmit)="handleSubmit(email.value)">
+  <input #email type="email" name="email" placeholder="Enter your Email" />
+  <button type="submit">Submit</button>
+</form>
+<br />
+<h3>Change</h3>
+<input (change)="saveField($event)" />
+<br />
+<br />
+<h3>Focus and Blur</h3>
+<input (focus)="markAsTouched()" (blur)="markAsUntouched()" />
+<br />

@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name" , placeholder="name" /><br />
+  @if (name?.invalid && name?.touched) {
+    <p class="error">Name is required</p>
+  }
+  <input formControlName="email" , placeholder="email" /><br />
+  @if (email?.invalid && email?.touched) {
+    <p class="error">Enter a valid email</p>
+  }
+  <input formControlName="password" , placeholder="password" /><br />
+  @if (password?.invalid && password?.touched) {
+    <p class="error">Password is required</p>
+  }
+  <input formControlName="age" , placeholder="age" /><br />
+  @if (age?.invalid && age?.touched) {
+    <p class="error">Enter a valid age</p>
+  }
+  <input formControlName="dream" , placeholder="dream" /><br />
+  @if (dream?.invalid && dream?.touched) {
+    <p class="error">Dream is required</p>
+  }
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

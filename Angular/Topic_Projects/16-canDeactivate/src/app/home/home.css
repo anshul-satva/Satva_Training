@@ -1,0 +1,27 @@
+.panel {
+  background: #ffffff;
+  border: 1px solid #d8e0ea;
+  border-radius: 8px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 32px;
+}
+
+p {
+  margin: 0 0 22px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  color: #ffffff;
+  background: #2563eb;
+  border-radius: 6px;
+  text-decoration: none;
+}

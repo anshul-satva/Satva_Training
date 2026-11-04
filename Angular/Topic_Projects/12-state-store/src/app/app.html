@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="topic">
+      <h1 class="cmp">State Store</h1>
+      <input type="text" #name placeholder="Name" /> <br />
+      <input type="text" #role placeholder="Role" /><br />
+      <button (click)="UserStore.login(name.value, $any(role.value))">Login</button>
+      @if (UserStore.isAdmin()) {
+        <h3>Welcome {{ UserStore.user()?.name }}</h3>
+        <p>Admin access</p>
+        <button (click)="UserStore.logout()">Logout</button>
+      } @else {
+        @if (!UserStore.isLogin()) {
+          <p>Please Login</p>
+        } @else {
+          <h3>Welcome {{ UserStore.user()?.name }}</h3>
+          <p>User access</p>
+          <button (click)="UserStore.logout()">Logout</button>
+        }
+      }
+    </div>
+    <!-- <h1 class="cmp">Store counter</h1>
+    <p>Counter: {{ CounterStore.count() }}</p>
+    <button (click)="CounterStore.increment()">Increment</button>
+    <button (click)="CounterStore.decrement()">Decrement</button>
+    <button (click)="CounterStore.reset()">Reset</button> -->
+  </body>
+</html>

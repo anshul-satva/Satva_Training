@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="topic">
+      <section>
+        <h1 class="cmp">Card</h1>
+        <app-card [title]="'Angular tutorial'" [description]="'Learn Angular with me'"
+          >My name is Anshul <br /><button (click)="clicked()">Click Me</button></app-card
+        >
+      </section>
+      <section>
+        <h1 class="cmp">Button</h1>
+        <app-button [label]="'Save'" (clicked)="onSave($event)"></app-button>
+        <p>{{ message }}</p>
+      </section>
+    </div>
+  </body>
+</html>

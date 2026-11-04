@@ -1,0 +1,28 @@
+<!-- <p>Welcome</p>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      (ngModelChange)="name.set($event)"
+      placeholder="Plese Enter your Name"
+    />
+    <input
+      type="text"
+      [(ngModel)]="age"
+      (ngModelChange)="age.set($event)"
+      placeholder="Plese Enter your Age"
+    />
+
+    <button (click)="submitForm()">SUBMIT</button>
+    <p>Name: {{ name() }}</p>
+    <p>Age: {{ age() }}</p> -->
+<h2>Signal Reactive form</h2>
+<form [formGroup]="form">
+  <input formControlName="name" placeholder="Name" />
+  <br /><br />
+  <input formControlName="email" placeholder="Email" />
+  <br /><br />
+</form>
+
+<button (click)="submitForm()">Submit</button>
+
+<p>Signal Value: {{ userSignal() | json }}</p>

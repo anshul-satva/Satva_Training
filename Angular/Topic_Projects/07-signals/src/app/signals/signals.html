@@ -1,0 +1,4 @@
+<h2>With Signal: {{ with_signal() }}</h2>
+<h2>Without Signal: {{ without_signal }}</h2>
+<button (click)="with_signal.set(`changed`)">Change Signal</button>
+<button (click)="with_signal_toggle()">Toggle Signal</button>

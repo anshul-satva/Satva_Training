@@ -1,0 +1,8 @@
+<p>String : {{ name }}</p>
+    Write 1st number : <input type="number" #firstNum />
+    <br />
+    Write 2nd number : <input type="number" #secondNum />
+    <br />
+    <button (click)="sum(firstNum.value, secondNum.value)">Sum</button>
+    <br />
+    <p>Result : {{ result }}</p>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signal Form</title>
+  </head>
+  <body>
+    <form (ngSubmit)="onSubmit()">
+      <input
+        formControlName="email"
+        placeholder="email"
+        [value]="email()"
+        (input)="email.set($event.target.value)"
+      />
+      <input
+        formControlName="password"
+        placeholder="password"
+        [value]="password()"
+        (input)="password.set($event.target.value)"
+      />
+
+      <button type="submit" [disabled]="!isFormValid()">Submit</button>
+    </form>
+  </body>
+</html>

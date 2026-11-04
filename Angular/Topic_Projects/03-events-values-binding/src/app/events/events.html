@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>events works!</p>
+    <button (click)="increment()">Increment</button>
+    <button (click)="Decrement()">Decrement</button>
+    <p>Count1 : {{ count }}</p>
+    <!-- <p>Count2 : {{ count_num() }}</p> -->
+    <!-- <p></p> -->
+    <button (click)="showEvent($event)">Show Event</button>
+    <input (input)="showName($event.target.value)" placeholder="Enter your name" />
+    <div>Your name is : {{ username }}</div>
+  </body>
+</html>

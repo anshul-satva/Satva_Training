@@ -1,0 +1,25 @@
+PRODUCT : {{ product() }}
+<input
+  type="text"
+  [value]="product()"
+  (input)="product.set($event.target.value)"
+  placeholder="Enter your product"
+  name=""
+  id=""
+/><br /><br />
+
+PRICE :
+<input
+  type="number"
+  placeholder="Enter your product's price"
+  (input)="setPrice(priceInput.value)"
+  #priceInput
+  name=""
+  id=""
+/><br /><br />
+{{ price() }}<br /><br />
+
+QUANTITY : <button (click)="decrement()">[-]</button> {{ counter() }}
+<button (click)="increment()">[+]</button><br /><br />
+
+TOTAL : {{ total() }}
